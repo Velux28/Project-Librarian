@@ -721,3 +721,1108 @@ LogConfig: CVar [[QualityLevelMapping:high]] deferred - dummy variable created
 [2024.04.25-14.39.44:054][  0]LogContentStreaming: Texture pool size now 1000 MB
 [2024.04.25-14.39.44:864][  2]LogSlate: Took 0.000255 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
 [2024.04.25-14.39.45:151][  2]LogSlate: Took 0.018272 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.25-14.40.38:528][163]LogDerivedDataCache: C:/Users/Lorenzo/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:05.517 and deleted 0 file(s) with total size 0 MiB.
+[2024.04.25-15.40.34:935][241]LogDerivedDataCache: C:/Users/Lorenzo/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:01.942 and deleted 0 file(s) with total size 0 MiB.
+[2024.04.25-16.09.46:532][889]LogEditorFactories: Performing atomic reimport of [A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/colonna.fbx]
+[2024.04.25-16.09.46:590][889]LogFbx: Loading FBX Scene from A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/colonna.fbx
+[2024.04.25-16.09.46:608][889]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.09.46:918][889]LogFbx: Display: Triangulating static mesh polySurface152
+[2024.04.25-16.09.46:985][889]LogStaticMesh: Display: Building static mesh colonna...
+[2024.04.25-16.09.47:093][889]LogStaticMesh: Adjacency [0.00s], tris: 818, UVs 2
+[2024.04.25-16.09.47:096][889]LogStaticMesh: Clustering [0.00s]. Ratio: 1.714286
+[2024.04.25-16.09.47:107][889]LogStaticMesh: Leaves [0.01s]
+[2024.04.25-16.09.47:107][889]LogStaticMesh: Num clusters 12. Error 0.0000, 0.0000, 0.0000
+[2024.04.25-16.09.47:141][889]LogStaticMesh: Num clusters 4. Error 0.8530, 0.8530, 0.8530
+[2024.04.25-16.09.47:156][889]LogStaticMesh: Num clusters 2. Error 5.7809, 5.7809, 5.7809
+[2024.04.25-16.09.47:161][889]LogStaticMesh: Num clusters 1. Error 13.4883, 13.4883, 13.4883
+[2024.04.25-16.09.47:161][889]LogStaticMesh: Reduce [0.06s]
+[2024.04.25-16.09.47:199][889]LogStaticMesh: Fallback 0/1 [0.04s], num tris: 381
+[2024.04.25-16.09.47:202][889]LogStaticMesh: ConstrainClusters:
+[2024.04.25-16.09.47:202][889]LogStaticMesh:   Input: 19 Clusters, 1699 Triangles and 2925 Vertices
+[2024.04.25-16.09.47:202][889]LogStaticMesh:   Output without splits: 19 Clusters, 1699 Triangles and 2925 Vertices
+[2024.04.25-16.09.47:202][889]LogStaticMesh:   Output with splits: 19 Clusters, 1699 Triangles and 2925 Vertices
+[2024.04.25-16.09.47:202][889]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 19, Slow Path Clusters: 0, 1 Material: 19, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2024.04.25-16.09.47:203][889]LogStaticMesh: WritePages:
+[2024.04.25-16.09.47:203][889]LogStaticMesh:   Root: GPU size: 32712 bytes. 1 Pages. 32712.000 bytes per page (99.829% utilization).
+[2024.04.25-16.09.47:203][889]LogStaticMesh:   Streaming: GPU size: 13424 bytes. 1 Pages. 13424.000 bytes per page (10.242% utilization).
+[2024.04.25-16.09.47:203][889]LogStaticMesh:   Page data disk size: 40012 bytes. Fixup data size: 192 bytes.
+[2024.04.25-16.09.47:203][889]LogStaticMesh:   Total GPU size: 46136 bytes, Total disk size: 40204 bytes.
+[2024.04.25-16.09.47:203][889]LogStaticMesh: Encode [0.00s]
+[2024.04.25-16.09.47:204][889]LogStaticMesh: Imposter [0.00s]
+[2024.04.25-16.09.47:204][889]LogStaticMesh: Nanite build [0.10s]
+
+[2024.04.25-16.09.47:231][889]LogStaticMesh: Built static mesh [0.26s] /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna.colonna
+[2024.04.25-16.09.47:632][889]LogEditorFactories: -- imported successfully
+[2024.04.25-16.09.47:650][889]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.10.07:277][528]LogUObjectHash: Compacting FUObjectHashTables data took   2.60ms
+[2024.04.25-16.10.07:827][528]LogPackageLocalizationCache: Processed 30 localized package path(s) for 1 prioritized culture(s) in 0.017291 seconds
+[2024.04.25-16.10.08:039][528]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/MAP_AssetShowcase
+[2024.04.25-16.10.08:040][528]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase09F6DDA24CF806331844DCADB1B80146.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/MAP_AssetShowcase.umap'
+[2024.04.25-16.10.08:142][528]AssetCheck: New page: Asset Save: MAP_AssetShowcase
+[2024.04.25-16.10.08:154][528]LogContentValidation: Display: Validating World /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase
+[2024.04.25-16.20.06:232][127]LogUObjectHash: Compacting FUObjectHashTables data took   0.24ms
+[2024.04.25-16.20.06:241][127]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/3DAssetLevel/3DArt/MAP_AssetShowcase' took 0.005
+[2024.04.25-16.20.06:300][127]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna] ([1] browsable assets)...
+[2024.04.25-16.20.06:433][127]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna.colonna]
+[2024.04.25-16.20.06:433][127]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna]
+[2024.04.25-16.20.06:492][127]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna_Auto1
+[2024.04.25-16.20.06:501][127]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/colonna_Auto19E478A124731157809314CBF9D835503.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna_Auto1.uasset'
+[2024.04.25-16.20.06:502][127]LogFileHelpers: Auto-saving content packages took 0.260
+[2024.04.25-16.34.16:686][844]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta3.fbx)
+[2024.04.25-16.34.16:694][844]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta3.fbx
+[2024.04.25-16.34.16:699][844]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.34.25:865][844]LogSlate: Window 'FBX Import Options' being destroyed
+[2024.04.25-16.34.25:900][844]LogFbx: Display: Triangulating static mesh polySurface186
+[2024.04.25-16.34.25:909][844]LogStaticMesh: Display: Building static mesh porta3...
+[2024.04.25-16.34.25:935][844]LogStaticMesh: Built static mesh [0.03s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3
+[2024.04.25-16.34.25:943][844]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.34.26:027][844]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porte piccola_1.fbx)
+[2024.04.25-16.34.26:035][844]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porte piccola_1.fbx
+[2024.04.25-16.34.26:042][844]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.34.26:043][844]LogFbx: Display: Triangulating static mesh polySurface42111
+[2024.04.25-16.34.26:056][844]LogStaticMesh: Display: Building static mesh porte_piccola_1...
+[2024.04.25-16.34.26:068][844]LogStaticMesh: Built static mesh [0.01s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.26:077][844]FBXImport: FBX File Loading: Found name clash, node 'polySurface4211' was renamed to 'polySurface42111' 
+[2024.04.25-16.34.26:077][844]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.34.26:111][844]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\pezzettino_alto.fbx)
+[2024.04.25-16.34.26:121][844]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\pezzettino_alto.fbx
+[2024.04.25-16.34.26:127][844]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.34.26:128][844]LogFbx: Display: Triangulating static mesh polySurface4217
+[2024.04.25-16.34.26:135][844]LogStaticMesh: Display: Building static mesh pezzettino_alto...
+[2024.04.25-16.34.26:143][844]LogStaticMesh: Built static mesh [0.01s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto.pezzettino_alto
+[2024.04.25-16.34.26:149][844]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.34.26:152][844]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta_piccola_2.fbx)
+[2024.04.25-16.34.26:160][844]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta_piccola_2.fbx
+[2024.04.25-16.34.26:166][844]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.34.26:168][844]LogFbx: Display: Triangulating static mesh polySurface42231
+[2024.04.25-16.34.26:179][844]LogStaticMesh: Display: Building static mesh porta_piccola_2...
+[2024.04.25-16.34.26:190][844]LogStaticMesh: Built static mesh [0.01s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.34.26:199][844]FBXImport: FBX File Loading: Found name clash, node 'polySurface4223' was renamed to 'polySurface42231' 
+[2024.04.25-16.34.26:199][844]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.34.26:232][844]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta1.fbx)
+[2024.04.25-16.34.26:241][844]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta1.fbx
+[2024.04.25-16.34.26:245][844]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.34.26:246][844]LogFbx: Display: Triangulating static mesh modulo_porta_piccola:polySurface186
+[2024.04.25-16.34.26:249][844]LogStaticMesh: Display: Building static mesh porta1...
+[2024.04.25-16.34.26:254][844]LogStaticMesh: Built static mesh [0.01s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.34.26:261][844]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.34.26:265][844]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta2.fbx)
+[2024.04.25-16.34.26:272][844]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\moduli_porte\Porte_piccole\porta2.fbx
+[2024.04.25-16.34.26:277][844]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.34.26:278][844]LogFbx: Display: Triangulating static mesh polySurface186
+[2024.04.25-16.34.26:283][844]LogStaticMesh: Display: Building static mesh porta2...
+[2024.04.25-16.34.26:289][844]LogStaticMesh: Built static mesh [0.01s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2
+[2024.04.25-16.34.26:297][844]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.34.27:853][991]LogSlate: Window 'Message Log' being destroyed
+[2024.04.25-16.34.27:864][991]LogSlate: Window 'Message Log' being destroyed
+[2024.04.25-16.34.29:439][156]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.04.25-16.34.29:484][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/MAP_AssetShowcase_Auto2
+[2024.04.25-16.34.29:484][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase_Auto2D1518CAA4F15ECC22CE81A878249E0AF.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/MAP_AssetShowcase_Auto2.umap'
+[2024.04.25-16.34.29:488][156]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/3DAssetLevel/3DArt/MAP_AssetShowcase' took 0.065
+[2024.04.25-16.34.29:488][156]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.065
+[2024.04.25-16.34.29:499][156]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3] ([1] browsable assets)...
+[2024.04.25-16.34.29:516][156]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3]
+[2024.04.25-16.34.29:516][156]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3]
+[2024.04.25-16.34.29:519][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3_Auto2
+[2024.04.25-16.34.29:532][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta3_Auto2BD0A8FB44E6EE12729868896FC40FC43.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3_Auto2.uasset'
+[2024.04.25-16.34.29:533][156]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1] ([1] browsable assets)...
+[2024.04.25-16.34.29:539][156]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1]
+[2024.04.25-16.34.29:539][156]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1]
+[2024.04.25-16.34.29:548][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1_Auto2
+[2024.04.25-16.34.29:548][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porte_piccola_1_Auto2B7B42F154066F2B088CEA5A605281B83.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1_Auto2.uasset'
+[2024.04.25-16.34.29:549][156]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto] ([1] browsable assets)...
+[2024.04.25-16.34.29:555][156]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto.pezzettino_alto]
+[2024.04.25-16.34.29:555][156]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto]
+[2024.04.25-16.34.29:558][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto_Auto2
+[2024.04.25-16.34.29:558][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/pezzettino_alto_Auto24C71993B4BE4D8F17AA936A5E60D9BD5.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto_Auto2.uasset'
+[2024.04.25-16.34.29:559][156]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2] ([1] browsable assets)...
+[2024.04.25-16.34.29:565][156]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2]
+[2024.04.25-16.34.29:565][156]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2]
+[2024.04.25-16.34.29:568][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2_Auto2
+[2024.04.25-16.34.29:568][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_2_Auto29A1C93044220687C9CADA4BC68FD6A23.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2_Auto2.uasset'
+[2024.04.25-16.34.29:569][156]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1] ([1] browsable assets)...
+[2024.04.25-16.34.29:575][156]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1]
+[2024.04.25-16.34.29:575][156]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1]
+[2024.04.25-16.34.29:578][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1_Auto2
+[2024.04.25-16.34.29:578][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta1_Auto20269B3C44D44F1BBE5C26F894DCD5BF9.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1_Auto2.uasset'
+[2024.04.25-16.34.29:579][156]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2] ([1] browsable assets)...
+[2024.04.25-16.34.29:585][156]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2]
+[2024.04.25-16.34.29:585][156]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2]
+[2024.04.25-16.34.29:588][156]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2_Auto2
+[2024.04.25-16.34.29:588][156]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta2_Auto29C380A6C41FDCF323269C3AB4A583BAA.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2_Auto2.uasset'
+[2024.04.25-16.34.29:588][156]LogFileHelpers: Auto-saving content packages took 0.101
+[2024.04.25-16.34.44:497][579]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.44:497][579]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.44:499][579]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_1
+[2024.04.25-16.34.45:460][611]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.45:460][611]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.45:460][611]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_37
+[2024.04.25-16.34.45:819][620]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.45:819][620]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1
+[2024.04.25-16.34.45:820][620]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.porte_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_42
+[2024.04.25-16.34.46:304][670]Cmd: TRANSACTION UNDO
+[2024.04.25-16.34.46:304][670]LogEditorTransaction: Undo Create Actors
+[2024.04.25-16.35.32:119][189]Cmd: DELETE
+[2024.04.25-16.35.32:119][189]Cmd: ACTOR DELETE
+[2024.04.25-16.35.32:691][189]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.35.32:706][189]LogUObjectHash: Compacting FUObjectHashTables data took   0.24ms
+[2024.04.25-16.35.32:707][189]LogEditorActor: Deleted 1 Actors (0.042 secs)
+[2024.04.25-16.35.33:000][208]Cmd: DELETE
+[2024.04.25-16.35.33:000][208]Cmd: ACTOR DELETE
+[2024.04.25-16.35.33:004][208]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.35.33:009][208]LogUObjectHash: Compacting FUObjectHashTables data took   0.19ms
+[2024.04.25-16.35.33:010][208]LogEditorActor: Deleted 1 Actors (0.010 secs)
+[2024.04.25-16.35.38:809][672]LogSlate: Took 0.013463 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2024.04.25-16.35.46:837][480]LogSlateStyle: Warning: Unable to find Slate Widget Style 'Window.Buttons.Close'. Using FButtonStyle defaults instead.
+[2024.04.25-16.35.46:837][480]LogSlateStyle: Warning: Unable to find Slate Widget Style 'Window.Buttons.Close'. Using FButtonStyle defaults instead.
+[2024.04.25-16.35.51:718][  9]LogContentBrowser: Attempting asset rename: porte_piccola_1 -> porte_piccola_1
+[2024.04.25-16.36.16:114][260]LogSlateStyle: Warning: Unable to find Slate Widget Style 'Window.Buttons.Close'. Using FButtonStyle defaults instead.
+[2024.04.25-16.36.16:114][260]LogSlateStyle: Warning: Unable to find Slate Widget Style 'Window.Buttons.Close'. Using FButtonStyle defaults instead.
+[2024.04.25-16.36.21:212][831]LogContentBrowser: Attempting asset rename: porte_piccola_1 -> porta_piccola_1
+[2024.04.25-16.36.22:172][831]LogMetaData: Removing '/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1' ref from Metadata '/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porte_piccola_1.PackageMetaData'
+[2024.04.25-16.36.22:247][831]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1
+[2024.04.25-16.36.22:247][831]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_16858FDCB4B0A7EA8139450AAE8C60C7F.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.uasset'
+[2024.04.25-16.36.22:366][831]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-16.36.22:371][831]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2024.04.25-16.36.22:376][831]LogUObjectHash: Compacting FUObjectHashTables data took   0.18ms
+[2024.04.25-16.36.22:383][831]AssetCheck: New page: Asset Save: porta_piccola_1
+[2024.04.25-16.36.22:383][831]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.36.34:017][896]Cmd: DELETE
+[2024.04.25-16.36.34:017][896]Cmd: ACTOR DELETE
+[2024.04.25-16.36.34:022][896]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.36.34:027][896]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2024.04.25-16.36.34:028][896]LogEditorActor: Deleted 1 Actors (0.010 secs)
+[2024.04.25-16.36.36:536][103]Cmd: TRANSACTION UNDO
+[2024.04.25-16.36.36:536][103]LogEditorTransaction: Undo Move Elements
+[2024.04.25-16.37.31:663][349]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.37.31:663][349]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.37.31:663][349]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_54
+[2024.04.25-16.37.31:814][349]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.37.31:814][349]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.37.31:815][349]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_55
+[2024.04.25-16.37.34:065][487]Cmd: TRANSACTION UNDO
+[2024.04.25-16.37.34:065][487]LogEditorTransaction: Undo Create Actors
+[2024.04.25-16.38.12:207][833]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.38.12:207][833]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.38.12:207][833]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_56
+[2024.04.25-16.38.12:208][833]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.38.12:208][833]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.38.12:208][833]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_128
+[2024.04.25-16.38.13:402][905]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.38.13:403][905]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.38.13:403][905]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_129
+[2024.04.25-16.38.13:416][905]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.38.13:416][905]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.38.13:417][905]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_130
+[2024.04.25-16.38.17:643][285]Cmd: DELETE
+[2024.04.25-16.38.17:643][285]Cmd: ACTOR DELETE
+[2024.04.25-16.38.17:647][285]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.38.17:652][285]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-16.38.17:653][285]LogEditorActor: Deleted 1 Actors (0.010 secs)
+[2024.04.25-16.38.21:719][707]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.38.21:719][707]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.38.21:720][707]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_137
+[2024.04.25-16.38.21:875][710]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.38.21:875][710]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.38.21:876][710]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_138
+[2024.04.25-16.38.44:274][836]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3
+[2024.04.25-16.38.44:274][836]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3
+[2024.04.25-16.38.44:275][836]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_140
+[2024.04.25-16.38.45:911][917]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3
+[2024.04.25-16.38.45:911][917]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3
+[2024.04.25-16.38.45:912][917]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_169
+[2024.04.25-16.39.03:740][485]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2024.04.25-16.39.18:738][979]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199
+[2024.04.25-16.39.18:738][979]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199
+[2024.04.25-16.39.18:739][979]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_197
+[2024.04.25-16.39.19:213][992]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199
+[2024.04.25-16.39.19:213][992]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199
+[2024.04.25-16.39.19:214][992]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_224
+[2024.04.25-16.39.25:922][616]Cmd: DELETE
+[2024.04.25-16.39.25:922][616]Cmd: ACTOR DELETE
+[2024.04.25-16.39.25:926][616]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.39.25:931][616]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-16.39.25:932][616]LogEditorActor: Deleted 1 Actors (0.010 secs)
+[2024.04.25-16.39.47:272][122]LogUObjectHash: Compacting FUObjectHashTables data took   0.20ms
+[2024.04.25-16.39.50:570][122]LogSlate: Window 'Delete Assets' being destroyed
+[2024.04.25-16.39.50:606][122]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface199.porta_piccola_3m_polySurface199
+	Asset Type: StaticMesh
+[2024.04.25-16.39.50:863][122]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.04.25-16.39.50:868][122]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.04.25-16.39.50:872][122]LogUObjectHash: Compacting FUObjectHashTables data took   0.23ms
+[2024.04.25-16.39.51:983][220]LogUObjectHash: Compacting FUObjectHashTables data took   0.21ms
+[2024.04.25-16.39.53:329][220]LogSlate: Window 'Delete Assets' being destroyed
+[2024.04.25-16.39.53:351][220]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_3m_polySurface186.porta_piccola_3m_polySurface186
+	Asset Type: StaticMesh
+[2024.04.25-16.39.53:471][220]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2024.04.25-16.39.53:476][220]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2024.04.25-16.39.53:480][220]LogUObjectHash: Compacting FUObjectHashTables data took   0.19ms
+[2024.04.25-16.40.18:828][771]Cmd: TRANSACTION UNDO
+[2024.04.25-16.40.18:828][771]LogEditorTransaction: Undo Rotate Elements
+[2024.04.25-16.40.22:326][ 48]LogUObjectHash: Compacting FUObjectHashTables data took   0.26ms
+[2024.04.25-16.40.22:370][ 48]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/MAP_AssetShowcase
+[2024.04.25-16.40.22:371][ 48]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase9AC23275432C02D215AFC7983DD57855.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/MAP_AssetShowcase.umap'
+[2024.04.25-16.40.22:393][ 48]AssetCheck: New page: Asset Save: MAP_AssetShowcase
+[2024.04.25-16.40.22:393][ 48]LogContentValidation: Display: Validating World /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase
+[2024.04.25-16.40.38:113][202]LogDerivedDataCache: C:/Users/Lorenzo/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:05.180 and deleted 0 file(s) with total size 0 MiB.
+[2024.04.25-16.44.00:941][403]LogEditorFactories: Performing atomic reimport of [A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta_piccola_2.fbx]
+[2024.04.25-16.44.00:947][403]LogFbx: Loading FBX Scene from A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta_piccola_2.fbx
+[2024.04.25-16.44.00:953][403]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.44.01:009][403]LogFbx: Display: Triangulating static mesh group12_polySurface4218
+[2024.04.25-16.44.01:030][403]LogStaticMesh: Display: Building static mesh porta_piccola_2...
+[2024.04.25-16.44.01:089][403]LogStaticMesh: Built static mesh [0.06s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.44.01:108][403]LogEditorFactories: -- imported successfully
+[2024.04.25-16.44.01:108][403]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.44.01:177][403]LogStaticMesh: Display: Building static mesh porta_piccola_2...
+[2024.04.25-16.44.01:177][403]LogStaticMesh: Built static mesh [0.01s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.44.30:087][879]Cmd: TRANSACTION UNDO
+[2024.04.25-16.44.30:087][879]LogEditorTransaction: Undo Move Elements
+[2024.04.25-16.44.38:259][339]LogEditorFactories: Performing atomic reimport of [A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx]
+[2024.04.25-16.44.38:265][339]LogFbx: Loading FBX Scene from A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx
+[2024.04.25-16.44.38:270][339]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-16.44.38:324][339]LogFbx: Display: Triangulating static mesh polySurface42141
+[2024.04.25-16.44.38:348][339]LogStaticMesh: Display: Building static mesh porta_piccola_1...
+[2024.04.25-16.44.38:409][339]LogStaticMesh: Built static mesh [0.06s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.44.38:427][339]LogEditorFactories: -- imported successfully
+[2024.04.25-16.44.38:427][339]FBXImport: FBX File Loading: Found name clash, node 'polySurface4214' was renamed to 'polySurface42141' 
+[2024.04.25-16.44.38:427][339]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-16.44.54:358][757]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2
+[2024.04.25-16.44.54:358][757]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2
+[2024.04.25-16.44.54:358][757]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_225
+[2024.04.25-16.44.56:919][887]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2
+[2024.04.25-16.44.56:919][887]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2
+[2024.04.25-16.44.56:920][887]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_227
+[2024.04.25-16.45.05:274][519]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.45.05:274][519]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.45.05:274][519]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_228
+[2024.04.25-16.45.05:722][533]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.45.05:722][533]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-16.45.05:723][533]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_229
+[2024.04.25-16.45.10:287][938]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2024.04.25-16.45.10:330][938]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/MAP_AssetShowcase
+[2024.04.25-16.45.10:331][938]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase22D3E05B48A0CFBA379DF0B03EA9A8F2.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/MAP_AssetShowcase.umap'
+[2024.04.25-16.45.10:353][938]AssetCheck: New page: Asset Save: MAP_AssetShowcase
+[2024.04.25-16.45.10:353][938]LogContentValidation: Display: Validating World /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase
+[2024.04.25-16.45.51:749][519]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.45.51:922][519]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.45.52:279][519]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Engine/EditorMeshes/AssetViewer/Floor_Mesh) ...
+[2024.04.25-16.45.53:000][519]LogViewport: Scene viewport resized to 919x664, mode Windowed.
+[2024.04.25-16.46.14:600][840]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-16.46.14:600][840]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_2039D8F6C49FECD52104BCAB28F403F67.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-16.46.14:616][840]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-16.46.14:616][840]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.46.18:064][108]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-16.46.18:074][108]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 8:46:18 PM)
+[2024.04.25-16.46.18:161][108]LogOnline: OSS: Created online subsystem instance for: NULL
+[2024.04.25-16.46.18:162][108]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2024.04.25-16.46.18:163][108]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.46.18:213][108]LogPlayLevel: PIE: StaticDuplicateObject took: (0.050777s)
+[2024.04.25-16.46.18:213][108]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.050889s)
+[2024.04.25-16.46.18:214][108]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-16.46.18:250][108]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.46.18:251][108]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-16.46.18:252][108]LogPlayLevel: PIE: World Init took: (0.037087s)
+[2024.04.25-16.46.18:334][108]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.04.25-16.46.18:351][108]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-16.46.18:351][108]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-16.46.18:351][108]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-16.46.18:351][108]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-16.46.18:351][108]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-16.46.18:351][108]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-16.46.18:364][108]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-16.46.18:416][108]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-16.46.18:416][108]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-16.46.18:416][108]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-16.46.18:416][108]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-16.46.18:417][108]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2024.04.25-16.46.18:417][108]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2024.04.25-16.46.18:418][108]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2024.04.25-16.46.18:418][108]LogInit: FAudioDevice initialized.
+[2024.04.25-16.46.18:418][108]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2024.04.25-16.46.18:418][108]LogAudio: Display: Audio Device (ID: 2) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-16.46.18:453][108]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-16.46.20:128][108]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-16.46.20:237][108]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-18.46.20
+[2024.04.25-16.46.20:248][108]LogWorld: Bringing up level for play took: 0.122350
+[2024.04.25-16.46.20:255][108]LogOnline: OSS: Created online subsystem instance for: :Context_4
+[2024.04.25-16.46.20:830][108]PIE: Server logged in
+[2024.04.25-16.46.20:837][108]PIE: Play in editor total start time 2.829 seconds.
+[2024.04.25-16.46.21:714][142]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-16.46.25:896][601]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.46.25:896][601]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.46.25:896][601]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.46.25:897][601]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.46.25:939][601]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-16.46.25:941][601]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.46.25:945][601]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.46.25:991][601]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.04.25-16.46.25:993][601]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2024.04.25-16.46.26:023][601]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2024.04.25-16.46.26:066][602]LogPlayLevel: Display: Destroying online subsystem :Context_4
+[2024.04.25-16.46.27:777][800]LogViewport: Scene viewport resized to 1858x595, mode Windowed.
+[2024.04.25-16.46.27:846][803]LogViewport: Scene viewport resized to 1858x609, mode Windowed.
+[2024.04.25-16.46.27:908][806]LogViewport: Scene viewport resized to 1858x620, mode Windowed.
+[2024.04.25-16.46.29:992][ 49]LogViewport: Scene viewport resized to 1858x617, mode Windowed.
+[2024.04.25-16.46.30:091][ 56]LogViewport: Scene viewport resized to 1858x600, mode Windowed.
+[2024.04.25-16.46.30:447][ 94]LogViewport: Scene viewport resized to 1858x602, mode Windowed.
+[2024.04.25-16.46.30:704][120]LogViewport: Scene viewport resized to 1858x613, mode Windowed.
+[2024.04.25-16.46.30:757][122]LogViewport: Scene viewport resized to 1858x623, mode Windowed.
+[2024.04.25-16.46.30:979][145]LogViewport: Scene viewport resized to 1858x622, mode Windowed.
+[2024.04.25-16.46.31:060][150]LogViewport: Scene viewport resized to 1858x618, mode Windowed.
+[2024.04.25-16.47.17:012][270]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-16.47.17:012][270]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_2B31F45DF40B190E059FE9482B59932A5.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-16.47.17:028][270]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-16.47.17:028][270]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.47.22:299][849]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-16.47.22:299][849]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_27241376F434B09C9E2C5508FAE443CF0.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-16.47.22:314][849]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-16.47.22:314][849]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.47.23:143][937]LogSlate: Window 'porta_piccola_2' being destroyed
+[2024.04.25-16.47.23:154][937]LogSlate: Window 'porta_piccola_2' being destroyed
+[2024.04.25-16.47.23:269][937]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.47.23:269][937]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.47.24:017][ 13]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.47.24:064][ 13]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.47.24:380][ 13]LogViewport: Scene viewport resized to 919x664, mode Windowed.
+[2024.04.25-16.47.34:267][ 59]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.47.34:289][ 59]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.47.34:537][ 59]LogViewport: Scene viewport resized to 919x664, mode Windowed.
+[2024.04.25-16.47.49:024][487]LogSlate: Window 'porta_piccola_2' being destroyed
+[2024.04.25-16.47.49:039][487]LogSlate: Window 'porta_piccola_2' being destroyed
+[2024.04.25-16.47.49:063][487]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.47.49:063][487]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.47.49:099][487]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.47.49:099][487]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.47.50:390][632]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.47.50:435][632]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.47.50:669][632]LogViewport: Scene viewport resized to 919x664, mode Windowed.
+[2024.04.25-16.47.52:203][779]LogSlate: Window 'porta_piccola_2' being destroyed
+[2024.04.25-16.47.52:214][779]LogSlate: Window 'porta_piccola_2' being destroyed
+[2024.04.25-16.47.52:238][779]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.47.52:238][779]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.47.53:749][946]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-16.47.53:749][946]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 8:47:53 PM)
+[2024.04.25-16.47.53:749][946]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.47.53:765][946]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015249s)
+[2024.04.25-16.47.53:765][946]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015334s)
+[2024.04.25-16.47.53:765][946]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-16.47.53:765][946]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.47.53:765][946]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-16.47.53:766][946]LogPlayLevel: PIE: World Init took: (0.000667s)
+[2024.04.25-16.47.53:774][946]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-16.47.53:775][946]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-16.47.53:775][946]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-16.47.53:775][946]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-16.47.53:776][946]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-16.47.53:776][946]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-16.47.53:776][946]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-16.47.53:777][946]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-16.47.53:831][946]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-16.47.53:832][946]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-16.47.53:832][946]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-16.47.53:832][946]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-16.47.53:833][946]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2024.04.25-16.47.53:833][946]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2024.04.25-16.47.53:834][946]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2024.04.25-16.47.53:834][946]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2024.04.25-16.47.53:834][946]LogInit: FAudioDevice initialized.
+[2024.04.25-16.47.53:834][946]LogAudio: Display: Audio Device (ID: 3) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-16.47.53:834][946]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-16.47.53:847][946]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-16.47.53:855][946]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-18.47.53
+[2024.04.25-16.47.53:855][946]LogWorld: Bringing up level for play took: 0.008709
+[2024.04.25-16.47.53:857][946]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2024.04.25-16.47.53:859][946]PIE: Server logged in
+[2024.04.25-16.47.53:860][946]PIE: Play in editor total start time 0.11 seconds.
+[2024.04.25-16.47.54:315][976]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-16.47.57:614][367]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.47.57:614][367]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.47.57:614][367]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.47.57:615][367]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.47.57:623][367]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-16.47.57:625][367]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.47.57:630][367]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.25-16.47.57:630][367]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.25-16.47.57:632][367]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2024.04.25-16.47.57:637][367]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.47.57:640][367]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2024.04.25-16.47.57:693][369]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2024.04.25-16.48.05:511][157]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.48.05:561][157]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.48.05:991][157]LogViewport: Scene viewport resized to 919x664, mode Windowed.
+[2024.04.25-16.49.11:122][645]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-16.49.11:122][645]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_219F8E82944BB5C974483C296331E680E.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-16.49.11:137][645]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-16.49.11:137][645]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.49.15:152][ 41]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-16.49.15:152][ 41]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 8:49:15 PM)
+[2024.04.25-16.49.15:152][ 41]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.49.15:168][ 41]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015603s)
+[2024.04.25-16.49.15:168][ 41]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015709s)
+[2024.04.25-16.49.15:168][ 41]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-16.49.15:168][ 41]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.49.15:168][ 41]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-16.49.15:168][ 41]LogPlayLevel: PIE: World Init took: (0.000829s)
+[2024.04.25-16.49.15:174][ 41]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2024.04.25-16.49.15:175][ 41]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-16.49.15:176][ 41]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-16.49.15:176][ 41]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-16.49.15:176][ 41]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-16.49.15:176][ 41]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-16.49.15:176][ 41]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-16.49.15:178][ 41]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-16.49.15:229][ 41]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-16.49.15:230][ 41]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-16.49.15:230][ 41]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-16.49.15:230][ 41]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-16.49.15:231][ 41]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2024.04.25-16.49.15:231][ 41]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2024.04.25-16.49.15:233][ 41]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2024.04.25-16.49.15:233][ 41]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2024.04.25-16.49.15:233][ 41]LogInit: FAudioDevice initialized.
+[2024.04.25-16.49.15:233][ 41]LogAudio: Display: Audio Device (ID: 4) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-16.49.15:233][ 41]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-16.49.15:240][ 41]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-16.49.15:248][ 41]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-18.49.15
+[2024.04.25-16.49.15:249][ 41]LogWorld: Bringing up level for play took: 0.008452
+[2024.04.25-16.49.15:250][ 41]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2024.04.25-16.49.15:251][ 41]PIE: Server logged in
+[2024.04.25-16.49.15:252][ 41]PIE: Play in editor total start time 0.1 seconds.
+[2024.04.25-16.49.15:690][ 77]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-16.49.22:203][854]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.49.22:203][854]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.49.22:203][854]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.49.22:204][854]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.49.22:212][854]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-16.49.22:214][854]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.49.22:220][854]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.25-16.49.22:220][854]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.25-16.49.22:222][854]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2024.04.25-16.49.22:226][854]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.49.22:230][854]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.04.25-16.49.22:296][856]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2024.04.25-16.49.33:622][ 56]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.49.33:622][ 56]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.49.33:622][ 56]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_233
+[2024.04.25-16.49.33:821][ 61]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.49.33:821][ 61]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.49.33:822][ 61]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_234
+[2024.04.25-16.49.36:197][223]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-16.49.36:197][223]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 8:49:36 PM)
+[2024.04.25-16.49.36:197][223]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.49.36:212][223]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015491s)
+[2024.04.25-16.49.36:212][223]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015589s)
+[2024.04.25-16.49.36:212][223]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-16.49.36:212][223]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.49.36:213][223]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-16.49.36:213][223]LogPlayLevel: PIE: World Init took: (0.000675s)
+[2024.04.25-16.49.36:220][223]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2024.04.25-16.49.36:221][223]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-16.49.36:221][223]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-16.49.36:221][223]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-16.49.36:221][223]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-16.49.36:221][223]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-16.49.36:221][223]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-16.49.36:223][223]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-16.49.36:274][223]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-16.49.36:274][223]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-16.49.36:274][223]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-16.49.36:274][223]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-16.49.36:275][223]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2024.04.25-16.49.36:275][223]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2024.04.25-16.49.36:277][223]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2024.04.25-16.49.36:277][223]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2024.04.25-16.49.36:277][223]LogInit: FAudioDevice initialized.
+[2024.04.25-16.49.36:277][223]LogAudio: Display: Audio Device (ID: 5) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-16.49.36:277][223]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-16.49.36:285][223]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-16.49.36:293][223]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-18.49.36
+[2024.04.25-16.49.36:293][223]LogWorld: Bringing up level for play took: 0.008260
+[2024.04.25-16.49.36:295][223]LogOnline: OSS: Created online subsystem instance for: :Context_11
+[2024.04.25-16.49.36:297][223]PIE: Server logged in
+[2024.04.25-16.49.36:297][223]PIE: Play in editor total start time 0.101 seconds.
+[2024.04.25-16.49.36:477][230]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-16.49.40:463][701]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.49.40:463][701]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.49.40:463][701]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.49.40:464][701]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.49.40:477][701]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-16.49.40:479][701]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.49.40:484][701]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.25-16.49.40:484][701]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.04.25-16.49.40:486][701]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2024.04.25-16.49.40:490][701]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.49.40:494][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2024.04.25-16.49.40:545][703]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2024.04.25-16.49.41:350][793]Cmd: DELETE
+[2024.04.25-16.49.41:350][793]Cmd: ACTOR DELETE
+[2024.04.25-16.49.41:354][793]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.49.41:359][793]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.04.25-16.49.41:360][793]LogEditorActor: Deleted 1 Actors (0.011 secs)
+[2024.04.25-16.50.00:576][925]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-16.50.00:577][925]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_22D7C70B74769BEB7C9B8E0BA98D5CF35.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-16.50.00:595][925]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-16.50.00:595][925]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.50.03:877][252]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.50.03:877][252]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.50.03:877][252]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_235
+[2024.04.25-16.50.04:009][252]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.50.04:009][252]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-16.50.04:010][252]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_236
+[2024.04.25-16.50.06:695][442]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-16.50.06:695][442]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 8:50:06 PM)
+[2024.04.25-16.50.06:695][442]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.50.06:711][442]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015159s)
+[2024.04.25-16.50.06:711][442]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015263s)
+[2024.04.25-16.50.06:711][442]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-16.50.06:711][442]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.50.06:711][442]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-16.50.06:711][442]LogPlayLevel: PIE: World Init took: (0.000690s)
+[2024.04.25-16.50.06:717][442]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.04.25-16.50.06:718][442]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-16.50.06:719][442]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-16.50.06:719][442]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-16.50.06:719][442]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-16.50.06:719][442]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-16.50.06:719][442]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-16.50.06:721][442]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-16.50.06:773][442]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-16.50.06:773][442]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-16.50.06:773][442]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-16.50.06:773][442]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-16.50.06:774][442]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2024.04.25-16.50.06:774][442]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2024.04.25-16.50.06:775][442]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2024.04.25-16.50.06:775][442]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2024.04.25-16.50.06:775][442]LogInit: FAudioDevice initialized.
+[2024.04.25-16.50.06:775][442]LogAudio: Display: Audio Device (ID: 6) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-16.50.06:776][442]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-16.50.06:787][442]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-16.50.06:795][442]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-18.50.06
+[2024.04.25-16.50.06:795][442]LogWorld: Bringing up level for play took: 0.008284
+[2024.04.25-16.50.06:796][442]LogOnline: OSS: Created online subsystem instance for: :Context_12
+[2024.04.25-16.50.06:798][442]PIE: Server logged in
+[2024.04.25-16.50.06:799][442]PIE: Play in editor total start time 0.103 seconds.
+[2024.04.25-16.50.07:056][451]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-16.50.15:353][439]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.50.15:353][439]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.50.15:353][439]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.50.15:354][439]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.50.15:366][439]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-16.50.15:368][439]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.50.15:373][439]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.50.15:374][439]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.25-16.50.15:376][439]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2024.04.25-16.50.15:384][439]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2024.04.25-16.50.15:436][441]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2024.04.25-16.50.17:564][683]Cmd: DELETE
+[2024.04.25-16.50.17:564][683]Cmd: ACTOR DELETE
+[2024.04.25-16.50.17:569][683]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-16.50.17:574][683]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-16.50.17:575][683]LogEditorActor: Deleted 1 Actors (0.011 secs)
+[2024.04.25-16.50.18:108][723]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.50.18:108][723]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.50.18:108][723]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_237
+[2024.04.25-16.50.18:243][726]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.50.18:243][726]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.50.18:244][726]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1 as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_241
+[2024.04.25-16.50.20:373][908]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.50.20:391][908]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.50.20:637][908]LogViewport: Scene viewport resized to 919x664, mode Windowed.
+[2024.04.25-16.51.09:818][598]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1
+[2024.04.25-16.51.09:818][598]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_1264E1B6B44D620B5582F4CA04297AE7E.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.uasset'
+[2024.04.25-16.51.09:833][598]AssetCheck: New page: Asset Save: porta_piccola_1
+[2024.04.25-16.51.09:833][598]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.51.14:021][992]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1
+[2024.04.25-16.51.14:021][992]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_15CDA3B8748F0BE20CB0E09945A6FFB92.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.uasset'
+[2024.04.25-16.51.14:037][992]AssetCheck: New page: Asset Save: porta_piccola_1
+[2024.04.25-16.51.14:037][992]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-16.51.20:501][546]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-16.51.20:501][546]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 8:51:20 PM)
+[2024.04.25-16.51.20:501][546]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.51.20:516][546]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015263s)
+[2024.04.25-16.51.20:516][546]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015336s)
+[2024.04.25-16.51.20:516][546]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-16.51.20:516][546]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-16.51.20:517][546]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-16.51.20:517][546]LogPlayLevel: PIE: World Init took: (0.000638s)
+[2024.04.25-16.51.20:522][546]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2024.04.25-16.51.20:523][546]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-16.51.20:523][546]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-16.51.20:523][546]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-16.51.20:523][546]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-16.51.20:523][546]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-16.51.20:523][546]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-16.51.20:525][546]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-16.51.20:578][546]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-16.51.20:578][546]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-16.51.20:578][546]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-16.51.20:578][546]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-16.51.20:579][546]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2024.04.25-16.51.20:579][546]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2024.04.25-16.51.20:581][546]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2024.04.25-16.51.20:581][546]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2024.04.25-16.51.20:581][546]LogInit: FAudioDevice initialized.
+[2024.04.25-16.51.20:581][546]LogAudio: Display: Audio Device (ID: 7) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-16.51.20:581][546]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-16.51.20:589][546]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-16.51.20:598][546]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-18.51.20
+[2024.04.25-16.51.20:598][546]LogWorld: Bringing up level for play took: 0.009157
+[2024.04.25-16.51.20:600][546]LogOnline: OSS: Created online subsystem instance for: :Context_14
+[2024.04.25-16.51.20:602][546]PIE: Server logged in
+[2024.04.25-16.51.20:602][546]PIE: Play in editor total start time 0.101 seconds.
+[2024.04.25-16.51.20:766][551]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-16.51.24:312][972]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.51.24:312][972]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-16.51.24:312][972]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-16.51.24:313][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.51.24:323][972]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-16.51.24:325][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-16.51.24:331][972]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.25-16.51.24:331][972]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.04.25-16.51.24:332][972]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2024.04.25-16.51.24:337][972]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-16.51.24:340][972]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2024.04.25-16.51.24:391][974]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2024.04.25-16.52.27:152][ 74]LogSlate: Took 0.008291 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2024.04.25-16.55.45:781][665]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2024.04.25-16.55.45:825][665]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/MAP_AssetShowcase_Auto3
+[2024.04.25-16.55.45:826][665]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase_Auto32F4287DA48F9EDC6B93C9087EE2F37C8.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/MAP_AssetShowcase_Auto3.umap'
+[2024.04.25-16.55.45:828][665]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/3DAssetLevel/3DArt/MAP_AssetShowcase' took 0.054
+[2024.04.25-16.55.45:829][665]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.054
+[2024.04.25-16.55.45:829][665]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1] ([1] browsable assets)...
+[2024.04.25-16.55.45:829][665]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1]
+[2024.04.25-16.55.45:832][665]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1_Auto3
+[2024.04.25-16.55.45:832][665]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_1_Auto33574DCD1476F5AB8EE6DB896BF1DADE9.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1_Auto3.uasset'
+[2024.04.25-16.55.45:833][665]LogFileHelpers: Auto-saving content packages took 0.004
+[2024.04.25-17.04.16:429][297]LogViewport: Scene viewport resized to 1405x902, mode Windowed.
+[2024.04.25-17.04.17:932][436]LogEditorFactories: Performing atomic reimport of [A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx]
+[2024.04.25-17.04.17:938][436]LogFbx: Loading FBX Scene from A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx
+[2024.04.25-17.04.17:945][436]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-17.04.18:007][436]LogFbx: Display: Triangulating static mesh polySurface42141
+[2024.04.25-17.04.18:030][436]LogStaticMesh: Display: Building static mesh porta_piccola_1...
+[2024.04.25-17.04.18:093][436]LogStaticMesh: Built static mesh [0.06s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-17.04.18:112][436]LogEditorFactories: -- imported successfully
+[2024.04.25-17.04.18:113][436]FBXImport: FBX File Loading: Found name clash, node 'polySurface4214' was renamed to 'polySurface42141' 
+[2024.04.25-17.04.18:113][436]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-17.04.21:720][751]Cmd: TRANSACTION UNDO
+[2024.04.25-17.04.21:720][751]LogEditorTransaction: Undo Clicking on Elements
+[2024.04.25-17.05.02:844][657]LogEditorFactories: Performing atomic reimport of [A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx]
+[2024.04.25-17.05.02:851][657]LogFbx: Loading FBX Scene from A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx
+[2024.04.25-17.05.02:858][657]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-17.05.02:915][657]LogFbx: Display: Triangulating static mesh polySurface42141
+[2024.04.25-17.05.02:939][657]LogStaticMesh: Display: Building static mesh porta_piccola_1...
+[2024.04.25-17.05.02:997][657]LogStaticMesh: Built static mesh [0.06s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-17.05.03:014][657]LogEditorFactories: -- imported successfully
+[2024.04.25-17.05.03:015][657]FBXImport: FBX File Loading: Found name clash, node 'polySurface4214' was renamed to 'polySurface42141' 
+[2024.04.25-17.05.03:015][657]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-17.06.24:618][322]LogEditorFactories: Performing atomic reimport of [A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx]
+[2024.04.25-17.06.24:624][322]LogFbx: Loading FBX Scene from A:/zBRUSH  e vari FILE MAYA/Nuove robe/Big one MOAI/Moduli_ok/moduli_porte/Porte_piccole/porta piccola_1.fbx
+[2024.04.25-17.06.24:630][322]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-17.06.24:689][322]LogFbx: Display: Triangulating static mesh polySurface42141
+[2024.04.25-17.06.24:712][322]LogStaticMesh: Display: Building static mesh porta_piccola_1...
+[2024.04.25-17.06.24:776][322]LogStaticMesh: Built static mesh [0.06s] /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-17.06.24:796][322]LogEditorFactories: -- imported successfully
+[2024.04.25-17.06.24:797][322]FBXImport: FBX File Loading: Found name clash, node 'polySurface4214' was renamed to 'polySurface42141' 
+[2024.04.25-17.06.24:797][322]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-17.07.11:661][688]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2024.04.25-17.07.11:663][688]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/3DAssetLevel/3DArt/MAP_AssetShowcase' took 0.007
+[2024.04.25-17.07.11:663][688]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1] ([1] browsable assets)...
+[2024.04.25-17.07.11:673][688]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1]
+[2024.04.25-17.07.11:673][688]OBJ SavePackage: Finished generating thumbnails for package [/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1]
+[2024.04.25-17.07.11:677][688]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1_Auto4
+[2024.04.25-17.07.11:677][688]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_1_Auto4BD118E5E460A2371E7AA9C8F6107DBAF.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/Autosaves/Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1_Auto4.uasset'
+[2024.04.25-17.07.11:678][688]LogFileHelpers: Auto-saving content packages took 0.015
+[2024.04.25-17.08.40:220][414]LogViewport: Scene viewport resized to 1405x902, mode Windowed.
+[2024.04.25-17.08.54:914][789]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198.porta_grande_6m_polySurface198
+[2024.04.25-17.08.54:933][789]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-17.08.55:179][789]LogViewport: Scene viewport resized to 1405x902, mode Windowed.
+[2024.04.25-17.10.39:194][516]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198
+[2024.04.25-17.10.39:195][516]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_grande_6m_polySurface198AE590ABC47AA06767A12259DFD6EEECC.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198.uasset'
+[2024.04.25-17.10.39:210][516]AssetCheck: New page: Asset Save: porta_grande_6m_polySurface198
+[2024.04.25-17.10.39:210][516]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198.porta_grande_6m_polySurface198
+[2024.04.25-17.12.03:703][537]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-17.12.03:703][537]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_2851D4E0147FE7F14ACC326BBD3627366.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-17.12.03:719][537]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-17.12.03:719][537]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-17.12.08:285][873]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198
+[2024.04.25-17.12.08:285][873]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_grande_6m_polySurface19814E35FC44FD69376F1A294BF025EB7F0.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198.uasset'
+[2024.04.25-17.12.08:300][873]AssetCheck: New page: Asset Save: porta_grande_6m_polySurface198
+[2024.04.25-17.12.08:300][873]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_grande_6m_polySurface198.porta_grande_6m_polySurface198
+[2024.04.25-17.12.09:705][972]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.12.09:705][972]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.12.58:967][515]Cmd: MODE SCALEGRID=0
+[2024.04.25-17.13.01:656][771]LogEditorTransaction: Undo Scale Collision
+[2024.04.25-17.13.11:651][651]LogEditorTransaction: Undo Scale Collision
+[2024.04.25-17.13.52:769][233]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1
+[2024.04.25-17.13.52:770][233]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_122B47528466ACA495D5E1DA897BB04AA.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.uasset'
+[2024.04.25-17.13.52:785][233]AssetCheck: New page: Asset Save: porta_piccola_1
+[2024.04.25-17.13.52:785][233]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-17.14.00:151][841]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-17.14.00:151][841]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 9:14:00 PM)
+[2024.04.25-17.14.00:151][841]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-17.14.00:167][841]LogPlayLevel: PIE: StaticDuplicateObject took: (0.016210s)
+[2024.04.25-17.14.00:167][841]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.016323s)
+[2024.04.25-17.14.00:167][841]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-17.14.00:167][841]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-17.14.00:168][841]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-17.14.00:168][841]LogPlayLevel: PIE: World Init took: (0.001053s)
+[2024.04.25-17.14.00:175][841]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2024.04.25-17.14.00:176][841]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-17.14.00:176][841]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-17.14.00:176][841]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-17.14.00:177][841]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-17.14.00:177][841]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-17.14.00:177][841]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-17.14.00:178][841]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-17.14.00:239][841]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-17.14.00:240][841]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-17.14.00:240][841]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-17.14.00:240][841]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-17.14.00:241][841]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2024.04.25-17.14.00:241][841]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2024.04.25-17.14.00:242][841]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2024.04.25-17.14.00:242][841]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2024.04.25-17.14.00:242][841]LogInit: FAudioDevice initialized.
+[2024.04.25-17.14.00:242][841]LogAudio: Display: Audio Device (ID: 8) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-17.14.00:242][841]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-17.14.00:250][841]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-17.14.00:259][841]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-19.14.00
+[2024.04.25-17.14.00:260][841]LogWorld: Bringing up level for play took: 0.008611
+[2024.04.25-17.14.00:261][841]LogOnline: OSS: Created online subsystem instance for: :Context_16
+[2024.04.25-17.14.00:263][841]PIE: Server logged in
+[2024.04.25-17.14.00:264][841]PIE: Play in editor total start time 0.113 seconds.
+[2024.04.25-17.14.01:103][844]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-17.14.09:583][853]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-17.14.09:583][853]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-17.14.09:583][853]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.14.09:585][853]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.14.09:592][853]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-17.14.09:594][853]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.14.09:599][853]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.25-17.14.09:600][853]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.25-17.14.09:601][853]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2024.04.25-17.14.09:608][853]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-17.14.09:612][853]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2024.04.25-17.14.09:664][855]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2024.04.25-17.15.57:253][ 85]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2
+[2024.04.25-17.15.57:254][ 85]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_2CED3CA22491E4ACDF5A216BE124C1341.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.uasset'
+[2024.04.25-17.15.57:269][ 85]AssetCheck: New page: Asset Save: porta_piccola_2
+[2024.04.25-17.15.57:269][ 85]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_2.porta_piccola_2
+[2024.04.25-17.15.57:643][116]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2024.04.25-17.15.57:687][116]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/MAP_AssetShowcase
+[2024.04.25-17.15.57:688][116]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase3ADCDD11417BDCA74DC9CBBAA21187B0.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/MAP_AssetShowcase.umap'
+[2024.04.25-17.15.57:715][116]AssetCheck: New page: Asset Save: MAP_AssetShowcase
+[2024.04.25-17.15.57:715][116]LogContentValidation: Display: Validating World /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase
+[2024.04.25-17.16.03:693][701]LogSlate: Window 'porta_piccola_1' being destroyed
+[2024.04.25-17.16.03:706][701]LogSlate: Window 'porta_piccola_1' being destroyed
+[2024.04.25-17.16.03:729][701]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.16.03:729][701]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.16.03:772][701]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.16.03:772][701]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.16.07:773][ 42]Cmd: DELETE
+[2024.04.25-17.16.07:773][ 42]Cmd: ACTOR DELETE
+[2024.04.25-17.16.07:778][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-17.16.07:784][ 42]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-17.16.07:792][ 42]LogEditorActor: Deleted 1 Actors (0.018 secs)
+[2024.04.25-17.16.23:190][396]Cmd: DELETE
+[2024.04.25-17.16.23:190][396]Cmd: ACTOR DELETE
+[2024.04.25-17.16.23:194][396]LogEditorActor: Deleted Actor: StaticMeshActor
+[2024.04.25-17.16.23:199][396]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2024.04.25-17.16.23:201][396]LogEditorActor: Deleted 1 Actors (0.011 secs)
+[2024.04.25-17.16.27:185][781]Cmd: TRANSACTION UNDO
+[2024.04.25-17.16.27:185][781]LogEditorTransaction: Undo Move Elements
+[2024.04.25-17.16.31:164][133]Cmd: TRANSACTION UNDO
+[2024.04.25-17.16.31:164][133]LogEditorTransaction: Undo Move Elements
+[2024.04.25-17.16.35:832][537]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-17.16.35:832][537]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 9:16:35 PM)
+[2024.04.25-17.16.35:832][537]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-17.16.35:846][537]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014977s)
+[2024.04.25-17.16.35:846][537]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015051s)
+[2024.04.25-17.16.35:846][537]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-17.16.35:846][537]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-17.16.35:846][537]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-17.16.35:846][537]LogPlayLevel: PIE: World Init took: (0.000666s)
+[2024.04.25-17.16.35:852][537]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.04.25-17.16.35:854][537]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-17.16.35:855][537]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-17.16.35:855][537]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-17.16.35:855][537]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-17.16.35:855][537]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-17.16.35:855][537]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-17.16.35:857][537]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-17.16.35:911][537]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-17.16.35:911][537]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-17.16.35:911][537]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-17.16.35:911][537]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-17.16.35:912][537]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=9
+[2024.04.25-17.16.35:912][537]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=9
+[2024.04.25-17.16.35:913][537]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=9
+[2024.04.25-17.16.35:913][537]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=9
+[2024.04.25-17.16.35:913][537]LogInit: FAudioDevice initialized.
+[2024.04.25-17.16.35:913][537]LogAudio: Display: Audio Device (ID: 9) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-17.16.35:914][537]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-17.16.35:926][537]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-17.16.35:934][537]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-19.16.35
+[2024.04.25-17.16.35:934][537]LogWorld: Bringing up level for play took: 0.008428
+[2024.04.25-17.16.35:936][537]LogOnline: OSS: Created online subsystem instance for: :Context_17
+[2024.04.25-17.16.35:967][537]LogSpawn: Warning: SpawnActor failed because of collision at the spawn location [X=1923.320 Y=8053.590 Z=92.100] for [BP_FirstPersonCharacter_C]
+[2024.04.25-17.16.35:967][537]LogGameMode: Warning: SpawnDefaultPawnAtTransform: Couldn't spawn Pawn of type BP_FirstPersonCharacter_C at Rotation: Pitch 0.000000 Yaw 29.013396 Roll 0.000000
+Translation: 1923.319735 8053.589666 92.099972
+Scale3D: 1.000000 1.000000 1.000000
+
+[2024.04.25-17.16.35:967][537]PIE: Server logged in
+[2024.04.25-17.16.35:968][537]PIE: Play in editor total start time 0.136 seconds.
+[2024.04.25-17.16.36:463][573]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-17.16.37:222][659]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-17.16.37:222][659]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-17.16.37:222][659]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.16.37:223][659]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.16.37:232][659]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-17.16.37:234][659]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.16.37:240][659]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-17.16.37:240][659]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.04.25-17.16.37:241][659]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2024.04.25-17.16.37:249][659]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2024.04.25-17.16.37:308][660]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2024.04.25-17.16.41:518][977]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2024.04.25-17.16.44:801][246]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2024.04.25-17.16.44:801][246]PIE: New page: PIE session: MAP_AssetShowcase (Apr 25, 2024, 9:16:44 PM)
+[2024.04.25-17.16.44:801][246]LogPlayLevel: Creating play world package: /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-17.16.44:816][246]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015021s)
+[2024.04.25-17.16.44:816][246]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase to /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase (0.015101s)
+[2024.04.25-17.16.44:816][246]LogSubsystemCollection: Failed to initialize subsystem dependency (WorldPartitionSubsystem)
+[2024.04.25-17.16.44:816][246]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2024.04.25-17.16.44:817][246]LogAIModule: Creating AISystem for world MAP_AssetShowcase
+[2024.04.25-17.16.44:817][246]LogPlayLevel: PIE: World Init took: (0.000660s)
+[2024.04.25-17.16.44:822][246]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2024.04.25-17.16.44:823][246]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: 	Max Channels (voices):				  0
+[2024.04.25-17.16.44:823][246]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2024.04.25-17.16.44:823][246]LogAudio: Display: AudioDevice MaxSources: 32
+[2024.04.25-17.16.44:823][246]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2024.04.25-17.16.44:824][246]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2024.04.25-17.16.44:824][246]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2024.04.25-17.16.44:825][246]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2024.04.25-17.16.44:876][246]LogAudioMixer: Display: Using Audio Hardware Device Cuffie (2- Arctis 7 Game)
+[2024.04.25-17.16.44:876][246]LogAudioMixer: Display: Initializing Sound Submixes...
+[2024.04.25-17.16.44:877][246]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2024.04.25-17.16.44:877][246]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2024.04.25-17.16.44:877][246]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2024.04.25-17.16.44:877][246]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2024.04.25-17.16.44:880][246]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2024.04.25-17.16.44:880][246]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2024.04.25-17.16.44:880][246]LogInit: FAudioDevice initialized.
+[2024.04.25-17.16.44:880][246]LogAudio: Display: Audio Device (ID: 10) registered with world 'MAP_AssetShowcase'.
+[2024.04.25-17.16.44:880][246]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2024.04.25-17.16.44:888][246]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2024.04.25-17.16.44:896][246]LogWorld: Bringing World /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase.MAP_AssetShowcase up for play (max tick rate 0) at 2024.04.25-19.16.44
+[2024.04.25-17.16.44:897][246]LogWorld: Bringing up level for play took: 0.008303
+[2024.04.25-17.16.44:898][246]LogOnline: OSS: Created online subsystem instance for: :Context_18
+[2024.04.25-17.16.44:920][246]PIE: Server logged in
+[2024.04.25-17.16.44:920][246]PIE: Play in editor total start time 0.119 seconds.
+[2024.04.25-17.16.45:451][289]LogCommonInput: UCommonInputSubsystem::SetCurrentInputType(): Using Mouse
+[2024.04.25-17.16.52:683][142]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-17.16.52:683][142]LogWorld: BeginTearingDown for /Game/3DAssetLevel/3DArt/UEDPIE_0_MAP_AssetShowcase
+[2024.04.25-17.16.52:683][142]LogWorld: UWorld::CleanupWorld for MAP_AssetShowcase, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.16.52:684][142]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.16.52:692][142]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2024.04.25-17.16.52:694][142]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2024.04.25-17.16.52:700][142]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2024.04.25-17.16.52:700][142]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.25-17.16.52:701][142]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2024.04.25-17.16.52:706][142]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2024.04.25-17.16.52:709][142]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2024.04.25-17.16.52:763][144]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2024.04.25-17.16.57:313][555]LogUObjectHash: Compacting FUObjectHashTables data took   0.31ms
+[2024.04.25-17.16.57:360][555]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/MAP_AssetShowcase
+[2024.04.25-17.16.57:361][555]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcaseCA21019D4BDC2B255276F7AF734568B6.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/MAP_AssetShowcase.umap'
+[2024.04.25-17.16.57:383][555]AssetCheck: New page: Asset Save: MAP_AssetShowcase
+[2024.04.25-17.16.57:383][555]LogContentValidation: Display: Validating World /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase
+[2024.04.25-17.20.05:165][396]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\Angolo.fbx)
+[2024.04.25-17.20.05:172][396]LogFbx: Loading FBX Scene from A:\zBRUSH  e vari FILE MAYA\Nuove robe\Big one MOAI\Moduli_ok\Angolo.fbx
+[2024.04.25-17.20.05:177][396]LogFbx: FBX Scene Loaded Succesfully
+[2024.04.25-17.20.09:480][396]LogSlate: Window 'FBX Import Options' being destroyed
+[2024.04.25-17.20.09:503][396]LogFbx: Display: Triangulating static mesh M_angolo_ok
+[2024.04.25-17.20.09:530][396]LogStaticMesh: Display: Building static mesh Angolo...
+[2024.04.25-17.20.09:558][396]LogStaticMesh: Built static mesh [0.03s] /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo
+[2024.04.25-17.20.09:570][396]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2024.04.25-17.20.15:658][ 91]LogSlate: Window 'Message Log' being destroyed
+[2024.04.25-17.20.15:670][ 91]LogSlate: Window 'Message Log' being destroyed
+[2024.04.25-17.20.17:062][204]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo
+[2024.04.25-17.20.17:062][204]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo
+[2024.04.25-17.20.17:062][204]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_242
+[2024.04.25-17.20.17:614][210]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo
+[2024.04.25-17.20.17:614][210]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo
+[2024.04.25-17.20.17:614][210]LogActorFactory: Actor Factory spawned StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo as actor: StaticMeshActor /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase:PersistentLevel.StaticMeshActor_243
+[2024.04.25-17.20.22:450][580]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2024.04.25-17.20.22:496][580]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/MAP_AssetShowcase
+[2024.04.25-17.20.22:496][580]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/MAP_AssetShowcase41A8322A490417428C5140BF32E5CE69.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/MAP_AssetShowcase.umap'
+[2024.04.25-17.20.22:519][580]AssetCheck: New page: Asset Save: MAP_AssetShowcase
+[2024.04.25-17.20.22:519][580]LogContentValidation: Display: Validating World /Game/3DAssetLevel/3DArt/MAP_AssetShowcase.MAP_AssetShowcase
+[2024.04.25-17.20.26:005][991]LogUObjectHash: Compacting FUObjectHashTables data took   0.21ms
+[2024.04.25-17.20.27:271][991]LogSlate: Window 'Save Content' being destroyed
+[2024.04.25-17.20.27:414][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo
+[2024.04.25-17.20.27:415][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/AngoloEC33FD674F618C426C635DAC1509DA88.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.uasset'
+[2024.04.25-17.20.27:434][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna
+[2024.04.25-17.20.27:435][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/colonna3A0E9D9B4B3A5BB8D3E94898E838B397.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna.uasset'
+[2024.04.25-17.20.27:438][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto
+[2024.04.25-17.20.27:438][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/pezzettino_alto1B3B6CC4466089A3EF65C4AAB746FD3F.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto.uasset'
+[2024.04.25-17.20.27:441][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1
+[2024.04.25-17.20.27:441][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta1470EA8E54B083414E79F67804AE78316.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.uasset'
+[2024.04.25-17.20.27:444][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2
+[2024.04.25-17.20.27:444][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta2E093DF444CBB2F9A228975B316338238.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.uasset'
+[2024.04.25-17.20.27:447][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3
+[2024.04.25-17.20.27:447][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta38BAD731E497E744D4B6271BCF45D50F7.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.uasset'
+[2024.04.25-17.20.27:451][991]LogSavePackage: Moving output files for package: /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1
+[2024.04.25-17.20.27:452][991]LogSavePackage: Moving '../../../../../Fork/Project-Librarian/PL6_1_1/Saved/porta_piccola_1F143F1C047A70813C59144952FCDEBC8.tmp' to '../../../../../Fork/Project-Librarian/PL6_1_1/Content/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.uasset'
+[2024.04.25-17.20.27:473][991]LogStall: Shutdown...
+[2024.04.25-17.20.27:480][991]LogStall: Shutdown complete.
+[2024.04.25-17.20.27:560][991]LogSlate: Window 'PL6_1 - Unreal Editor' being destroyed
+[2024.04.25-17.20.27:768][991]AssetCheck: New page: Asset Save: multiple assets
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta2.porta2
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/colonna.colonna
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta1.porta1
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/pezzettino_alto.pezzettino_alto
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta_piccola_1.porta_piccola_1
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Moduli_Porte/porta3.porta3
+[2024.04.25-17.20.27:768][991]LogContentValidation: Display: Validating StaticMesh /Game/3DAssetLevel/3DArt/StaticMeshes/Modoli_Mura/Angolo.Angolo
+[2024.04.25-17.20.27:769][992]Cmd: QUIT_EDITOR
+[2024.04.25-17.20.27:769][992]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2024.04.25-17.20.27:848][992]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2024.04.25-17.20.27:849][992]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2024.04.25-17.20.27:849][992]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2024.04.25-17.20.28:775][992]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2024.04.25-17.20.28:776][992]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2024.04.25-17.20.28:776][992]LogAudio: Display: Audio Device unregistered from world 'MAP_AssetShowcase'.
+[2024.04.25-17.20.28:776][992]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2024.04.25-17.20.28:778][992]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2024.04.25-17.20.28:796][992]LogAudio: Display: Audio Device Manager Shutdown
+[2024.04.25-17.20.28:834][992]LogExit: Preparing to exit.
+[2024.04.25-17.20.29:021][992]LogUObjectHash: Compacting FUObjectHashTables data took   0.41ms
+[2024.04.25-17.20.29:700][992]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogActorComponent: UnregisterComponent: (None.None) Not registered. Aborting.
+[2024.04.25-17.20.29:913][992]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
+[2024.04.25-17.20.30:062][992]LogStylusInput: Shutting down StylusInput subsystem.
+[2024.04.25-17.20.30:079][992]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2024.04.25-17.20.30:110][992]LogExit: Editor shut down
+[2024.04.25-17.20.30:112][992]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
+[2024.04.25-17.20.30:170][992]LogExit: Transaction tracking system shut down
+[2024.04.25-17.20.33:200][992]LogExit: Object subsystem successfully closed.
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: ================================================
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: Total job queries 0, among them cache hits 0 (0.00%)
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: Tracking 0 distinct input hashes that result in 0 distinct outputs (0.00%)
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: RAM used: 0.00 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.00%
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: Shaders Compiled: 0
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: Jobs assigned 0, completed 0 (0.00%)
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 0.00 s
+[2024.04.25-17.20.33:208][992]LogShaderCompilers: Display: ================================================
+[2024.04.25-17.20.33:306][992]LogShaderCompilers: Display: Shaders left to compile 0
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (890)
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module Voice (888)
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module HierarchicalLODUtilities (886)
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (884)
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module SubobjectEditor (882)
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module SceneOutliner (880)
+[2024.04.25-17.20.36:293][992]LogModuleManager: Shutting down and abandoning module AddContentDialog (878)
+[2024.04.25-17.20.36:328][992]LogModuleManager: Shutting down and abandoning module WidgetCarousel (877)
+[2024.04.25-17.20.36:328][992]LogModuleManager: Shutting down and abandoning module StatusBar (874)
+[2024.04.25-17.20.36:328][992]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (872)
+[2024.04.25-17.20.36:355][992]LogModuleManager: Shutting down and abandoning module StatsViewer (870)
+[2024.04.25-17.20.36:372][992]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (868)
+[2024.04.25-17.20.36:386][992]LogModuleManager: Shutting down and abandoning module AutomationWorker (866)
+[2024.04.25-17.20.36:386][992]LogModuleManager: Shutting down and abandoning module ResonanceAudioEditor (864)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module GooglePADEditor (862)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (860)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module AndroidFileServerEditor (858)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (856)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (854)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (852)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (850)
+[2024.04.25-17.20.36:387][992]LogModuleManager: Shutting down and abandoning module WebMMedia (848)
+[2024.04.25-17.20.36:391][992]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (846)
+[2024.04.25-17.20.36:407][992]LogModuleManager: Shutting down and abandoning module TemplateSequenceEditor (844)
+[2024.04.25-17.20.36:429][992]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (842)
+[2024.04.25-17.20.36:458][992]LogModuleManager: Shutting down and abandoning module SequenceRecorder (841)
+[2024.04.25-17.20.36:459][992]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (838)
+[2024.04.25-17.20.36:459][992]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (836)
+[2024.04.25-17.20.36:459][992]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (834)
+[2024.04.25-17.20.36:475][992]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (832)
+[2024.04.25-17.20.36:489][992]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (830)
+[2024.04.25-17.20.36:523][992]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (828)
+[2024.04.25-17.20.36:544][992]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (826)
+[2024.04.25-17.20.36:544][992]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (824)
+[2024.04.25-17.20.36:544][992]LogModuleManager: Shutting down and abandoning module TextureAlignMode (822)
+[2024.04.25-17.20.36:544][992]LogModuleManager: Shutting down and abandoning module BspMode (820)
+[2024.04.25-17.20.36:549][992]LogModuleManager: Shutting down and abandoning module GeometryMode (818)
