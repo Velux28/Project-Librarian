@@ -28,12 +28,15 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Door")
 	float doorSpeed;
 
+	//the relative position for the closed door
 	UPROPERTY(EditAnywhere, Category = "Door")
 	FVector doorStartPosition;
 
+	//the relative position for the opened door
 	UPROPERTY(EditAnywhere, Category = "Door")
 	FVector doorEndPosition;
 
+	//this variable must be setted on begin play
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
 	UStaticMeshComponent* door;
 
