@@ -20,10 +20,14 @@ protected:
 	virtual void BeginPlay() override;
 
 	UFUNCTION(BlueprintCallable)
-	void OpenDoor();
+	virtual void OpenDoor();	
+	UFUNCTION(BlueprintCallable)
+	virtual void OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorEndPosition);
 
 	UFUNCTION(BlueprintCallable)
-	void CloseDoor();
+	virtual void CloseDoor();
+	UFUNCTION(BlueprintCallable)
+	virtual void CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorStartPosition);
 
 	UPROPERTY(EditAnywhere, Category = "Door")
 	float doorSpeed;
