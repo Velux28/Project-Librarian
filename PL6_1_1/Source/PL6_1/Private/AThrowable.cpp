@@ -16,11 +16,6 @@ AAThrowable::AAThrowable()
 void AAThrowable::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	for(auto & Elem : SoundsMap)
-	{
-		Elem.Value = CreateDefaultSubobject<USoundBase>(*Elem.Key);
-	}
 }
 
 // Called every frame
@@ -43,14 +38,20 @@ USoundBase* AAThrowable::AddSound(FString _SoundType, USoundBase* _NewSound)
 	return _NewSound;
 }
 
+
 void AAThrowable::PlaySoundByName(FString _SoundType)
+{
+	PlaySoundByNameAtLocation(_SoundType, GetActorLocation());
+}
+
+void AAThrowable::PlaySoundByNameAtLocation(FString _SoundType, FVector _SoundLocation)
 {
 	if (!SoundsMap.Find(_SoundType))
 	{
-		UGameplayStatics::PlaySoundAtLocation(GetWorld(), DefaultSound, GetActorLocation());
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), DefaultSound, _SoundLocation);
+		return;
 	}
-
-	UGameplayStatics::PlaySoundAtLocation(GetWorld(), SoundsMap[_SoundType], GetActorLocation());
+	UGameplayStatics::PlaySoundAtLocation(GetWorld(), SoundsMap[_SoundType], _SoundLocation);
 }
 
 void AAThrowable::PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation)

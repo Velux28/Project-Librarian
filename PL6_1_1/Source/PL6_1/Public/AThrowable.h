@@ -38,6 +38,9 @@ public:
 		void PlaySoundByName(FString _SoundType);
 
 	UFUNCTION(BlueprintCallable)
+		void PlaySoundByNameAtLocation(FString _SoundType, FVector SoundLocation);
+
+	UFUNCTION(BlueprintCallable)
 		void PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation);
 
 };
