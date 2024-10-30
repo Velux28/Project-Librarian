@@ -38,6 +38,10 @@ USoundBase* AAThrowable::AddSound(FString _SoundType, USoundBase* _NewSound)
 	return _NewSound;
 }
 
+void AAThrowable::PlayDefaultSound()
+{
+	PlaySoundWithParams(DefaultSound, GetActorLocation());
+}
 
 void AAThrowable::PlaySoundByName(FString _SoundType)
 {
@@ -48,10 +52,10 @@ void AAThrowable::PlaySoundByNameAtLocation(FString _SoundType, FVector _SoundLo
 {
 	if (!SoundsMap.Find(_SoundType))
 	{
-		UGameplayStatics::PlaySoundAtLocation(GetWorld(), DefaultSound, _SoundLocation);
+		PlaySoundWithParams(DefaultSound, _SoundLocation);
 		return;
 	}
-	UGameplayStatics::PlaySoundAtLocation(GetWorld(), SoundsMap[_SoundType], _SoundLocation);
+	PlaySoundWithParams(SoundsMap[_SoundType], _SoundLocation);
 }
 
 void AAThrowable::PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation)

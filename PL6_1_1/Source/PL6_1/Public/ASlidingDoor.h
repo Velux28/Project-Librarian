@@ -19,30 +19,20 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UFUNCTION(BlueprintCallable)
-	virtual void OpenDoor();	
-	UFUNCTION(BlueprintCallable)
-	virtual void OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorEndPosition);
-
-	UFUNCTION(BlueprintCallable)
-	virtual void CloseDoor();
-	UFUNCTION(BlueprintCallable)
-	virtual void CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorStartPosition);
-
 	UPROPERTY(EditAnywhere, Category = "Door")
 	float doorSpeed;
 
 	//the relative position for the closed door
 	UPROPERTY(EditAnywhere, Category = "Door")
-	FVector doorStartPosition;
+	FVector DoorClosePosition;
 
 	//the relative position for the opened door
 	UPROPERTY(EditAnywhere, Category = "Door")
-	FVector doorEndPosition;
+	FVector DoorOpenPosition;
 
 	//this variable must be setted on begin play
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
-	UStaticMeshComponent* door;
+	UStaticMeshComponent* Door;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
 	bool bIsDoorOpening;
@@ -54,4 +44,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	virtual void OpenDoor();
+	UFUNCTION(BlueprintCallable)
+	virtual void OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorOpenPosition);
+
+	UFUNCTION(BlueprintCallable)
+	virtual void CloseDoor();
+	UFUNCTION(BlueprintCallable)
+	virtual void CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorClosePosition);
 };

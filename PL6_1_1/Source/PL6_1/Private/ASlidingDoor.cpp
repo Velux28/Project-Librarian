@@ -28,29 +28,10 @@ void AASlidingDoor::Tick(float DeltaTime)
 // Function for opening the door
 void AASlidingDoor::OpenDoor()
 {
-	//if the door is null skip this part
-	if(!door)
-	{
-		bIsDoorOpening = false;
-		return;
-	}
-	//Get the direction where the door is opening
-	FVector direction = doorEndPosition - door->GetRelativeLocation();
-	if (direction.X < 3 && direction.X > -3
-		&& direction.Y < 3 && direction.Y > -3
-		&& direction.Z < 3 && direction.Z > -3)
-	{
-		// is door opening is true to start the delay before start closing the door
-		bIsDoorOpening = true;
-		bIsDoorClosing = true;
-		return;
-	}
-	//update the door position
-	door->SetRelativeLocation(FMath::Lerp(door->GetRelativeLocation(), doorEndPosition, FVector::One() * doorSpeed * GetWorld()->GetDeltaSeconds()));
-	//bIsDoorOpening = true;
+	OpenDoorWithParams(Door, DoorOpenPosition);
 }
 
-void AASlidingDoor::OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorEndPosition)
+void AASlidingDoor::OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorOpenPosition)
 {
 	//if the door is null skip this part
 	if (!_Door)
@@ -59,7 +40,7 @@ void AASlidingDoor::OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _Doo
 		return;
 	}
 	//Get the direction where the door is opening
-	FVector direction = _DoorEndPosition - _Door->GetRelativeLocation();
+	FVector direction = _DoorOpenPosition - _Door->GetRelativeLocation();
 	if (direction.X < 3 && direction.X > -3
 		&& direction.Y < 3 && direction.Y > -3
 		&& direction.Z < 3 && direction.Z > -3)
@@ -70,36 +51,17 @@ void AASlidingDoor::OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _Doo
 		return;
 	}
 	//update the door position
-	_Door->SetRelativeLocation(FMath::Lerp(_Door->GetRelativeLocation(), _DoorEndPosition, FVector::One() * doorSpeed * GetWorld()->GetDeltaSeconds()));
+	_Door->SetRelativeLocation(FMath::Lerp(_Door->GetRelativeLocation(), _DoorOpenPosition, FVector::One() * doorSpeed * GetWorld()->GetDeltaSeconds()));
 	//bIsDoorOpening = true;
 }
 
 // Function for opening the door
 void AASlidingDoor::CloseDoor()
 {
-	//if the door is null skip this part
-	if (!door)
-	{
-		bIsDoorClosing = false;
-		return;
-	}
-	//Get the direction where the door is opening
-	FVector direction = doorStartPosition - door->GetRelativeLocation();
-	if (direction.X < .05f && direction.X > -.05f
-		&& direction.Y < .05f && direction.Y > -.05f
-		&& direction.Z < .05f && direction.Z > -.05f)
-	{
-		//reset bpth variable
-		bIsDoorClosing = false;
-		bIsDoorOpening = false;
-		return;
-	}
-	//update the door position
-	door->SetRelativeLocation(FMath::Lerp(door->GetRelativeLocation(), doorStartPosition, FVector::One() * doorSpeed * GetWorld()->GetDeltaSeconds()));
-	//bIsDoorClosing = true;
+	CloseDoorWithParams(Door, DoorClosePosition);
 }
 
-void AASlidingDoor::CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorStartPosition)
+void AASlidingDoor::CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorClosePosition)
 {
 	//if the door is null skip this part
 	if (!_Door)
@@ -108,7 +70,7 @@ void AASlidingDoor::CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _Do
 		return;
 	}
 	//Get the direction where the door is opening
-	FVector direction = _DoorStartPosition - _Door->GetRelativeLocation();
+	FVector direction = _DoorClosePosition - _Door->GetRelativeLocation();
 	if (direction.X < .05f && direction.X > -.05f
 		&& direction.Y < .05f && direction.Y > -.05f
 		&& direction.Z < .05f && direction.Z > -.05f)
@@ -119,6 +81,6 @@ void AASlidingDoor::CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _Do
 		return;
 	}
 	//update the door position
-	_Door->SetRelativeLocation(FMath::Lerp(_Door->GetRelativeLocation(), _DoorStartPosition, FVector::One() * doorSpeed * GetWorld()->GetDeltaSeconds()));
+	_Door->SetRelativeLocation(FMath::Lerp(_Door->GetRelativeLocation(), _DoorClosePosition, FVector::One() * doorSpeed * GetWorld()->GetDeltaSeconds()));
 	//bIsDoorClosing = true;
 }

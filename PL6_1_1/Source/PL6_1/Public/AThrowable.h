@@ -25,7 +25,7 @@ protected:
 	TMap<FString, USoundBase*> SoundsMap;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
-		USoundBase* DefaultSound;
+	USoundBase* DefaultSound;
 
 public:	
 	// Called every frame
@@ -35,12 +35,15 @@ public:
 	USoundBase* AddSound(FString _SoundType, USoundBase* _NewSound);
 
 	UFUNCTION(BlueprintCallable)
-		void PlaySoundByName(FString _SoundType);
+	void PlayDefaultSound();
 
 	UFUNCTION(BlueprintCallable)
-		void PlaySoundByNameAtLocation(FString _SoundType, FVector SoundLocation);
+	void PlaySoundByName(FString _SoundType);
 
 	UFUNCTION(BlueprintCallable)
-		void PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation);
+	void PlaySoundByNameAtLocation(FString _SoundType, FVector SoundLocation);
+
+	UFUNCTION(BlueprintCallable)
+	void PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation);
 
 };
