@@ -39,9 +39,14 @@ public:
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
 	float BreathTimer;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
 	float BreathCurrTimer;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
+	float CrouchBreathMultiplier;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
+	float MovingBreathMultiplier;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
+	float StillBreathMultiplier;
 	float BreathMultiplier;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
 	bool bIsHoldingBreath;

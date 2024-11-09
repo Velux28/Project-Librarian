@@ -15,7 +15,8 @@ AMain_PlayerCharacter::AMain_PlayerCharacter()
 void AMain_PlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	BreathCurrTimer = 0;
+	BreathMultiplier = 0;
 }
 
 // Called every frame
@@ -44,16 +45,16 @@ void AMain_PlayerCharacter::HandleHoldBreath()
 	{
 		if (bIsCrouching)
 		{
-			BreathMultiplier = 2.f;
+			BreathMultiplier = CrouchBreathMultiplier;
 		}
 		else
 		{
-			BreathMultiplier = 3.f;
+			BreathMultiplier = MovingBreathMultiplier;
 		}
 	}
 	else
 	{
-		BreathMultiplier = 1.f;
+		BreathMultiplier = StillBreathMultiplier;
 	}
 
 	BreathCurrTimer -= GetWorld()->DeltaTimeSeconds * BreathMultiplier;
