@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "BreathWidget.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/Character.h"
 #include "Main_PlayerCharacter.generated.h"
 
@@ -36,7 +37,7 @@ public:
 	virtual bool RechargeBreath();
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
-	virtual bool HandleCrouch();
+	virtual bool HandleCrouch(UCameraComponent* _Camera);
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
@@ -62,4 +63,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	FVector PlayerUncrouchHeight;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+	float CrouchFOV;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+	float UncrouchFOV;
+	UPROPERTY(BlueprintReadOnly, Category = "Camera")
+	float DeltaFOV;
 };

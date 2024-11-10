@@ -96,10 +96,11 @@ bool AMain_PlayerCharacter::RechargeBreath()
 	return true;
 }
 
-bool AMain_PlayerCharacter::HandleCrouch()
+bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 {
-	if (bIsCrouching)
+	if (bIsCrouching && _Camera->FieldOfView == CrouchFOV)
 	{
+		DeltaFOV = UncrouchFOV - _Camera->FieldOfView;
 		FHitResult OnHit;
 		FCollisionQueryParams Params;
 		//if hits something does not uncrouch
@@ -111,15 +112,15 @@ bool AMain_PlayerCharacter::HandleCrouch()
 		GetMesh()->SetRelativeLocation(FVector::Zero());
 		bIsCrouching = false;
 	}
-	else 
+	else if (!bIsCrouching && _Camera->FieldOfView == UncrouchFOV)
 	{
+		DeltaFOV = CrouchFOV - _Camera->FieldOfView;
 		Crouch();
 		//playsound
 		GetMesh()->SetRelativeLocation(FVector(-40, -15, 0));
 		bIsCrouching = true;
 	}
 
-	//activate the widget
-	//set camera fov
 	return true;
+	
 }
