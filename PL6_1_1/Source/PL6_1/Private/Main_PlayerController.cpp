@@ -2,18 +2,20 @@
 
 
 #include "Main_PlayerController.h"
+#include "..\Public\Main_PlayerController.h"
 
-//AMain_PlayerController::AMain_PlayerController()
-//{
-//
-//}
-//
-//void AMain_PlayerController::BeginPlay()
-//{
-//
-//}
-//
-//void AMain_PlayerController::Tick(float DeltaTime)
-//{
-//
-//}
+AMain_PlayerController::AMain_PlayerController()
+{
+
+}
+
+
+void AMain_PlayerController::BeginPlay()
+{
+
+}
+
+void AMain_PlayerController::Tick(float DeltaTime)
+{
+
+}

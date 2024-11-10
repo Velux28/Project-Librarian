@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BreathWidget.h"
 #include "GameFramework/Character.h"
 #include "Main_PlayerCharacter.generated.h"
 
@@ -23,6 +24,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
@@ -31,7 +33,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "HoldBreath")
 	virtual void HoldBreath(bool _CurrBreathStatus);
 	UFUNCTION(BlueprintCallable, Category = "HoldBreath")
-	virtual void RechargeBreath();
+	virtual bool RechargeBreath();
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual bool HandleCrouch();
@@ -50,6 +52,8 @@ protected:
 	float BreathMultiplier;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
 	bool bIsHoldingBreath;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
+	UBreathWidget* BreathBar;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	bool bIsMoving;

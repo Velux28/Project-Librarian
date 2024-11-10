@@ -15,7 +15,7 @@ AMain_PlayerCharacter::AMain_PlayerCharacter()
 void AMain_PlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	BreathCurrTimer = 0;
+	BreathCurrTimer = BreathTimer;
 	BreathMultiplier = 0;
 }
 
@@ -37,7 +37,9 @@ void AMain_PlayerCharacter::HandleHoldBreath()
 {
 	if (BreathCurrTimer <= 0)
 	{
+		BreathCurrTimer = 0;
 		bIsHoldingBreath = false;
+		UE_LOG(LogTemp, Warning, TEXT("!Handle"));
 		return;
 	}
 
@@ -57,32 +59,41 @@ void AMain_PlayerCharacter::HandleHoldBreath()
 		BreathMultiplier = StillBreathMultiplier;
 	}
 
+	UE_LOG(LogTemp, Warning, TEXT("Handle"));
 	BreathCurrTimer -= GetWorld()->DeltaTimeSeconds * BreathMultiplier;
 
-	//settare la percentuale della ui
-	//BreathCurrTimer / BreathTimer
+	BreathBar->SetBreathPerc(BreathCurrTimer / BreathTimer);
+	UE_LOG(LogTemp, Warning, TEXT("%f"), BreathCurrTimer / BreathTimer);
 }
 
 void AMain_PlayerCharacter::HoldBreath(bool _CurrBreathStatus)
 {
 	bIsHoldingBreath = _CurrBreathStatus;
+	UE_LOG(LogTemp, Warning, TEXT("Hold"));
 
-	if (bIsHoldingBreath)
-	{
-		//Attivo la ui
-	}
+	//if (bIsHoldingBreath)
+	//{
+	//	BreathBar->SetIsEnabled(true);
+	//	return;
+	//}
+	////BreathBar->Visibility = ESlateVisibility::Hidden;
+	//return;
 }
 
-void AMain_PlayerCharacter::RechargeBreath()
+bool AMain_PlayerCharacter::RechargeBreath()
 {
 	if (BreathCurrTimer >= BreathTimer)
 	{
 		BreathCurrTimer = BreathTimer;
-		//disattivare la ui 
-		return;
+		UE_LOG(LogTemp, Warning, TEXT("!Recharge"));
+		//BreathBar->SetIsEnabled(false);
+		return false;
 	}
+	UE_LOG(LogTemp, Warning, TEXT("Recharge"));
 	BreathCurrTimer += GetWorld()->DeltaTimeSeconds;
-	//settare la percentuale della ui
+	BreathBar->SetBreathPerc(BreathCurrTimer / BreathTimer);
+	UE_LOG(LogTemp, Warning, TEXT("%f"), BreathCurrTimer / BreathTimer);
+	return true;
 }
 
 bool AMain_PlayerCharacter::HandleCrouch()
