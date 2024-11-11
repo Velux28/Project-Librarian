@@ -39,7 +39,6 @@ void AMain_PlayerCharacter::HandleHoldBreath()
 	{
 		BreathCurrTimer = 0;
 		bIsHoldingBreath = false;
-		UE_LOG(LogTemp, Warning, TEXT("!Handle"));
 		return;
 	}
 
@@ -59,17 +58,14 @@ void AMain_PlayerCharacter::HandleHoldBreath()
 		BreathMultiplier = StillBreathMultiplier;
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("Handle"));
 	BreathCurrTimer -= GetWorld()->DeltaTimeSeconds * BreathMultiplier;
 
 	BreathBar->SetBreathPerc(BreathCurrTimer / BreathTimer);
-	UE_LOG(LogTemp, Warning, TEXT("%f"), BreathCurrTimer / BreathTimer);
 }
 
 void AMain_PlayerCharacter::HoldBreath(bool _CurrBreathStatus)
 {
 	bIsHoldingBreath = _CurrBreathStatus;
-	UE_LOG(LogTemp, Warning, TEXT("Hold"));
 
 	//if (bIsHoldingBreath)
 	//{
@@ -85,14 +81,11 @@ bool AMain_PlayerCharacter::RechargeBreath()
 	if (BreathCurrTimer >= BreathTimer)
 	{
 		BreathCurrTimer = BreathTimer;
-		UE_LOG(LogTemp, Warning, TEXT("!Recharge"));
 		//BreathBar->SetIsEnabled(false);
 		return false;
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Recharge"));
 	BreathCurrTimer += GetWorld()->DeltaTimeSeconds;
 	BreathBar->SetBreathPerc(BreathCurrTimer / BreathTimer);
-	UE_LOG(LogTemp, Warning, TEXT("%f"), BreathCurrTimer / BreathTimer);
 	return true;
 }
 
