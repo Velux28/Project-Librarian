@@ -27,7 +27,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 			Blackboard->SetValueAsObject(TEXT("TargetActor"), _Actor);
 			CurrAIState = EAIState::Chase;
 
-			ControlledPawn->SetWalkSpeed(ChasingSpeed);
+			ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
 			ControlledPawn->ChangeMaterial(0, nullptr);
 
 		}
@@ -41,7 +41,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);*/
 		CurrAIState = EAIState::PlayerLost;
 
-		ControlledPawn->SetWalkSpeed(WalkingSpeed);
+		ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 		ControlledPawn->ChangeMaterial(0, nullptr);
 
 		//TODO:
@@ -49,6 +49,45 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		//reduce/disable sight
 		//set chase variable
 	}
+}
+
+
+
+void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
+{
+	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
+	Blackboard->SetValueAsName(TEXT("SoundType"), _Stimulus.Tag);
+
+	if (_Stimulus.Tag == TEXT("Human"))
+	{
+		HandleHearHumanSound();
+	}
+	else if (_Stimulus.Tag == TEXT("Non-Human"))
+	{
+		HandleHearNonHumanSound();
+	}
+
+	ControlledPawn->ChangeMaterial(0, nullptr);
+}
+
+void ANPCAIController::HandleHearHumanSound()
+{
+	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase && CurrAIState != EAIState::Hunt)
+	{
+		CurrAIState = EAIState::Hunt;
+		ControlledPawn->CurrHuntTimer = ControlledPawn->HuntingResetTimer;
+		ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->HuntingRadius;
+		//playsound
+	}
+}
+
+void ANPCAIController::HandleHearNonHumanSound()
+{
+	if (CurrAIState != EAIState::Alert)
+	{
+		//playsound	
+	}	
+	CurrAIState = EAIState::Alert;
 }
 
 void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)

@@ -9,6 +9,7 @@
 #include "Perception/AIPerceptionTypes.h"
 #include "NPCAIController.generated.h"
 
+UENUM()
 enum EAIState
 {
 	Patrol,
@@ -37,26 +38,20 @@ protected:
 	AMain_PlayerCharacter* PlayerRef;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AISense")
-	EAIState CurrAIState;
+	TEnumAsByte<EAIState> CurrAIState;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
-	float ChasingSpeed;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
-	float WalkingSpeed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-		UMaterialInstance* PatrolMaterial;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-		UMaterialInstance* ChaseMaterial;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-		UMaterialInstance* AlertMaterial;
-
-	UFUNCTION(BlueprintCallable, Category = "AISense")
+	UFUNCTION(BlueprintCallable, Category = "AISense/Sight")
 	virtual void HandleSight(AActor* _Actor, FAIStimulus _Stimulus);
+	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
+	virtual void HandleHear(FAIStimulus _Stimulus);
+	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
+	virtual void HandleHearHumanSound();
+	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
+	virtual void HandleHearNonHumanSound();
 
 
 	UFUNCTION(BlueprintCallable, Category = "Patrol")
-		virtual void ChosePatrolLocation(FVector &PatrolPosition);
+	virtual void ChosePatrolLocation(FVector &PatrolPosition);
 
 
 	/*UFUNCTION()
