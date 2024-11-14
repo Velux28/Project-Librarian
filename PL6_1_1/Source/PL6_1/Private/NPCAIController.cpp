@@ -21,11 +21,12 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		}
 
 		//if the blackboard value isn't set 
-		if (!GetBlackboardComponent()->IsVectorValueSet(TEXT("TargetActor")))
+		if (!Blackboard->IsVectorValueSet(TEXT("TargetActor")))
 		{
 			//set the value and change color and speed
-			GetBlackboardComponent()->SetValueAsObject(TEXT("TargetActor"), _Actor);
+			Blackboard->SetValueAsObject(TEXT("TargetActor"), _Actor);
 			CurrAIState = EAIState::Chase;
+
 			ControlledPawn->SetWalkSpeed(ChasingSpeed);
 			ControlledPawn->ChangeMaterial(0, nullptr);
 
@@ -34,12 +35,15 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 	else 
 	{
 		//if the player is outside my sight radius, set his last location and change color and walk speed
-		GetBlackboardComponent()->ClearValue(TEXT("TargetActor"));
-		GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
+		Blackboard->ClearValue(TEXT("TargetActor"));
+		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
+		/*GetBlackboardComponent()->ClearValue(TEXT("TargetActor"));
+		GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);*/
 		CurrAIState = EAIState::PlayerLost;
+
 		ControlledPawn->SetWalkSpeed(WalkingSpeed);
 		ControlledPawn->ChangeMaterial(0, nullptr);
-		Blackboard->ClearValue(TEXT("TargetActor"));
+
 		//TODO:
 		//enable earsense
 		//reduce/disable sight
