@@ -37,9 +37,14 @@ void ANPCCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 }
 
-void ANPCCharacter::ChangeMaterial(UMaterialInstance* NewMat, int32 MatIndex)
+void ANPCCharacter::ChangeMaterial(FString MattType, int32 MatIndex)
 {
-
+	if (MaterialMap.IsEmpty() || !MaterialMap.Contains(MattType))
+	{
+		GetMesh()->SetMaterial(MatIndex, DefaultMat);
+		return;
+	}
+	GetMesh()->SetMaterial(MatIndex, MaterialMap[MattType]);
 }
 
 void ANPCCharacter::SetWalkSpeed(float NewSpeed)

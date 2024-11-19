@@ -4,6 +4,46 @@
 #include "NPCAIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
 
+void ANPCAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	switch (CurrAIState)
+	{
+	case EAIState::Patrol:
+
+		break;
+
+	case EAIState::Alert:
+
+		break; 
+
+	case EAIState::Chase:
+
+			break;
+
+	case EAIState::Hunt:
+		ControlledPawn->CurrHuntTimer -= DeltaTime;
+
+		if (ControlledPawn->CurrHuntTimer <= 0)
+		{
+			Blackboard->ClearValue(TEXT("SoundType"));
+			ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->PatrolRadius;
+			ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
+			CurrAIState = EAIState::Patrol;
+			ControlledPawn->ChangeMaterial(TEXT("Patrol"));
+		}
+
+		break;
+
+	case EAIState::PlayerLost:
+
+		break;
+
+	default:
+		break;
+	}
+}
+
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 {
 	//check if player ref is set
@@ -28,7 +68,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 			CurrAIState = EAIState::Chase;
 
 			ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
-			ControlledPawn->ChangeMaterial(nullptr);
+			ControlledPawn->ChangeMaterial(TEXT("Patrol"));
 
 		}
 	}
@@ -40,7 +80,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		CurrAIState = EAIState::PlayerLost;
 
 		ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
-		ControlledPawn->ChangeMaterial(nullptr);
+		ControlledPawn->ChangeMaterial(TEXT("Chase"));
 
 		//TODO:
 		//enable earsense
@@ -65,7 +105,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 		HandleHearNonHumanSound();
 	}
 
-	ControlledPawn->ChangeMaterial(nullptr);
+	ControlledPawn->ChangeMaterial(TEXT("Alert"));
 }
 
 void ANPCAIController::HandleHearHumanSound()

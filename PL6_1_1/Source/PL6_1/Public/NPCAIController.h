@@ -29,6 +29,8 @@ class PL6_1_API ANPCAIController : public AAIController
 	GENERATED_BODY()
 	
 protected:
+	virtual void Tick(float DeltaTime) override;
+
 	class UAISenseConfig_Sight* SightConfig;
 	class UAISenseConfig_Hearing* HearingConfig;
 

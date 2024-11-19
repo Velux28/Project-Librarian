@@ -35,11 +35,10 @@ public:
 	USoundComponent* SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-	UMaterialInstance* PatrolMaterial;
+	TMap<FString, UMaterialInstance*> MaterialMap;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-	UMaterialInstance* ChaseMaterial;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-	UMaterialInstance* AlertMaterial;
+	UMaterialInstance* DefaultMat;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
 	float ChasingSpeed;
@@ -48,7 +47,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Hunt")
 	float HuntingResetTimer;
-	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Hunt")
 	float CurrHuntTimer;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Hunt")
 	float HuntingRadius;
@@ -62,7 +60,7 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Material")
-	virtual void ChangeMaterial(UMaterialInstance* NewMat, int32 MatIndex = 0);
+	virtual void ChangeMaterial(FString MattType, int32 MatIndex = 0);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetWalkSpeed(float NewSpeed);
