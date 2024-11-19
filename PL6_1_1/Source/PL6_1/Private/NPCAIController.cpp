@@ -28,7 +28,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 			CurrAIState = EAIState::Chase;
 
 			ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
-			ControlledPawn->ChangeMaterial(0, nullptr);
+			ControlledPawn->ChangeMaterial(nullptr);
 
 		}
 	}
@@ -37,12 +37,10 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		//if the player is outside my sight radius, set his last location and change color and walk speed
 		Blackboard->ClearValue(TEXT("TargetActor"));
 		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
-		/*GetBlackboardComponent()->ClearValue(TEXT("TargetActor"));
-		GetBlackboardComponent()->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);*/
 		CurrAIState = EAIState::PlayerLost;
 
 		ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
-		ControlledPawn->ChangeMaterial(0, nullptr);
+		ControlledPawn->ChangeMaterial(nullptr);
 
 		//TODO:
 		//enable earsense
@@ -67,7 +65,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 		HandleHearNonHumanSound();
 	}
 
-	ControlledPawn->ChangeMaterial(0, nullptr);
+	ControlledPawn->ChangeMaterial(nullptr);
 }
 
 void ANPCAIController::HandleHearHumanSound()

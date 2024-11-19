@@ -5,6 +5,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "SoundComponent.h"
 #include "AThrowable.generated.h"
 
 
@@ -22,28 +23,10 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
-	TMap<FString, USoundBase*> SoundsMap;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
-	USoundBase* DefaultSound;
+	USoundComponent* SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
-	UFUNCTION(BlueprintCallable)
-	USoundBase* AddSound(FString _SoundType, USoundBase* _NewSound);
-
-	UFUNCTION(BlueprintCallable)
-	void PlayDefaultSound();
-
-	UFUNCTION(BlueprintCallable)
-	void PlaySoundByName(FString _SoundType);
-
-	UFUNCTION(BlueprintCallable)
-	void PlaySoundByNameAtLocation(FString _SoundType, FVector SoundLocation);
-
-	UFUNCTION(BlueprintCallable)
-	void PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation);
 
 };

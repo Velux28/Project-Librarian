@@ -34,12 +34,12 @@ void ANPCCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 }
 
-void ANPCCharacter::ChangeMaterial(int32 MatIndex, UMaterialInstance* NewMat)
+void ANPCCharacter::ChangeMaterial(UMaterialInstance* NewMat, int32 MatIndex)
 {
+
 }
 
 void ANPCCharacter::SetWalkSpeed(float NewSpeed)
 {
-	//	GetMovementComponent()->SetWalkSpeed(NewSpeed);
-		//GetMove
+	GetCharacterMovement()->MaxWalkSpeed = NewSpeed;
 }

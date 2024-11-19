@@ -3,6 +3,8 @@
 
 #include "AThrowable.h"
 #include "Components/AudioComponent.h"
+#include "GameFramework/Actor.h"
+//#include "SoundComponent.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
@@ -10,6 +12,10 @@ AAThrowable::AAThrowable()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+	if(!SoundComp)
+	{
+		SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
+	}
 }
 
 // Called when the game starts or when spawned
@@ -25,41 +31,4 @@ void AAThrowable::Tick(float DeltaTime)
 
 }
 
-USoundBase* AAThrowable::AddSound(FString _SoundType, USoundBase* _NewSound)
-{
-	if (!_NewSound)
-	{
-		return NULL;
-	}
-	SoundsMap.Add(_SoundType, _NewSound);
-
-	SoundsMap[_SoundType] = CreateDefaultSubobject<USoundBase>(*_SoundType);
-
-	return _NewSound;
-}
-
-void AAThrowable::PlayDefaultSound()
-{
-	PlaySoundWithParams(DefaultSound, GetActorLocation());
-}
-
-void AAThrowable::PlaySoundByName(FString _SoundType)
-{
-	PlaySoundByNameAtLocation(_SoundType, GetActorLocation());
-}
-
-void AAThrowable::PlaySoundByNameAtLocation(FString _SoundType, FVector _SoundLocation)
-{
-	if (!SoundsMap.Find(_SoundType))
-	{
-		PlaySoundWithParams(DefaultSound, _SoundLocation);
-		return;
-	}
-	PlaySoundWithParams(SoundsMap[_SoundType], _SoundLocation);
-}
-
-void AAThrowable::PlaySoundWithParams(USoundBase* _Sound, FVector SoundLocation)
-{
-	UGameplayStatics::PlaySoundAtLocation(GetWorld(), _Sound, SoundLocation);
-}
 

@@ -58,7 +58,7 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Material")
-	virtual void ChangeMaterial(int32 MatIndex, UMaterialInstance* NewMat);
+	virtual void ChangeMaterial(UMaterialInstance* NewMat, int32 MatIndex = 0);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetWalkSpeed(float NewSpeed);
