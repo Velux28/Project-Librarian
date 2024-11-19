@@ -75,7 +75,7 @@ void ANPCAIController::HandleHearHumanSound()
 		CurrAIState = EAIState::Hunt;
 		ControlledPawn->CurrHuntTimer = ControlledPawn->HuntingResetTimer;
 		ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->HuntingRadius;
-		//playsound
+		ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
 	}
 }
 
@@ -83,7 +83,7 @@ void ANPCAIController::HandleHearNonHumanSound()
 {
 	if (CurrAIState != EAIState::Alert)
 	{
-		//playsound	
+		ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
 	}	
 	CurrAIState = EAIState::Alert;
 }

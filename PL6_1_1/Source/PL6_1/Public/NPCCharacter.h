@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "SoundComponent.h"
 #include "NPCCharacter.generated.h"
 
 UCLASS()
@@ -29,6 +30,9 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	USoundComponent* SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
 	UMaterialInstance* PatrolMaterial;

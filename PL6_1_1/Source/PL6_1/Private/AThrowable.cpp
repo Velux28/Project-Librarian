@@ -4,7 +4,6 @@
 #include "AThrowable.h"
 #include "Components/AudioComponent.h"
 #include "GameFramework/Actor.h"
-//#include "SoundComponent.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
