@@ -20,10 +20,6 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	
-
-	
-
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -51,7 +47,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Hunt")
 	float HuntingRadius;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Patrol")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Chase")
+	float ChasingResetTimer;
+	float CurrChaseTimer;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Chase")
+	float ChasingRadius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Patrol")		
 	float PatrolRadius;
 
 	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState")
@@ -64,5 +66,8 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetWalkSpeed(float NewSpeed);
+
+	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
+	virtual void ChosePatrolLocation(FVector& PatrolPosition);
 
 };

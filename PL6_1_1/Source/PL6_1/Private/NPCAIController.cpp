@@ -27,10 +27,7 @@ void ANPCAIController::Tick(float DeltaTime)
 		if (ControlledPawn->CurrHuntTimer <= 0)
 		{
 			Blackboard->ClearValue(TEXT("SoundType"));
-			ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->PatrolRadius;
-			ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
-			CurrAIState = EAIState::Patrol;
-			ControlledPawn->ChangeMaterial(TEXT("Patrol"));
+			EnterPatrolState();
 		}
 
 		break;
@@ -65,10 +62,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		{
 			//set the value and change color and speed
 			Blackboard->SetValueAsObject(TEXT("TargetActor"), _Actor);
-			CurrAIState = EAIState::Chase;
-
-			ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
-			ControlledPawn->ChangeMaterial(TEXT("Patrol"));
+			EnterChaseState();
 
 		}
 	}
@@ -77,10 +71,8 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		//if the player is outside my sight radius, set his last location and change color and walk speed
 		Blackboard->ClearValue(TEXT("TargetActor"));
 		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
-		CurrAIState = EAIState::PlayerLost;
 
-		ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
-		ControlledPawn->ChangeMaterial(TEXT("Chase"));
+		EnterPalyerLostState();
 
 		//TODO:
 		//enable earsense
@@ -104,18 +96,13 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 	{
 		HandleHearNonHumanSound();
 	}
-
-	ControlledPawn->ChangeMaterial(TEXT("Alert"));
 }
 
 void ANPCAIController::HandleHearHumanSound()
 {
 	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase && CurrAIState != EAIState::Hunt)
 	{
-		CurrAIState = EAIState::Hunt;
-		ControlledPawn->CurrHuntTimer = ControlledPawn->HuntingResetTimer;
-		ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->HuntingRadius;
-		ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
+		EnterHuntState();
 	}
 }
 
@@ -123,14 +110,56 @@ void ANPCAIController::HandleHearNonHumanSound()
 {
 	if (CurrAIState != EAIState::Alert)
 	{
-		ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
+		EnterAlertState();
 	}	
-	CurrAIState = EAIState::Alert;
 }
 
-void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)
+void ANPCAIController::EnterPatrolState()
 {
+	CurrAIState = EAIState::Patrol;
+	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->PatrolRadius;
+	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
+	ControlledPawn->ChangeMaterial(TEXT("Patrol"));
 }
+
+void ANPCAIController::EnterAlertState()
+{
+	CurrAIState = EAIState::Alert;
+	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
+	ControlledPawn->ChangeMaterial(TEXT("Alert"));
+
+}
+
+void ANPCAIController::EnterHuntState()
+{
+	CurrAIState = EAIState::Hunt;
+	ControlledPawn->CurrHuntTimer = ControlledPawn->HuntingResetTimer;
+	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->HuntingRadius;
+	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
+	ControlledPawn->ChangeMaterial(TEXT("Alert"));
+}
+
+void ANPCAIController::EnterChaseState()
+{
+	CurrAIState = EAIState::Chase;
+
+	ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
+	ControlledPawn->ChangeMaterial(TEXT("Chase"));
+	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Chase"));
+}
+
+void ANPCAIController::EnterPalyerLostState()
+{
+	CurrAIState = EAIState::PlayerLost;
+
+	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+	ControlledPawn->ChangeMaterial(TEXT("Chase"));
+}
+
+
 
 //void ANPCAIController::OnTargetDetected(AActor* Actor, FAIStimulus const Stimulus)
 //{

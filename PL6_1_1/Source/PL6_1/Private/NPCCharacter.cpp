@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "NPCCharacter.h"
+#include "Math/UnrealMathUtility.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values
@@ -50,4 +50,13 @@ void ANPCCharacter::ChangeMaterial(FString MattType, int32 MatIndex)
 void ANPCCharacter::SetWalkSpeed(float NewSpeed)
 {
 	GetCharacterMovement()->MaxWalkSpeed = NewSpeed;
+	
+}
+
+void ANPCCharacter::ChosePatrolLocation(FVector& PatrolPosition)
+{
+	float x = FMath::FRandRange(-1.f, 1.f);
+	float y = FMath::FRandRange(-1.f, 1.f);
+
+	PatrolPosition = FVector(PatrolPosition.X + x * CurrPlayerMaxRadius, PatrolPosition.X + y * CurrPlayerMaxRadius, PatrolPosition.Z);
 }
