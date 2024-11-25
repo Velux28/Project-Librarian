@@ -50,6 +50,8 @@ protected:
 	virtual void HandleHearHumanSound();
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
 	virtual void HandleHearNonHumanSound();
+	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
+	virtual void ChosePatrolLocation(FVector& PatrolPosition);
 
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterPatrolState();
@@ -61,6 +63,7 @@ protected:
 	virtual void EnterChaseState();
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterPalyerLostState();
+
 	
 
 

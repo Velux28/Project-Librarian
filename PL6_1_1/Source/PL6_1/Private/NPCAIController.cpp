@@ -43,6 +43,7 @@ void ANPCAIController::Tick(float DeltaTime)
 
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 {
+	
 	//check if player ref is set
 	if (_Actor != PlayerRef)
 	{
@@ -51,7 +52,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 	//if the player is in sight radius
 	if (_Stimulus.WasSuccessfullySensed())
 	{
-		//if the ai is in alert i
+		//if the ai is in alert 
 		if (CurrAIState == EAIState::Alert)
 		{
 			//endScanning
@@ -77,7 +78,6 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		//TODO:
 		//enable earsense
 		//reduce/disable sight
-		//set chase variable
 	}
 }
 
@@ -112,6 +112,13 @@ void ANPCAIController::HandleHearNonHumanSound()
 	{
 		EnterAlertState();
 	}	
+}
+
+void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)
+{
+	FVector PlayerPos = PlayerRef->GetActorLocation();
+	ControlledPawn->ChosePatrolLocation(PlayerPos);
+	PatrolPosition = PlayerPos;
 }
 
 void ANPCAIController::EnterPatrolState()

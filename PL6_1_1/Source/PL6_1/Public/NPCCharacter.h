@@ -67,7 +67,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetWalkSpeed(float NewSpeed);
 
-	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
+	//UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
 	virtual void ChosePatrolLocation(FVector& PatrolPosition);
 
 };
