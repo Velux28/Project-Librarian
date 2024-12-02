@@ -53,10 +53,10 @@ void ANPCCharacter::SetWalkSpeed(float NewSpeed)
 	
 }
 
-void ANPCCharacter::ChosePatrolLocation(FVector& PatrolPosition)
+FVector ANPCCharacter::ChosePatrolLocation(FVector PlayerPosition)
 {
 	float x = FMath::FRandRange(-1.f, 1.f);
 	float y = FMath::FRandRange(-1.f, 1.f);
 
-	PatrolPosition = FVector(PatrolPosition.X + x * CurrPlayerMaxRadius, PatrolPosition.X + y * CurrPlayerMaxRadius, PatrolPosition.Z);
+	return FVector(PlayerPosition.X + x * CurrPlayerMaxRadius, PlayerPosition.X + y * CurrPlayerMaxRadius, GetActorLocation().Z);
 }

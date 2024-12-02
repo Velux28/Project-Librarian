@@ -68,6 +68,6 @@ public:
 	virtual void SetWalkSpeed(float NewSpeed);
 
 	//UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
-	virtual void ChosePatrolLocation(FVector& PatrolPosition);
+	virtual FVector ChosePatrolLocation(FVector PlayerPosition);
 
 };

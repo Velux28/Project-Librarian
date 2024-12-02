@@ -116,9 +116,9 @@ void ANPCAIController::HandleHearNonHumanSound()
 
 void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)
 {
-	FVector PlayerPos = PlayerRef->GetActorLocation();
-	ControlledPawn->ChosePatrolLocation(PlayerPos);
-	PatrolPosition = PlayerPos;
+	FVector PlayerPos = FVector::Zero();
+	ControlledPawn->ChosePatrolLocation(PlayerRef->GetActorLocation());
+	PatrolPosition = ControlledPawn->ChosePatrolLocation(PlayerRef->GetActorLocation());
 }
 
 void ANPCAIController::EnterPatrolState()
