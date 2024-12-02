@@ -127,7 +127,11 @@ void ANPCAIController::EnterPatrolState()
 	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->PatrolRadius;
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
-	ControlledPawn->ChangeMaterial(TEXT("Patrol"));
+	ControlledPawn->ChangeMaterial(TEXT("Patrol")); 
+	Blackboard->ClearValue(TEXT("SoundType"));
+	Blackboard->ClearValue(TEXT("LastKnownLocation"));
+	Blackboard->ClearValue(TEXT("TargetActor"));
+	Blackboard->ClearValue(TEXT("TargetLocation"));
 }
 
 void ANPCAIController::EnterAlertState()
@@ -136,6 +140,9 @@ void ANPCAIController::EnterAlertState()
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
 	ControlledPawn->ChangeMaterial(TEXT("Alert"));
+	Blackboard->ClearValue(TEXT("LastKnownLocation"));
+	Blackboard->ClearValue(TEXT("TargetActor"));
+	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 
 }
 
@@ -147,6 +154,9 @@ void ANPCAIController::EnterHuntState()
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
 	ControlledPawn->ChangeMaterial(TEXT("Alert"));
+	Blackboard->ClearValue(TEXT("LastKnownLocation"));
+	Blackboard->ClearValue(TEXT("TargetActor"));
+	Blackboard->ClearValue(TEXT("TargetLocation"));
 }
 
 void ANPCAIController::EnterChaseState()
@@ -156,6 +166,10 @@ void ANPCAIController::EnterChaseState()
 	ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Chase"));
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Chase"));
+	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+	Blackboard->ClearValue(TEXT("TargetLocation"));
+	Blackboard->ClearValue(TEXT("LastKnownLocation"));
+	Blackboard->ClearValue(TEXT("SoundType"));
 }
 
 void ANPCAIController::EnterPalyerLostState()
@@ -164,6 +178,11 @@ void ANPCAIController::EnterPalyerLostState()
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Chase"));
+	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+	Blackboard->ClearValue(TEXT("TargetLocation"));
+	Blackboard->ClearValue(TEXT("SoundType"));
+	Blackboard->ClearValue(TEXT("TargetActor"));
+
 }
 
 
