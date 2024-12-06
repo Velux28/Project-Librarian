@@ -48,13 +48,17 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 	{
 		return;
 	}
+
 	//if the player is in sight radius
 	if (_Stimulus.WasSuccessfullySensed())
 	{
+		UE_LOG(LogTemp, Warning, TEXT("SENSE"));
 		//if the ai is in alert 
 		if (CurrAIState == EAIState::Alert)
 		{
+			//deactivete scanner
 			EnterChaseState(_Actor);
+			return;
 		}
 
 		//if the blackboard value isn't set 
@@ -62,7 +66,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		{
 			//set the value and change color and speed
 			EnterChaseState(_Actor);
-
+			return;
 		}
 	}
 	else 
@@ -70,6 +74,8 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		//if the player is outside my sight radius, set his last location and change color and walk speed
 
 		EnterPalyerLostState(_Stimulus.StimulusLocation);
+		UE_LOG(LogTemp, Warning, TEXT("NOT SENSE"));
+
 
 		//TODO:
 		//enable earsense
