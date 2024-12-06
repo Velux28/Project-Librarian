@@ -49,20 +49,20 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
 	virtual void HandleHearHumanSound();
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
-	virtual void HandleHearNonHumanSound();
+	virtual void HandleHearNonHumanSound(FVector _TargetLocation);
 	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
 	virtual void ChosePatrolLocation(FVector& PatrolPosition);
 
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterPatrolState();
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterAlertState();
+	virtual void EnterAlertState(FVector _TargetLocation);
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterHuntState();
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterChaseState();
+	virtual void EnterChaseState(UObject* _TargetActor);
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterPalyerLostState();
+	virtual void EnterPalyerLostState(FVector _LastKnownLocation);
 
 	
 

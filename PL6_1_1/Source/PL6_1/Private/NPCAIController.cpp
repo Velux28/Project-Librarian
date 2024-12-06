@@ -26,7 +26,6 @@ void ANPCAIController::Tick(float DeltaTime)
 
 		if (ControlledPawn->CurrHuntTimer <= 0)
 		{
-			Blackboard->ClearValue(TEXT("SoundType"));
 			EnterPatrolState();
 		}
 
@@ -55,25 +54,22 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 		//if the ai is in alert 
 		if (CurrAIState == EAIState::Alert)
 		{
-			//endScanning
+			EnterChaseState(_Actor);
 		}
 
 		//if the blackboard value isn't set 
 		if (!Blackboard->IsVectorValueSet(TEXT("TargetActor")))
 		{
 			//set the value and change color and speed
-			Blackboard->SetValueAsObject(TEXT("TargetActor"), _Actor);
-			EnterChaseState();
+			EnterChaseState(_Actor);
 
 		}
 	}
 	else 
 	{
 		//if the player is outside my sight radius, set his last location and change color and walk speed
-		Blackboard->ClearValue(TEXT("TargetActor"));
-		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
 
-		EnterPalyerLostState();
+		EnterPalyerLostState(_Stimulus.StimulusLocation);
 
 		//TODO:
 		//enable earsense
@@ -85,7 +81,6 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 
 void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 {
-	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation);
 	Blackboard->SetValueAsName(TEXT("SoundType"), _Stimulus.Tag);
 
 	if (_Stimulus.Tag == TEXT("Human"))
@@ -94,7 +89,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 	}
 	else if (_Stimulus.Tag == TEXT("Non-Human"))
 	{
-		HandleHearNonHumanSound();
+		HandleHearNonHumanSound(_Stimulus.StimulusLocation);
 	}
 }
 
@@ -106,11 +101,11 @@ void ANPCAIController::HandleHearHumanSound()
 	}
 }
 
-void ANPCAIController::HandleHearNonHumanSound()
+void ANPCAIController::HandleHearNonHumanSound(FVector _TargetLocation)
 {
 	if (CurrAIState != EAIState::Alert)
 	{
-		EnterAlertState();
+		EnterAlertState(_TargetLocation);
 	}	
 }
 
@@ -132,18 +127,25 @@ void ANPCAIController::EnterPatrolState()
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
+
+	UE_LOG(LogTemp, Warning, TEXT("Patrol"));
 }
 
-void ANPCAIController::EnterAlertState()
+void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 {
 	CurrAIState = EAIState::Alert;
+
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
 	ControlledPawn->ChangeMaterial(TEXT("Alert"));
+
+	Blackboard->SetValueAsVector(TEXT("TargetLocation"), _TargetLocation);
+
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 
+	UE_LOG(LogTemp, Warning, TEXT("Alert"));
 }
 
 void ANPCAIController::EnterHuntState()
@@ -157,31 +159,42 @@ void ANPCAIController::EnterHuntState()
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
+
+	UE_LOG(LogTemp, Warning, TEXT("Hunt"));
 }
 
-void ANPCAIController::EnterChaseState()
+void ANPCAIController::EnterChaseState(UObject* _TargetActor)
 {
 	CurrAIState = EAIState::Chase;
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Chase"));
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Chase"));
+
+	Blackboard->SetValueAsObject(TEXT("TargetActor"), _TargetActor);
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("SoundType"));
+
+	UE_LOG(LogTemp, Warning, TEXT("Chase"));
 }
 
-void ANPCAIController::EnterPalyerLostState()
+void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
 {
 	CurrAIState = EAIState::PlayerLost;
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Chase"));
+
+	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _LastKnownLocation);
+
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
+
+	UE_LOG(LogTemp, Warning, TEXT("PalyerLost"));
 
 }
 
