@@ -151,7 +151,7 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 
-	UE_LOG(LogTemp, Warning, TEXT("Alert"));
+	UE_LOG(LogTemp, Warning, TEXT("sound loc  %d, %d, %d"), _TargetLocation.X, _TargetLocation.Y, _TargetLocation.Z);
 }
 
 void ANPCAIController::EnterHuntState()
