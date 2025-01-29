@@ -1,0 +1,59 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "DialogueComponent.h"
+#include "..\Public\DialogueComponent.h"
+
+// Sets default values for this component's properties
+UDialogueComponent::UDialogueComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
+
+	// ...
+}
+
+
+// Called when the game starts
+void UDialogueComponent::BeginPlay()
+{
+	Super::BeginPlay();
+
+	// ...
+	
+}
+
+
+// Called every frame
+void UDialogueComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	// ...
+}
+
+void UDialogueComponent::FillDialogue(TMap<FString, FString> Dialogues)
+{
+	DialogueDictionary = Dialogues;
+}
+
+bool UDialogueComponent::AddDialogue(FString DialogueKey, FString Dialogue)
+{
+	if (!DialogueDictionary.Contains(DialogueKey))
+	{
+		DialogueDictionary.Add(DialogueKey, Dialogue);
+		return true;
+	}
+	return false;
+}
+
+FString UDialogueComponent::ShowDialogue(FString DialogueKey)
+{
+	if (DialogueDictionary.Contains(DialogueKey))
+	{
+		return DialogueDictionary[DialogueKey];
+	}
+	return TEXT("Dialogue not found");
+}
+
