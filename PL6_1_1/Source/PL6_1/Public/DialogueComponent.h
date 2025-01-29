@@ -33,6 +33,7 @@ public:
 	FString ShowDialogue(FString DialogueKey);
 
 private:
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
 	TMap<FString, FString> DialogueDictionary;
 
 
