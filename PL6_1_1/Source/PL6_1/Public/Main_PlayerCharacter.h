@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "BreathWidget.h"
 #include "Camera/CameraComponent.h"
+#include "DialogueComponent.h"
 #include "GameFramework/Character.h"
 #include "Main_PlayerCharacter.generated.h"
 
@@ -39,6 +40,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual bool HandleCrouch(UCameraComponent* _Camera);
 
+	
+
+		
+
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
 	float BreathTimer;
@@ -69,4 +74,7 @@ protected:
 	float UncrouchFOV;
 	UPROPERTY(BlueprintReadOnly, Category = "Camera")
 	float DeltaFOV;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+	UDialogueComponent* PlayerDialogue;
 };
