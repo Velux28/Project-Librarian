@@ -3,36 +3,31 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Object.h"
 #include "Dialogue.generated.h"
-/**
- * 
- */
+
 UCLASS()
-class PL6_1_API UDialogue :: public UObject
+class PL6_1_API UDialogue : public UObject
 {
-//public:
-//	UDialogue();
-//	~UDialogue();
+	GENERATED_BODY()
 
 private:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-	FString DialogueKey;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-	FString DialogueText;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-	bool bNextDialogueIsPlayer;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-	float DialogueDuration;
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
+		FString DialogueKey;
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
+		FString DialogueText;
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
+		bool bNextDialogueIsPlayer;
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
+		float DialogueDuration;
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	FString GetDialogueKey();
+		FString GetDialogueKey();
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	FString GetDialogue();
+		FString GetDialogue();
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	bool GetNextDialogueIsPlayer();
+		bool GetNextDialogueIsPlayer();
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	float GetDialogueDuration();
+		float GetDialogueDuration();
 };

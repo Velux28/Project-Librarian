@@ -2,17 +2,16 @@
 
 
 #include "Dialogue.h"
-#include "..\Public\Dialogue.h"
 
-//FString UDialogue::GetDialogueKey()
-//{
-//	return DialogueKey;
-//}
-//
-//FString UDialogue::GetDialogue()
-//{
-//	return DialogueText;
-//}
+FString UDialogue::GetDialogueKey()
+{
+	return DialogueKey;
+}
+
+FString UDialogue::GetDialogue()
+{
+	return DialogueText;
+}
 
 bool UDialogue::GetNextDialogueIsPlayer()
 {

@@ -33,27 +33,56 @@ void UDialogueComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 	// ...
 }
 
-void UDialogueComponent::FillDialogue(TMap<FString, FString> Dialogues)
+void UDialogueComponent::FillDialogue(TArray<UDialogue*> Dialogues)
 {
-	DialogueDictionary = Dialogues;
+	DialogueList = Dialogues;
 }
 
-bool UDialogueComponent::AddDialogue(FString DialogueKey, FString Dialogue)
+bool UDialogueComponent::AddDialogue(UDialogue* _Dialogue)
 {
-	if (!DialogueDictionary.Contains(DialogueKey))
+	
+	for (int i=0;i<DialogueList.Num();i++)
 	{
-		DialogueDictionary.Add(DialogueKey, Dialogue);
-		return true;
+		if (DialogueList[i]->GetDialogueKey()== _Dialogue->GetDialogueKey())
+		{
+			return false;
+		}
 	}
-	return false;
+	DialogueList.Add(_Dialogue);
+	return true;
 }
 
 FString UDialogueComponent::ShowDialogue(FString DialogueKey)
 {
-	if (DialogueDictionary.Contains(DialogueKey))
+	if (DialogueKey.IsEmpty())
 	{
-		return DialogueDictionary[DialogueKey];
+		return DialogueList[0]->GetDialogue();
+	}
+
+	for (int i = 0; i < DialogueList.Num(); i++)
+	{
+		if (DialogueList[i]->GetDialogueKey() == DialogueKey)
+		{
+			return DialogueList[i]->GetDialogue();
+		}
 	}
 	return TEXT("Dialogue not found");
+}
+
+UDialogue* UDialogueComponent::GetDialogue(FString DialogueKey)
+{
+	if (DialogueKey.IsEmpty())
+	{
+		return DialogueList[0];
+	}
+
+	for (int i = 0; i < DialogueList.Num(); i++)
+	{
+		if (DialogueList[i]->GetDialogueKey() == DialogueKey)
+		{
+			return DialogueList[i];
+		}
+	}
+	return NULL;
 }
 
