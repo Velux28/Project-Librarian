@@ -5,29 +5,30 @@
 #include "CoreMinimal.h"
 #include "Dialogue.generated.h"
 
-UCLASS()
-class PL6_1_API UDialogue : public UObject
+USTRUCT(BlueprintType)
+struct PL6_1_API FDialogue 
 {
 	GENERATED_BODY()
 
-private:
+public:
 
-	UPROPERTY(EditAnywhere, Category = "Dialogue")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 		FString DialogueKey;
-	UPROPERTY(EditAnywhere, Category = "Dialogue")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+		FString NextDialogueKey;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 		FString DialogueText;
-	UPROPERTY(EditAnywhere, Category = "Dialogue")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 		bool bNextDialogueIsPlayer;
-	UPROPERTY(EditAnywhere, Category = "Dialogue")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 		float DialogueDuration;
 
-public:
-	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-		FString GetDialogueKey();
-	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-		FString GetDialogue();
-	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-		bool GetNextDialogueIsPlayer();
-	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-		float GetDialogueDuration();
+	FDialogue()
+	{
+		DialogueKey = "";
+		NextDialogueKey = "";
+		DialogueText = "";
+		bNextDialogueIsPlayer = true;
+		DialogueDuration = 0;
+	}
 };

@@ -33,17 +33,17 @@ void UDialogueComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 	// ...
 }
 
-void UDialogueComponent::FillDialogue(TArray<UDialogue*> Dialogues)
+void UDialogueComponent::FillDialogue(TArray<FDialogue> Dialogues)
 {
 	DialogueList = Dialogues;
 }
 
-bool UDialogueComponent::AddDialogue(UDialogue* _Dialogue)
+bool UDialogueComponent::AddDialogue(FDialogue _Dialogue)
 {
 	
 	for (int i=0;i<DialogueList.Num();i++)
 	{
-		if (DialogueList[i]->GetDialogueKey()== _Dialogue->GetDialogueKey())
+		if (DialogueList[i].DialogueKey== _Dialogue.DialogueKey)
 		{
 			return false;
 		}
@@ -56,20 +56,20 @@ FString UDialogueComponent::ShowDialogue(FString DialogueKey)
 {
 	if (DialogueKey.IsEmpty())
 	{
-		return DialogueList[0]->GetDialogue();
+		return DialogueList[0].DialogueText;
 	}
 
 	for (int i = 0; i < DialogueList.Num(); i++)
 	{
-		if (DialogueList[i]->GetDialogueKey() == DialogueKey)
+		if (DialogueList[i].DialogueKey == DialogueKey)
 		{
-			return DialogueList[i]->GetDialogue();
+			return DialogueList[i].DialogueText;
 		}
 	}
 	return TEXT("Dialogue not found");
 }
 
-UDialogue* UDialogueComponent::GetDialogue(FString DialogueKey)
+FDialogue UDialogueComponent::GetDialogue(FString DialogueKey)
 {
 	if (DialogueKey.IsEmpty())
 	{
@@ -78,11 +78,11 @@ UDialogue* UDialogueComponent::GetDialogue(FString DialogueKey)
 
 	for (int i = 0; i < DialogueList.Num(); i++)
 	{
-		if (DialogueList[i]->GetDialogueKey() == DialogueKey)
+		if (DialogueList[i].DialogueKey == DialogueKey)
 		{
 			return DialogueList[i];
 		}
 	}
-	return NULL;
+	return DialogueList[0];
 }
 

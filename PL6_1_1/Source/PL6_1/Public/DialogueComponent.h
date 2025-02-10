@@ -26,18 +26,18 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	void FillDialogue(TArray<UDialogue*> Dialogues);
+	void FillDialogue(TArray<FDialogue> Dialogues);
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	bool AddDialogue(UDialogue* _Dialogue);
+	bool AddDialogue(FDialogue _Dialogue);
 
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 	FString ShowDialogue(FString DialogueKey);
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	UDialogue* GetDialogue(FString DialogueKey);
+	FDialogue GetDialogue(FString DialogueKey);
 
 private:
 	UPROPERTY(EditAnywhere, Category = "Dialogue")
-	TArray<UDialogue*> DialogueList;
+	TArray<FDialogue> DialogueList;
 
 
 		
