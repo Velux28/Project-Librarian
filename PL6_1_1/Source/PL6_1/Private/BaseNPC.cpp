@@ -37,7 +37,7 @@ bool ABaseNPC::IsDialogueFinish(float DeltaTime)
 
 	if (CurrDialogueTimer <= 0)
 	{
-		ResetDialogueTimer();
+		//ResetDialogueTimer();
 		return true;
 	}
 
