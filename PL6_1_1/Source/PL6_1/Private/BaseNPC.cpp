@@ -2,6 +2,7 @@
 
 
 #include "BaseNPC.h"
+#include "..\Public\BaseNPC.h"
 
 // Sets default values
 ABaseNPC::ABaseNPC()
@@ -27,5 +28,24 @@ void ABaseNPC::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+bool ABaseNPC::IsDialogueFinish(float DeltaTime)
+{
+	//decremento il timer
+	CurrDialogueTimer -= DeltaTime;
+
+	if (CurrDialogueTimer <= 0)
+	{
+		ResetDialogueTimer();
+		return true;
+	}
+
+	return false;
+}
+
+void ABaseNPC::ResetDialogueTimer()
+{
+	CurrDialogueTimer = CurrNPCDialogue.DialogueDuration;
 }
 
