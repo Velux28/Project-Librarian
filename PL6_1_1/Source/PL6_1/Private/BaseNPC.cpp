@@ -14,6 +14,11 @@ ABaseNPC::ABaseNPC()
 	{
 		ActorName = "Set actor name in editor";
 	}
+
+	if (!NPCDialogues)
+	{
+		NPCDialogues = CreateDefaultSubobject<UDialogueComponent>(TEXT("NPC Dialogue"));
+	}
 }
 
 // Called when the game starts or when spawned
@@ -47,5 +52,10 @@ bool ABaseNPC::IsDialogueFinish(float DeltaTime)
 void ABaseNPC::ResetDialogueTimer()
 {
 	CurrDialogueTimer = CurrNPCDialogue.DialogueDuration;
+}
+
+void ABaseNPC::SetDialogue_Implementation(const FString& _DialogueKey)
+{
+	CurrNPCDialogue = NPCDialogues->GetDialogue(_DialogueKey);
 }
 

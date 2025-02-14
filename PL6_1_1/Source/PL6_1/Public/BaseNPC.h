@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Dialogue.h"
+#include "DialogueComponent.h"
 #include "GameFramework/Actor.h"
 #include "BaseNPC.generated.h"
 
@@ -31,6 +32,8 @@ protected:
 	FString DialogueKey;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	FDialogue CurrNPCDialogue;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+	UDialogueComponent* NPCDialogues;
 
 	float CurrDialogueTimer;
 
@@ -38,4 +41,9 @@ protected:
 	bool IsDialogueFinish(float DeltaTime);
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 	virtual void ResetDialogueTimer();
+
+public:
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue")
+		void SetDialogue(const FString& _DialogueKey);
 };
