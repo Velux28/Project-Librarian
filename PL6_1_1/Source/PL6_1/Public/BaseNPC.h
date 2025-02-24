@@ -42,8 +42,11 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 	virtual void ResetDialogueTimer();
 
+
 public:
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue")
 		void SetDialogue(const FString& _DialogueKey);
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Dialogue")
+		void SkipDialogue();
 };

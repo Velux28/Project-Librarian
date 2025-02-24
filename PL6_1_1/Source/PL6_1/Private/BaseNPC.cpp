@@ -58,4 +58,7 @@ void ABaseNPC::SetDialogue_Implementation(const FString& _DialogueKey)
 {
 	CurrNPCDialogue = NPCDialogues->GetDialogue(_DialogueKey);
 }
+//void ABaseNPC::SkipDialogue()
+//{
+//}
 
