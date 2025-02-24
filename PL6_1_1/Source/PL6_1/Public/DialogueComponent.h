@@ -34,10 +34,14 @@ public:
 	FString ShowDialogue(FString DialogueKey);
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 	FDialogue GetDialogue(FString DialogueKey);
+	UFUNCTION(BlueprintPure)
+	FString GetLastDialogueKey();
 
 private:
 	UPROPERTY(EditAnywhere, Category = "Dialogue")
 	TArray<FDialogue> DialogueList;
+
+	const FString LastDialogueKey = "End";
 
 
 		

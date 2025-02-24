@@ -86,3 +86,8 @@ FDialogue UDialogueComponent::GetDialogue(FString DialogueKey)
 	return DialogueList[0];
 }
 
+FString UDialogueComponent::GetLastDialogueKey()
+{
+	return LastDialogueKey;
+}
+
