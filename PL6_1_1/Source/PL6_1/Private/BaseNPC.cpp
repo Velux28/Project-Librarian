@@ -54,11 +54,20 @@ void ABaseNPC::ResetDialogueTimer()
 	CurrDialogueTimer = CurrNPCDialogue.DialogueDuration;
 }
 
+void ABaseNPC::SetNextInteractionDialogueKey(const FString& _DialogueKey)
+{
+	if (!NextInteractionDialogueKey.IsEmpty())
+	{
+		DialogueKey = NextInteractionDialogueKey;
+	}
+
+	if (!_DialogueKey.IsEmpty())
+	{
+		NextInteractionDialogueKey = _DialogueKey;
+	}
+}
+
 void ABaseNPC::SetDialogue_Implementation(const FString& _DialogueKey)
 {
 	CurrNPCDialogue = NPCDialogues->GetDialogue(_DialogueKey);
 }
-//void ABaseNPC::SkipDialogue()
-//{
-//}
-

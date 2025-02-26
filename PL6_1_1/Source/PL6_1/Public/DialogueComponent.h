@@ -41,8 +41,5 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Dialogue")
 	TArray<FDialogue> DialogueList;
 
-	const FString LastDialogueKey = "End";
-
-
-		
+	const FString LastDialogueKey = "End";	
 };

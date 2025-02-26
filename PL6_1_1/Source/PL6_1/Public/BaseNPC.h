@@ -30,6 +30,8 @@ protected:
 	FString ActorName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	FString DialogueKey;
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
+	FString NextInteractionDialogueKey;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	FDialogue CurrNPCDialogue;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
@@ -47,6 +49,9 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue")
 		void SetDialogue(const FString& _DialogueKey);
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+		void SetNextInteractionDialogueKey(const FString& _DialogueKey);
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Dialogue")
 		void SkipDialogue();
+
 };
