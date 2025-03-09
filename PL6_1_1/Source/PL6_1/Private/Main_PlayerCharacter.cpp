@@ -100,8 +100,9 @@ bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 		DeltaFOV = UncrouchFOV - _Camera->FieldOfView;
 		FHitResult OnHit;
 		FCollisionQueryParams Params;
+		//Params.AddIgnoredActor(this);
 		//if hits something does not uncrouch
-		if (ActorLineTraceSingle(OnHit, GetActorLocation(), GetActorLocation() + PlayerUncrouchHeight, ECollisionChannel::ECC_Visibility, Params))
+		if (GetWorld()->SweepSingleByChannel(OnHit, GetActorLocation(), GetActorLocation() + PlayerUncrouchHeight, FQuat::Identity, ECC_Visibility, FCollisionShape::MakeSphere(25.f), Params))
 		{
 			return false;
 		}
