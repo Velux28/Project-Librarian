@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Dialogue.h"
 #include "DialogueComponent.generated.h"
 
 
@@ -25,17 +26,20 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	void FillDialogue(TMap<FString, FString> Dialogues);
+	void FillDialogue(TArray<FDialogue> Dialogues);
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	bool AddDialogue(FString DialogueKey, FString Dialogue);
+	bool AddDialogue(FDialogue _Dialogue);
 
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 	FString ShowDialogue(FString DialogueKey);
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+	FDialogue GetDialogue(FString DialogueKey);
+	UFUNCTION(BlueprintPure)
+	FString GetLastDialogueKey();
 
 private:
 	UPROPERTY(EditAnywhere, Category = "Dialogue")
-	TMap<FString, FString> DialogueDictionary;
+	TArray<FDialogue> DialogueList;
 
-
-		
+	const FString LastDialogueKey = "End";	
 };

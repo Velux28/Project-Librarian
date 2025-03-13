@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Dialogue.h"
+#include "DialogueComponent.h"
 #include "GameFramework/Actor.h"
 #include "BaseNPC.generated.h"
 
@@ -28,7 +30,28 @@ protected:
 	FString ActorName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	FString DialogueKey;
+	UPROPERTY(EditAnywhere, Category = "Dialogue")
+	FString NextInteractionDialogueKey;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
-	FVector2D BorderSize;
+	FDialogue CurrNPCDialogue;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+	UDialogueComponent* NPCDialogues;
+
+	float CurrDialogueTimer;
+
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+	bool IsDialogueFinish(float DeltaTime);
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+	virtual void ResetDialogueTimer();
+
+
+public:
+
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue")
+		void SetDialogue(const FString& _DialogueKey);
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+		void SetNextInteractionDialogueKey(const FString& _DialogueKey);
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Dialogue")
+		void SkipDialogue();
 
 };

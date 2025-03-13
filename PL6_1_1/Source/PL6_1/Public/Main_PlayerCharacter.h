@@ -77,4 +77,13 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	UDialogueComponent* PlayerDialogue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+	FDialogue CurrPlayerDialogue;
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+	bool IsDialogueFinish(float DeltaTime);
+	UFUNCTION(BlueprintCallable, Category = "Dialogue")
+	virtual void ResetDialogueTimer();
+
+	float CurrDialogueTimer;
 };
