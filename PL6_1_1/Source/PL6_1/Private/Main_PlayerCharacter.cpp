@@ -109,6 +109,7 @@ bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 		UnCrouch();
 		GetMesh()->SetRelativeLocation(FVector::Zero());
 		bIsCrouching = false;
+		return true;
 	}
 	else if (!bIsCrouching && _Camera->FieldOfView == UncrouchFOV)
 	{
@@ -117,10 +118,10 @@ bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 		//playsound
 		GetMesh()->SetRelativeLocation(FVector(-40, -15, 0));
 		bIsCrouching = true;
+		return true;
 	}
 
-	return true;
-	
+	return false;
 }
 
 bool AMain_PlayerCharacter::IsDialogueFinish(float DeltaTime)
