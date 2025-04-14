@@ -15,11 +15,11 @@ void ANPCAIController::Tick(float DeltaTime)
 
 	case EAIState::Alert:
 
-		break; 
+		break;
 
 	case EAIState::Chase:
 
-			break;
+		break;
 
 	case EAIState::Hunt:
 		ControlledPawn->CurrHuntTimer -= DeltaTime;
@@ -118,7 +118,7 @@ void ANPCAIController::HandleHearNonHumanSound(FVector _TargetLocation)
 void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)
 {
 	FVector PlayerPos = FVector::Zero();
-	ControlledPawn->ChosePatrolLocation(PlayerRef->GetActorLocation());
+	//ControlledPawn->ChosePatrolLocation(PlayerRef->GetActorLocation());
 	PatrolPosition = ControlledPawn->ChosePatrolLocation(PlayerRef->GetActorLocation());
 }
 
