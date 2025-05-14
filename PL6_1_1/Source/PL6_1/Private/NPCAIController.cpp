@@ -161,7 +161,7 @@ void ANPCAIController::EnterHuntState()
 	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->HuntingRadius;
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
-	ControlledPawn->ChangeMaterial(TEXT("Alert"));
+	ControlledPawn->ChangeMaterial(TEXT("Hunt"));
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
@@ -191,7 +191,7 @@ void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
 	CurrAIState = EAIState::PlayerLost;
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
-	ControlledPawn->ChangeMaterial(TEXT("Chase"));
+	ControlledPawn->ChangeMaterial(TEXT("Lost"));
 
 	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _LastKnownLocation);
 
