@@ -16,13 +16,15 @@ class PL6_1_API USaveGameFile : public USaveGame
 	GENERATED_BODY()
 
 public:
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Player")
 	FTransform PlayerTransform;
-
-	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
 	int32 PlayerItems;
 
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
-	FName CurrLevel;
+	FName CurrSection; 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
+	FName CurrMap;
 };
