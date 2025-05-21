@@ -37,18 +37,11 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	UDialogueComponent* NPCDialogues;
 
-	float CurrDialogueTimer;
-
-	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	bool IsDialogueFinish(float DeltaTime);
-	UFUNCTION(BlueprintCallable, Category = "Dialogue")
-	virtual void ResetDialogueTimer();
-
 
 public:
 
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Dialogue")
-		void SetDialogue(const FString& _DialogueKey);
+	FDialogue SetDialogue(const FString& _DialogueKey);
 	UFUNCTION(BlueprintCallable, Category = "Dialogue")
 		void SetNextInteractionDialogueKey(const FString& _DialogueKey);
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Dialogue")

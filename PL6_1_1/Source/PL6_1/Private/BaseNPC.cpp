@@ -35,25 +35,6 @@ void ABaseNPC::Tick(float DeltaTime)
 
 }
 
-bool ABaseNPC::IsDialogueFinish(float DeltaTime)
-{
-	//decremento il timer
-	CurrDialogueTimer -= DeltaTime;
-
-	if (CurrDialogueTimer <= 0)
-	{
-		//ResetDialogueTimer();
-		return true;
-	}
-
-	return false;
-}
-
-void ABaseNPC::ResetDialogueTimer()
-{
-	CurrDialogueTimer = CurrNPCDialogue.DialogueDuration;
-}
-
 void ABaseNPC::SetNextInteractionDialogueKey(const FString& _DialogueKey)
 {
 	if (!NextInteractionDialogueKey.IsEmpty())
@@ -67,7 +48,8 @@ void ABaseNPC::SetNextInteractionDialogueKey(const FString& _DialogueKey)
 	}
 }
 
-void ABaseNPC::SetDialogue_Implementation(const FString& _DialogueKey)
+FDialogue ABaseNPC::SetDialogue_Implementation(const FString& _DialogueKey)
 {
 	CurrNPCDialogue = NPCDialogues->GetDialogue(_DialogueKey);
+	return CurrNPCDialogue;
 }

@@ -123,22 +123,3 @@ bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 
 	return false;
 }
-
-bool AMain_PlayerCharacter::IsDialogueFinish(float DeltaTime)
-{
-	//decremento il timer
-	CurrDialogueTimer -= DeltaTime;
-
-	if (CurrDialogueTimer <= 0)
-	{
-		//ResetDialogueTimer();
-		return true;
-	}
-
-	return false;
-}
-
-void AMain_PlayerCharacter::ResetDialogueTimer()
-{
-	CurrDialogueTimer = CurrPlayerDialogue.DialogueDuration;
-}
