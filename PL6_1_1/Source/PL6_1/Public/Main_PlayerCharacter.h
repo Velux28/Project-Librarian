@@ -30,13 +30,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UFUNCTION(BlueprintCallable, Category = "HoldBreath")
-	virtual void HandleHoldBreath();
-	UFUNCTION(BlueprintCallable, Category = "HoldBreath")
-	virtual void HoldBreath(bool _CurrBreathStatus);
-	UFUNCTION(BlueprintCallable, Category = "HoldBreath")
-	virtual bool RechargeBreath();
-
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual bool HandleCrouch(UCameraComponent* _Camera);
 
@@ -45,22 +38,6 @@ public:
 		
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	float BreathTimer;
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	float BreathCurrTimer;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	float CrouchBreathMultiplier;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	float MovingBreathMultiplier;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	float StillBreathMultiplier;
-	float BreathMultiplier;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	bool bIsHoldingBreath;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hold Breath")
-	UBreathWidget* BreathBar;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	bool bIsMoving;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
