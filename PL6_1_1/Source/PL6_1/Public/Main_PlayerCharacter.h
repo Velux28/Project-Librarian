@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BreathWidget.h"
 #include "Camera/CameraComponent.h"
 #include "DialogueComponent.h"
 #include "GameFramework/Character.h"
