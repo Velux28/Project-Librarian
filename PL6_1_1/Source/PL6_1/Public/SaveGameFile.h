@@ -20,7 +20,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Player")
 	FTransform PlayerTransform;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
-	int32 PlayerItems;
+	bool HasPowerCell;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
+	bool HasScrewdriver;
 
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
