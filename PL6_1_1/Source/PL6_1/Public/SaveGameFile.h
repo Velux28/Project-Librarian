@@ -20,12 +20,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Player")
 	FTransform PlayerTransform;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
-	bool HasPowerCell;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
-	bool IsFinishAssembly;
+	bool HasPowerCell = false;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
-	bool HasScrewdriver;
+	bool HasScrewdriver = false;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
+	bool IsFinishAssembly = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
+	bool UnloadLevel1Submup1 = false;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
 	FName CurrSection; 
