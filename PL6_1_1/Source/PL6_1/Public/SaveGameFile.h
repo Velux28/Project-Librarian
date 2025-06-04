@@ -21,6 +21,8 @@ public:
 	FTransform PlayerTransform;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
 	bool HasPowerCell;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
+	bool IsFinishAssembly;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player")
 	bool HasScrewdriver;
 
