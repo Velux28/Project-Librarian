@@ -30,7 +30,7 @@ public:
 	bool UnloadLevel1Submup1 = false;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
-	FName CurrSection; 
+	TArray<FName> CurrSection; 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
 	FName CurrMap;
 };
