@@ -58,5 +58,5 @@ FVector ANPCCharacter::ChosePatrolLocation(FVector PlayerPosition)
 	float x = FMath::FRandRange(-1.f, 1.f);
 	float y = FMath::FRandRange(-1.f, 1.f);
 
-	return FVector(PlayerPosition.X + x * CurrPlayerMaxRadius, PlayerPosition.X + y * CurrPlayerMaxRadius, GetActorLocation().Z);
+	return FVector(PlayerPosition.X + x * CurrPlayerMaxRadius, PlayerPosition.Y + y * CurrPlayerMaxRadius, PlayerPosition.Z);
 }
