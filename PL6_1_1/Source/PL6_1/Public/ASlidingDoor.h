@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/TimelineComponent.h"
+#include "Curves/CurveVector.h"
 #include "GameFramework/Actor.h"
 #include "ASlidingDoor.generated.h"
 
@@ -22,6 +24,15 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "Door")
 	float doorSpeed;
 
+	FVector CurveValue;
+	float TimelineValue;
+
+	FTimeline DoorTimeline;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
+	UCurveVector* DoorOpeningCurve;
+
 	//the relative position for the closed door
 	UPROPERTY(EditAnywhere, Category = "Door")
 	FVector DoorClosePosition;
@@ -33,6 +44,12 @@ protected:
 	//this variable must be setted on begin play
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
 	UStaticMeshComponent* Door;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Door")
+	bool bIsDoorOpen;
+	UPROPERTY(BlueprintReadWrite, Category = "Door")
+	bool bIsDoorReady;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
 	bool bIsDoorOpening;
@@ -53,4 +70,8 @@ public:
 	virtual void CloseDoor();
 	UFUNCTION(BlueprintCallable)
 	virtual void CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorClosePosition);
+
+	//Questa funzione è stata nominata da lorenzo maurizio zuccarello
+	UFUNCTION(BlueprintCallable)
+	virtual bool TryOpenDoor();
 };

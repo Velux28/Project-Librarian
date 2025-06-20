@@ -15,12 +15,15 @@ class PL6_1_API AASlidingDoubleDoor : public AASlidingDoor
 	GENERATED_BODY()
 	
 protected:
-
-	
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, Category = "Door")
 	float door2Speed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
+	UCurveVector* Door2OpeningCurve;
+	
 	//the relative position for the closed door
 	UPROPERTY(EditAnywhere, Category = "Door")
 	FVector Door2OpenPosition;
