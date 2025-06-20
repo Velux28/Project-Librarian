@@ -21,57 +21,55 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditAnywhere, Category = "Door")
-	float doorSpeed;
-
 	FVector CurveValue;
 	float TimelineValue;
 
 	FTimeline DoorTimeline;
 
-
+	/**
+	* the curve used in the timeline
+	*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
 	UCurveVector* DoorOpeningCurve;
 
-	//the relative position for the closed door
-	UPROPERTY(EditAnywhere, Category = "Door")
-	FVector DoorClosePosition;
-
-	//the relative position for the opened door
-	UPROPERTY(EditAnywhere, Category = "Door")
-	FVector DoorOpenPosition;
-
-	//this variable must be setted on begin play
+	/**
+	* this variable must be setted on begin play
+	*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
 	UStaticMeshComponent* Door;
 
+	/**
+	* this value rapresents if the door is open or not
+	*/
 	UPROPERTY(BlueprintReadWrite, Category = "Door")
 	bool bIsDoorOpen;
+	/**
+	* this value rapresents if the door is ready to be open
+	*/
 	UPROPERTY(BlueprintReadWrite, Category = "Door")
 	bool bIsDoorReady;
-
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
-	bool bIsDoorOpening;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Door")
-	bool bIsDoorClosing;
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	/**
+	* The function is called in the update of the timeline, and open the the door using the curve
+	*/
 	UFUNCTION(BlueprintCallable)
 	virtual void OpenDoor();
-	UFUNCTION(BlueprintCallable)
-	virtual void OpenDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorOpenPosition);
 
+	/**
+	* The function is called at the end of the timeline, check if the door is open and open reverse the timeline closing the door
+	*/
 	UFUNCTION(BlueprintCallable)
 	virtual void CloseDoor();
-	UFUNCTION(BlueprintCallable)
-	virtual void CloseDoorWithParams(UStaticMeshComponent* _Door, FVector _DoorClosePosition);
 
-	//Questa funzione è stata nominata da lorenzo maurizio zuccarello
+
+	/**
+	* open the door only if it's ready to be open
+	* @return Return true if he succeded
+	*/
 	UFUNCTION(BlueprintCallable)
 	virtual bool TryOpenDoor();
 };
