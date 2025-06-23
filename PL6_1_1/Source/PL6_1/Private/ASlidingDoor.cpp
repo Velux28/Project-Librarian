@@ -12,7 +12,6 @@ AASlidingDoor::AASlidingDoor()
 	//the door start closed and ready to be open
 	bIsDoorOpen = false;
 	bIsDoorReady = true;
-	x = 0;
 }
 
 // Called when the game starts or when spawned
