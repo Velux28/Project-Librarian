@@ -7,6 +7,15 @@
 #include "SoundComponent.h"
 #include "NPCCharacter.generated.h"
 
+USTRUCT(BlueprintType)
+struct FMaterialMap
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sound")
+	TMap<int32, UMaterialInstance*> MaterialChanges;
+};
+
 UCLASS()
 class PL6_1_API ANPCCharacter : public ACharacter
 {
@@ -31,9 +40,9 @@ public:
 	USoundComponent* SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-	TMap<FString, UMaterialInstance*> MaterialMap;
+	TMap<FString, FMaterialMap> MaterialMap;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
-	UMaterialInstance* DefaultMat;
+	TMap<int32, UMaterialInstance*> DefaultMat;
 
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
@@ -62,7 +71,7 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "Material")
-	virtual void ChangeMaterial(FString MattType, int32 MatIndex = 0);
+	virtual void ChangeMaterial(FString MattType);
 
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 	virtual void SetWalkSpeed(float NewSpeed);
