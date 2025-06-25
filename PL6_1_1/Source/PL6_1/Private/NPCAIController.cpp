@@ -3,6 +3,59 @@
 
 #include "NPCAIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
+#include "Perception/AISenseConfig.h"
+#include "Perception/AISense.h"
+#include "Perception/AISenseConfig_Sight.h"
+#include "Perception/AIPerceptionComponent.h"
+#include "Perception/AISenseConfig.h"
+
+void ANPCAIController::BeginPlay()
+{
+	Super::BeginPlay();
+	if (ControlledPawn == nullptr)
+	{
+		ControlledPawn = Cast<ANPCCharacter>(GetPawn());
+	}
+
+	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
+
+	if (!Id.IsValid())
+	{
+		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
+		return;
+	}
+
+	auto Perception = GetAIPerceptionComponent();
+	if (Perception == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Perception == nullptr"));
+		return;
+	}
+
+	auto Config = Perception->GetSenseConfig(Id);
+	if (Config == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Config == nullptr"));
+		return;
+	}
+
+	auto ConfigSight = Cast<UAISenseConfig_Sight>(Config);
+	if (ConfigSight == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No sight"));
+		return;
+	}
+
+	float LostRadius = ConfigSight->LoseSightRadius - ConfigSight->SightRadius;
+	
+	ConfigSight->SightRadius = ControlledPawn->ChasingRadius;
+
+	ConfigSight->LoseSightRadius = ControlledPawn->ChasingRadius + LostRadius;
+
+	Perception->RequestStimuliListenerUpdate();
+
+	//UE_LOG(LogTemp, Warning, TEXT("%f"), ConfigSight->SightRadius);
+}
 
 void ANPCAIController::Tick(float DeltaTime)
 {

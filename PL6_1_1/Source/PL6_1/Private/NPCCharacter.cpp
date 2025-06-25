@@ -13,6 +13,8 @@ ANPCCharacter::ANPCCharacter()
 	{
 		SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 	}
+
+	
 }
 
 // Called when the game starts or when spawned
@@ -20,6 +22,7 @@ void ANPCCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
 }
 
 
