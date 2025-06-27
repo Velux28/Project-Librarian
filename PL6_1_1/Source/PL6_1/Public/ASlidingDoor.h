@@ -47,7 +47,15 @@ protected:
 	* this value rapresents if the door is ready to be open
 	*/
 	UPROPERTY(BlueprintReadWrite, Category = "Door")
-	bool bIsDoorReady;
+	bool bIsReady;
+
+	/**
+	* this value is used only in automatic doors and determins if the door can be closed
+	*/
+	UPROPERTY(BlueprintReadWrite, Category = "Door")
+	bool bIsPlayerInTrigger;
+
+
 
 public:	
 	// Called every frame
@@ -59,11 +67,15 @@ public:
 	UFUNCTION(BlueprintCallable)
 	virtual void OpenDoor();
 
+	UFUNCTION(BlueprintCallable)
+	virtual void TimelineEnd();
+
 	/**
 	* The function is called at the end of the timeline, check if the door is open and open reverse the timeline closing the door
 	*/
 	UFUNCTION(BlueprintCallable)
 	virtual void CloseDoor();
+
 
 
 	/**
