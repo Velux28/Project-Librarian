@@ -5,7 +5,6 @@
 
 void AASlidingDoubleDoor::BeginPlay()
 {
-	Super::BeginPlay();
 
 	if (Door2OpeningCurve)
 	{
@@ -19,9 +18,8 @@ void AASlidingDoubleDoor::BeginPlay()
 
 }
 
-void AASlidingDoubleDoor::OpenDoor()
+void AASlidingDoubleDoor::TimelineTick()
 {
-	Super::OpenDoor();
 
 	//based on the value of the timeline, get the value and change second door location
 	TimelineValue = DoorTimeline.GetPlaybackPosition();

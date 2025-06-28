@@ -12,13 +12,12 @@ AASlidingDoor::AASlidingDoor()
 	//the door start closed and ready to be open
 	bIsReady = true;
 	bIsDoorOpen = false;
-	bIsPlayerInTrigger = false;
+	bCanBeClose = true;
 }
 
 // Called when the game starts or when spawned
 void AASlidingDoor::BeginPlay()
 {
-	Super::BeginPlay();
 
 	if (DoorOpeningCurve)
 	{
@@ -26,7 +25,7 @@ void AASlidingDoor::BeginPlay()
 		FOnTimelineVector TimelineCallback;
 		FOnTimelineEventStatic TimelineFinishedCallback;
 
-		TimelineCallback.BindUFunction(this, FName("OpenDoor"));
+		TimelineCallback.BindUFunction(this, FName("TimelineTick"));
 		TimelineFinishedCallback.BindUFunction(this, FName("TimelineEnd"));
 
 		DoorTimeline.AddInterpVector(DoorOpeningCurve, TimelineCallback);
@@ -38,12 +37,11 @@ void AASlidingDoor::BeginPlay()
 // Called every frame
 void AASlidingDoor::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
 	
 	DoorTimeline.TickTimeline(DeltaTime);
 }
 
-void AASlidingDoor::OpenDoor()
+void AASlidingDoor::TimelineTick()
 {
 	//based on the value of the timeline, get the value and change door location
 	TimelineValue = DoorTimeline.GetPlaybackPosition();
@@ -62,12 +60,12 @@ void AASlidingDoor::TimelineEnd()
 	}
 }
 
-void AASlidingDoor::CloseDoor()
+bool AASlidingDoor::CloseDoor_Implementation()
 {
 	//close door only when player is out trigger
-	if (bIsPlayerInTrigger)
+	if (!bCanBeClose)
 	{
-		return;
+		return false;
 	}
 	//bIsDoorOpen = !bIsDoorOpen;
 	//if door is open, start closing process
@@ -75,12 +73,14 @@ void AASlidingDoor::CloseDoor()
 	{
 		//reverse timeline
 		DoorTimeline.Reverse();
+		return true;
 	}
+	return false;
 }
 
-bool AASlidingDoor::TryOpenDoor()
+bool AASlidingDoor::OpenDoor_Implementation()
 {
-	if (bIsReady || bIsPlayerInTrigger)
+	if (bIsReady || !bCanBeClose)
 	{
 		bIsReady = false;
 		bIsDoorOpen = false;

@@ -34,5 +34,5 @@ public:
 	/**
 	* The function is called in the update of the timeline, and open the the door using the curve
 	*/
-	void OpenDoor() override;
+	void TimelineTick() override;
 };

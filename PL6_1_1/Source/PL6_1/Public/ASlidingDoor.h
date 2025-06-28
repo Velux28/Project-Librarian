@@ -41,21 +41,17 @@ protected:
 	/**
 	* this value rapresents if the door is open or not
 	*/
-	UPROPERTY(BlueprintReadWrite, Category = "Door")
 	bool bIsDoorOpen;
 	/**
 	* this value rapresents if the door is ready to be open
 	*/
-	UPROPERTY(BlueprintReadWrite, Category = "Door")
 	bool bIsReady;
 
 	/**
 	* this value is used only in automatic doors and determins if the door can be closed
 	*/
 	UPROPERTY(BlueprintReadWrite, Category = "Door")
-	bool bIsPlayerInTrigger;
-
-
+	bool bCanBeClose;
 
 public:	
 	// Called every frame
@@ -65,23 +61,25 @@ public:
 	* The function is called in the update of the timeline, and open the the door using the curve
 	*/
 	UFUNCTION(BlueprintCallable)
-	virtual void OpenDoor();
-
-	UFUNCTION(BlueprintCallable)
-	virtual void TimelineEnd();
+	virtual void TimelineTick();
 
 	/**
 	* The function is called at the end of the timeline, check if the door is open and open reverse the timeline closing the door
 	*/
 	UFUNCTION(BlueprintCallable)
-	virtual void CloseDoor();
+	virtual void TimelineEnd();
 
-
+	/**
+	* close the door only if it's fully open and can be close
+	* @return Return true if he succeded
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction))
+	bool CloseDoor();
 
 	/**
 	* open the door only if it's ready to be open
 	* @return Return true if he succeded
 	*/
-	UFUNCTION(BlueprintCallable)
-	virtual bool TryOpenDoor();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction))
+	bool OpenDoor();
 };
