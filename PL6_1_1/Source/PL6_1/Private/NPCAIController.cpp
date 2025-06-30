@@ -5,54 +5,44 @@
 #include "BehaviorTree/BlackboardComponent.h"
 #include "Perception/AISenseConfig.h"
 #include "Perception/AISense.h"
-#include "Perception/AISenseConfig_Sight.h"
-#include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig.h"
+
+ANPCAIController::ANPCAIController()
+{
+	if (AISight== nullptr)
+	{
+		AISight = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AI Perception Sight"));
+		SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("sight"));
+		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+		AISight->SetDominantSense(SightConfig->GetSenseImplementation());
+		AISight->ConfigureSense(*SightConfig);
+	}
+
+	if (AIHearing == nullptr)
+	{
+		AIHearing = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AI Perception Hear"));
+		HearConfig = CreateDefaultSubobject<UAISenseConfig_Hearing>(TEXT("hear"));
+		HearConfig->DetectionByAffiliation.bDetectFriendlies = true;
+		HearConfig->DetectionByAffiliation.bDetectEnemies = true;
+		HearConfig->DetectionByAffiliation.bDetectNeutrals = true;
+		AIHearing->SetDominantSense(HearConfig->GetSenseImplementation());
+		AIHearing->ConfigureSense(*HearConfig);
+	}
+}
 
 void ANPCAIController::BeginPlay()
 {
 	Super::BeginPlay();
+
 	if (ControlledPawn == nullptr)
 	{
 		ControlledPawn = Cast<ANPCCharacter>(GetPawn());
 	}
 
-	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
-
-	if (!Id.IsValid())
-	{
-		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
-		return;
-	}
-
-	auto Perception = GetAIPerceptionComponent();
-	if (Perception == nullptr)
-	{
-		UE_LOG(LogTemp, Error, TEXT("Perception == nullptr"));
-		return;
-	}
-
-	auto Config = Perception->GetSenseConfig(Id);
-	if (Config == nullptr)
-	{
-		UE_LOG(LogTemp, Error, TEXT("Config == nullptr"));
-		return;
-	}
-
-	auto ConfigSight = Cast<UAISenseConfig_Sight>(Config);
-	if (ConfigSight == nullptr)
-	{
-		UE_LOG(LogTemp, Error, TEXT("No sight"));
-		return;
-	}
-
-	float LostRadius = ConfigSight->LoseSightRadius - ConfigSight->SightRadius;
-	
-	ConfigSight->SightRadius = ControlledPawn->ChasingRadius;
-
-	ConfigSight->LoseSightRadius = ControlledPawn->ChasingRadius + LostRadius;
-
-	Perception->RequestStimuliListenerUpdate();
+	SightConfiguration();
+	HearConfiguration();
 
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), ConfigSight->SightRadius);
 }
@@ -91,6 +81,51 @@ void ANPCAIController::Tick(float DeltaTime)
 	default:
 		break;
 	}
+}
+
+void ANPCAIController::SightConfiguration()
+{
+	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
+
+	if (!Id.IsValid())
+	{
+		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
+		return;
+	}
+	SightConfig = Cast<UAISenseConfig_Sight>(AISight->GetSenseConfig(Id));
+	if (SightConfig == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No sight"));
+		return;
+	}
+
+
+	SightConfig->SightRadius = ControlledPawn->SightRadius;
+
+	SightConfig->LoseSightRadius = ControlledPawn->SightRadius + ControlledPawn->SightLostRadiusDelta;
+	SightConfig->PeripheralVisionAngleDegrees = ControlledPawn->SightHalfAngle;
+	AISight->RequestStimuliListenerUpdate();
+}
+
+void ANPCAIController::HearConfiguration()
+{
+	FAISenseID Id = UAISense::GetSenseID(UAISense_Hearing::StaticClass());
+
+	if (!Id.IsValid())
+	{
+		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
+		return;
+	}
+	HearConfig = Cast<UAISenseConfig_Hearing>(AIHearing->GetSenseConfig(Id));
+	if (HearConfig == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("No hear"));
+		return;
+	}
+
+
+	HearConfig->HearingRange = ControlledPawn->HearingRadius;
+	AIHearing->RequestStimuliListenerUpdate();
 }
 
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)

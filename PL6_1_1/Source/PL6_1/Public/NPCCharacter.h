@@ -67,7 +67,28 @@ public:
 
 	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState")
 	float CurrPlayerMaxRadius;
-	
+
+	/**
+	* Radius of the sight sense
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float SightRadius;
+	/**
+	* Difference between sight radius and lost radius
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float SightLostRadiusDelta;
+	/**
+	* half radius of the sight sense
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float SightHalfAngle;
+
+	/**
+	* Radius of the hearing sense
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float HearingRadius;
 
 
 	UFUNCTION(BlueprintCallable, Category = "Material")
