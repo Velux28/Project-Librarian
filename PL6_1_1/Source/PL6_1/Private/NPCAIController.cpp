@@ -9,26 +9,21 @@
 
 ANPCAIController::ANPCAIController()
 {
-	if (AISight== nullptr)
+	if (AISense== nullptr)
 	{
-		AISight = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AI Perception Sight"));
+		AISense= CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AI Perception"));
 		SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("sight"));
 		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
 		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
 		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
-		AISight->SetDominantSense(SightConfig->GetSenseImplementation());
-		AISight->ConfigureSense(*SightConfig);
-	}
+		AISense->SetDominantSense(SightConfig->GetSenseImplementation());
+		AISense->ConfigureSense(*SightConfig);
 
-	if (AIHearing == nullptr)
-	{
-		AIHearing = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AI Perception Hear"));
 		HearConfig = CreateDefaultSubobject<UAISenseConfig_Hearing>(TEXT("hear"));
 		HearConfig->DetectionByAffiliation.bDetectFriendlies = true;
 		HearConfig->DetectionByAffiliation.bDetectEnemies = true;
 		HearConfig->DetectionByAffiliation.bDetectNeutrals = true;
-		AIHearing->SetDominantSense(HearConfig->GetSenseImplementation());
-		AIHearing->ConfigureSense(*HearConfig);
+		AISense->ConfigureSense(*HearConfig);
 	}
 }
 
@@ -92,11 +87,15 @@ void ANPCAIController::SightConfiguration()
 		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
 		return;
 	}
-	SightConfig = Cast<UAISenseConfig_Sight>(AISight->GetSenseConfig(Id));
+	SightConfig = Cast<UAISenseConfig_Sight>(AISense->GetSenseConfig(Id));
 	if (SightConfig == nullptr)
 	{
-		UE_LOG(LogTemp, Error, TEXT("No sight"));
-		return;
+		SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("sight"));
+		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+
+		AISense->ConfigureSense(*SightConfig);
 	}
 
 
@@ -104,7 +103,7 @@ void ANPCAIController::SightConfiguration()
 
 	SightConfig->LoseSightRadius = ControlledPawn->SightRadius + ControlledPawn->SightLostRadiusDelta;
 	SightConfig->PeripheralVisionAngleDegrees = ControlledPawn->SightHalfAngle;
-	AISight->RequestStimuliListenerUpdate();
+	AISense->RequestStimuliListenerUpdate();
 }
 
 void ANPCAIController::HearConfiguration()
@@ -116,16 +115,19 @@ void ANPCAIController::HearConfiguration()
 		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
 		return;
 	}
-	HearConfig = Cast<UAISenseConfig_Hearing>(AIHearing->GetSenseConfig(Id));
+	HearConfig = Cast<UAISenseConfig_Hearing>(AISense->GetSenseConfig(Id));
 	if (HearConfig == nullptr)
 	{
-		UE_LOG(LogTemp, Error, TEXT("No hear"));
-		return;
+		HearConfig = CreateDefaultSubobject<UAISenseConfig_Hearing>(TEXT("hear"));
+		HearConfig->DetectionByAffiliation.bDetectFriendlies = true;
+		HearConfig->DetectionByAffiliation.bDetectEnemies = true;
+		HearConfig->DetectionByAffiliation.bDetectNeutrals = true;
+		AISense->ConfigureSense(*HearConfig);
 	}
 
 
 	HearConfig->HearingRange = ControlledPawn->HearingRadius;
-	AIHearing->RequestStimuliListenerUpdate();
+	AISense->RequestStimuliListenerUpdate();
 }
 
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)

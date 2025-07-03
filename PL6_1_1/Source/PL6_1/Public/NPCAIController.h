@@ -40,9 +40,7 @@ protected:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sense")
-	UAIPerceptionComponent* AISight;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sense")
-	UAIPerceptionComponent* AIHearing;
+	UAIPerceptionComponent* AISense;
 
 	UAISenseConfig_Sight* SightConfig;
 	UAISenseConfig_Hearing* HearConfig;
