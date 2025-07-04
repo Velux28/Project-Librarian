@@ -85,6 +85,22 @@ public:
 	float SightHalfAngle;
 
 	/**
+	* Radius of the sight sense
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float ScanRadius;
+	/**
+	* Difference between sight radius and lost radius
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float ScanLostRadiusDelta;
+	/**
+	* half radius of the sight sense
+	*/
+	UPROPERTY(EditAnywhere, Category = "AIState/Config")
+	float ScanHalfAngle;
+
+	/**
 	* Radius of the hearing sense
 	*/
 	UPROPERTY(EditAnywhere, Category = "AIState/Config")

@@ -130,6 +130,42 @@ void ANPCAIController::HearConfiguration()
 	AISense->RequestStimuliListenerUpdate();
 }
 
+bool ANPCAIController::ActivateScanner_Implementation()
+{
+	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
+
+	if (!Id.IsValid())
+	{
+		UE_LOG(LogTemp, Error, TEXT("Wrong Sense ID"));
+		return false;
+	}
+	SightConfig = Cast<UAISenseConfig_Sight>(AISense->GetSenseConfig(Id));
+	if (SightConfig == nullptr)
+	{
+		SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("sight"));
+		SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+		SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+		SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+
+		AISense->ConfigureSense(*SightConfig);
+	}
+
+
+	SightConfig->SightRadius = ControlledPawn->ScanRadius;
+
+	SightConfig->LoseSightRadius = ControlledPawn->ScanRadius + ControlledPawn->ScanLostRadiusDelta;
+	SightConfig->PeripheralVisionAngleDegrees = ControlledPawn->ScanHalfAngle;
+	AISense->RequestStimuliListenerUpdate();
+
+	return true;
+}
+
+bool ANPCAIController::DeactivateScanner_Implementation()
+{
+	SightConfiguration();
+	return false;
+}
+
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 {
 	

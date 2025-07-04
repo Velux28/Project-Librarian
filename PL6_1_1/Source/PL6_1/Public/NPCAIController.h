@@ -58,6 +58,11 @@ protected:
 
 	void SightConfiguration();
 	void HearConfiguration();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Sight")
+	bool ActivateScanner();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Sight")
+	bool DeactivateScanner();
+
 	UFUNCTION(BlueprintCallable, Category = "AISense/Sight")
 	virtual void HandleSight(AActor* _Actor, FAIStimulus _Stimulus);
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
