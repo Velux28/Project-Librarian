@@ -130,7 +130,7 @@ void ANPCAIController::HearConfiguration()
 	AISense->RequestStimuliListenerUpdate();
 }
 
-bool ANPCAIController::ActivateScanner_Implementation()
+bool ANPCAIController::ActivateAlertScanner_Implementation()
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
 
@@ -160,10 +160,10 @@ bool ANPCAIController::ActivateScanner_Implementation()
 	return true;
 }
 
-bool ANPCAIController::DeactivateScanner_Implementation()
+bool ANPCAIController::DeactivateAlertScanner_Implementation()
 {
 	SightConfiguration();
-	return false;
+	return true;
 }
 
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
