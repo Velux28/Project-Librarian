@@ -44,7 +44,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
 	TMap<int32, UMaterialInstance*> DefaultMat;
 
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
 	float ChasingSpeed;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
