@@ -36,8 +36,8 @@ void ANPCAIController::BeginPlay()
 		ControlledPawn = Cast<ANPCCharacter>(GetPawn());
 	}
 
-	SightConfiguration();
-	HearConfiguration();
+	SightPatrolConfig();
+	HearPatrolConfig();
 
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), ConfigSight->SightRadius);
 }
@@ -60,9 +60,9 @@ void ANPCAIController::Tick(float DeltaTime)
 		break;
 
 	case EAIState::Hunt:
-		ControlledPawn->CurrHuntTimer -= DeltaTime;
+		ControlledPawn->MovementHuntCurrResetTimer -= DeltaTime;
 
-		if (ControlledPawn->CurrHuntTimer <= 0)
+		if (ControlledPawn->MovementHuntCurrResetTimer <= 0)
 		{
 			EnterPatrolState();
 		}
@@ -77,8 +77,8 @@ void ANPCAIController::Tick(float DeltaTime)
 		break;
 	}
 }
-
-void ANPCAIController::SightConfiguration()
+#pragma region SightConfig
+void ANPCAIController::SightConfigWithParams(float _SightRadius, float _SightLostDelta, float _SightAngle)
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Sight::StaticClass());
 
@@ -99,14 +99,42 @@ void ANPCAIController::SightConfiguration()
 	}
 
 
-	SightConfig->SightRadius = ControlledPawn->SightRadius;
+	SightConfig->SightRadius = _SightRadius;
 
-	SightConfig->LoseSightRadius = ControlledPawn->SightRadius + ControlledPawn->SightLostRadiusDelta;
-	SightConfig->PeripheralVisionAngleDegrees = ControlledPawn->SightHalfAngle;
+	SightConfig->LoseSightRadius = _SightRadius + _SightLostDelta;
+	SightConfig->PeripheralVisionAngleDegrees = _SightAngle;
+
 	AISense->RequestStimuliListenerUpdate();
 }
 
-void ANPCAIController::HearConfiguration()
+void ANPCAIController::SightPatrolConfig()
+{
+	SightConfigWithParams(ControlledPawn->SightPatrolRadius, ControlledPawn->SightPatrolLostRadiusDelta, ControlledPawn->SightPatrolHalfAngle);
+}
+
+void ANPCAIController::SightAlertConfig()
+{
+	SightConfigWithParams(ControlledPawn->SightAlertRadius, ControlledPawn->SightAlertLostRadiusDelta, ControlledPawn->SightAlertHalfAngle);
+}
+
+void ANPCAIController::SightHuntConfig()
+{
+	SightConfigWithParams(ControlledPawn->SightHuntRadius, ControlledPawn->SightHuntLostRadiusDelta, ControlledPawn->SightHuntHalfAngle);
+}
+
+void ANPCAIController::SightChaseConfig()
+{
+	SightConfigWithParams(ControlledPawn->SightChaseRadius, ControlledPawn->SightChaseLostRadiusDelta, ControlledPawn->SightChaseHalfAngle);
+}
+
+void ANPCAIController::SightPlayerLostConfig()
+{
+	SightConfigWithParams(ControlledPawn->SightPlayerLostRadius, ControlledPawn->SightPlayerLostLostRadiusDelta, ControlledPawn->SightPlayerLostHalfAngle);
+}
+#pragma endregion
+
+#pragma region HearingConfig
+void ANPCAIController::HearConfigWithParams(float _HearRadius)
 {
 	FAISenseID Id = UAISense::GetSenseID(UAISense_Hearing::StaticClass());
 
@@ -126,9 +154,25 @@ void ANPCAIController::HearConfiguration()
 	}
 
 
-	HearConfig->HearingRange = ControlledPawn->HearingRadius;
+	HearConfig->HearingRange = _HearRadius;
 	AISense->RequestStimuliListenerUpdate();
 }
+
+void ANPCAIController::HearPatrolConfig()
+{
+	HearConfigWithParams(ControlledPawn->HearingPatrolRadius);
+}
+
+void ANPCAIController::HearAlertConfig()
+{
+	HearConfigWithParams(ControlledPawn->HearingAlertRadius);
+}
+
+void ANPCAIController::HearHuntConfig()
+{
+	HearConfigWithParams(ControlledPawn->HearingHuntRadius);
+}
+#pragma endregion
 
 bool ANPCAIController::ActivateAlertScanner_Implementation()
 {
@@ -151,10 +195,10 @@ bool ANPCAIController::ActivateAlertScanner_Implementation()
 	}
 
 
-	SightConfig->SightRadius = ControlledPawn->ScanRadius;
+	SightConfig->SightRadius = ControlledPawn->SightScanRadius;
 
-	SightConfig->LoseSightRadius = ControlledPawn->ScanRadius + ControlledPawn->ScanLostRadiusDelta;
-	SightConfig->PeripheralVisionAngleDegrees = ControlledPawn->ScanHalfAngle;
+	SightConfig->LoseSightRadius = ControlledPawn->SightScanRadius + ControlledPawn->SightScanLostRadiusDelta;
+	SightConfig->PeripheralVisionAngleDegrees = ControlledPawn->SightScanHalfAngle;
 	AISense->RequestStimuliListenerUpdate();
 
 	return true;
@@ -162,7 +206,7 @@ bool ANPCAIController::ActivateAlertScanner_Implementation()
 
 bool ANPCAIController::DeactivateAlertScanner_Implementation()
 {
-	SightConfiguration();
+	SightPatrolConfig();
 	return true;
 }
 
@@ -227,6 +271,12 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 
 void ANPCAIController::HandleHearHumanSound()
 {
+	if (CurrAIState == EAIState::Hunt)
+	{
+		ControlledPawn->MovementHuntCurrResetTimer = ControlledPawn->MovementHuntResetTimer;
+		return;
+	}
+
 	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase && CurrAIState != EAIState::Hunt)
 	{
 		EnterHuntState();
@@ -255,14 +305,20 @@ void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)
 void ANPCAIController::EnterPatrolState()
 {
 	CurrAIState = EAIState::Patrol;
-	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->PatrolRadius;
-	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+
+	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementPatrolRadius;
+	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPatrolSpeed);
+
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
-	ControlledPawn->ChangeMaterial(TEXT("Patrol")); 
+	ControlledPawn->ChangeMaterial(TEXT("Patrol"));
+
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
+
+	SightPatrolConfig();
+	HearPatrolConfig();
 
 	UE_LOG(LogTemp, Warning, TEXT("Patrol"));
 }
@@ -271,15 +327,18 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 {
 	CurrAIState = EAIState::Alert;
 
-	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementAlertSpeed);
+
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
 	ControlledPawn->ChangeMaterial(TEXT("Alert"));
 
 	Blackboard->SetValueAsVector(TEXT("TargetLocation"), _TargetLocation);
-
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+
+	SightAlertConfig();
+	HearAlertConfig();
 
 	UE_LOG(LogTemp, Warning, TEXT("sound loc  %d, %d, %d"), _TargetLocation.X, _TargetLocation.Y, _TargetLocation.Z);
 }
@@ -287,14 +346,20 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 void ANPCAIController::EnterHuntState()
 {
 	CurrAIState = EAIState::Hunt;
-	ControlledPawn->CurrHuntTimer = ControlledPawn->HuntingResetTimer;
-	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->HuntingRadius;
-	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+
+	ControlledPawn->MovementHuntCurrResetTimer = ControlledPawn->MovementHuntResetTimer;
+	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementHuntRadius;
+	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementHuntSpeed);
+
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
 	ControlledPawn->ChangeMaterial(TEXT("Hunt"));
+
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
+
+	SightHuntConfig();
+	HearHuntConfig();
 
 	UE_LOG(LogTemp, Warning, TEXT("Hunt"));
 }
@@ -303,7 +368,8 @@ void ANPCAIController::EnterChaseState(UObject* _TargetActor)
 {
 	CurrAIState = EAIState::Chase;
 
-	ControlledPawn->SetWalkSpeed(ControlledPawn->ChasingSpeed);
+	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementChaseSpeed);
+
 	ControlledPawn->ChangeMaterial(TEXT("Chase"));
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Chase"));
 
@@ -313,6 +379,8 @@ void ANPCAIController::EnterChaseState(UObject* _TargetActor)
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("SoundType"));
 
+	SightChaseConfig();
+
 	UE_LOG(LogTemp, Warning, TEXT("Chase"));
 }
 
@@ -320,15 +388,16 @@ void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
 {
 	CurrAIState = EAIState::PlayerLost;
 
-	ControlledPawn->SetWalkSpeed(ControlledPawn->WalkingSpeed);
+	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPlayerLostSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Lost"));
 
 	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _LastKnownLocation);
-
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
+
+	SightPlayerLostConfig();
 
 	UE_LOG(LogTemp, Warning, TEXT("PalyerLost"));
 

@@ -55,12 +55,22 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AISense")
 	TEnumAsByte<EAIState> CurrAIState;
 
+	//in player lost l'ai si gira in direzione del player solo all'inizio delle scansione
+	void SightConfigWithParams(float _SightRadius, float _SightLostDelta, float _SightAnfgle);
+	void SightPatrolConfig();
+	void SightAlertConfig();
+	void SightHuntConfig();
+	void SightChaseConfig();
+	void SightPlayerLostConfig();
 
-	void SightConfiguration();
-	void HearConfiguration();
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Sight")
+	void HearConfigWithParams(float _HearRadius);
+	void HearPatrolConfig();
+	void HearAlertConfig();
+	void HearHuntConfig();
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Scan")
 	bool ActivateAlertScanner();
-	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Sight")
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Scan")
 	bool DeactivateAlertScanner();
 
 	UFUNCTION(BlueprintCallable, Category = "AISense/Sight")
