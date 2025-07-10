@@ -338,7 +338,6 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
-	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTimer"), ControlledPawn->MovementHuntWaitTimer);
 
 	SightAlertConfig();
 	HearAlertConfig();
@@ -360,6 +359,7 @@ void ANPCAIController::EnterHuntState()
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
+	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTimer"), ControlledPawn->MovementHuntWaitTimer);
 
 	SightHuntConfig();
 	HearHuntConfig();
