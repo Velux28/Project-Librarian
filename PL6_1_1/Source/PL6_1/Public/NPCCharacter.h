@@ -44,30 +44,78 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
 	TMap<int32, UMaterialInstance*> DefaultMat;
 
+	//una variabile per ogni stato, categorizzate per stato
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float MovementPatrolSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float MovementPatrolRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float MovementPatrolWaitTimer;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float HearingPatrolRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float SightPatrolRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float SightPatrolLostRadiusDelta;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
+	float SightPatrolHalfAngle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
-	float ChasingSpeed;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement")
-	float WalkingSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AlertConfig")
+	float MovementAlertSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AlertConfig")
+	float HearingAlertRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AlertConfig")
+	float SightAlertRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AlertConfig")
+	float SightAlertLostRadiusDelta;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AlertConfig")
+	float SightAlertHalfAngle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Hunt")
-	float HuntingResetTimer;
-	float CurrHuntTimer;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Hunt")
-	float HuntingRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ScanningConfig")
+	float SightScanRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ScanningConfig")
+	float SightScanLostRadiusDelta;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ScanningConfig")
+	float SightScanHalfAngle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Chase")
-	float ChasingResetTimer;
-	float CurrChaseTimer;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Chase")
-	float ChasingRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float MovementHuntSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float MovementHuntRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float MovementHuntWaitTimer;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float MovementHuntResetTimer;
+	float MovementHuntCurrResetTimer;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float HearingHuntRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float SightHuntRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float SightHuntLostRadiusDelta;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
+	float SightHuntHalfAngle;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState/Patrol")		
-	float PatrolRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ChaseConfig")
+	float MovementChaseSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ChaseConfig")
+	float SightChaseRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ChaseConfig")
+	float SightChaseLostRadiusDelta;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "ChaseConfig")
+	float SightChaseHalfAngle;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlayerLostConfig")
+	float MovementPlayerLostSpeed;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlayerLostConfig")
+	float SightPlayerLostRadius;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlayerLostConfig")
+	float SightPlayerLostLostRadiusDelta;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlayerLostConfig")
+	float SightPlayerLostHalfAngle;
 
 	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState")
 	float CurrPlayerMaxRadius;
-	
 
 
 	UFUNCTION(BlueprintCallable, Category = "Material")

@@ -13,13 +13,52 @@ ANPCCharacter::ANPCCharacter()
 	{
 		SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 	}
+
+	MovementPatrolSpeed = 200; 
+	MovementPatrolRadius = 5000;
+	MovementPatrolWaitTimer = 2;
+	HearingPatrolRadius = 3000;
+	SightPatrolRadius = 200;
+	SightPatrolLostRadiusDelta = 50000;
+	SightPatrolHalfAngle = 60;
+	
+	MovementAlertSpeed = 200;
+	HearingAlertRadius = 3000;
+	SightAlertRadius = 400;
+	SightAlertLostRadiusDelta = 50000;
+	SightAlertHalfAngle = 60;
+
+	SightScanRadius = 1500;
+	SightScanLostRadiusDelta = 50000;
+	SightScanHalfAngle = 75;
+
+	MovementHuntSpeed = 300;
+	MovementHuntRadius = 800;
+	MovementHuntWaitTimer = 1;
+	MovementHuntResetTimer = 20;
+	MovementHuntCurrResetTimer = MovementHuntResetTimer;
+	HearingHuntRadius = 3000;
+	SightHuntRadius = 400;
+	SightHuntLostRadiusDelta = 50000;
+	SightHuntHalfAngle = 60;
+
+	MovementChaseSpeed = 350;
+	SightChaseRadius = 400;
+	SightChaseLostRadiusDelta = 50000;
+	SightChaseHalfAngle = 90;
+
+	MovementPlayerLostSpeed = 250;
+	SightPlayerLostRadius = 1500;
+	SightPlayerLostLostRadiusDelta = 50000;
+	SightPlayerLostHalfAngle = 75;
 }
 
 // Called when the game starts or when spawned
 void ANPCCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	CurrPlayerMaxRadius = PatrolRadius;
+	
+
 }
 
 
