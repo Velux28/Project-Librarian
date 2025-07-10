@@ -71,7 +71,7 @@ protected:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Scan")
 	bool ActivateAlertScanner();
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Scan")
-	bool DeactivateAlertScanner();
+	bool ActivatePlayerLostScanner();
 
 	UFUNCTION(BlueprintCallable, Category = "AISense/Sight")
 	virtual void HandleSight(AActor* _Actor, FAIStimulus _Stimulus);

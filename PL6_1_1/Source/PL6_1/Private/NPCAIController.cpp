@@ -204,9 +204,10 @@ bool ANPCAIController::ActivateAlertScanner_Implementation()
 	return true;
 }
 
-bool ANPCAIController::DeactivateAlertScanner_Implementation()
+bool ANPCAIController::ActivatePlayerLostScanner_Implementation()
 {
-	SightPatrolConfig();
+	SightPlayerLostConfig();
+
 	return true;
 }
 
@@ -316,6 +317,7 @@ void ANPCAIController::EnterPatrolState()
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
+	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTimer"), ControlledPawn->MovementPatrolWaitTimer);
 
 	SightPatrolConfig();
 	HearPatrolConfig();
@@ -336,6 +338,7 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTimer"), ControlledPawn->MovementHuntWaitTimer);
 
 	SightAlertConfig();
 	HearAlertConfig();
@@ -397,7 +400,7 @@ void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 
-	SightPlayerLostConfig();
+	//SightPlayerLostConfig();
 
 	UE_LOG(LogTemp, Warning, TEXT("PalyerLost"));
 
