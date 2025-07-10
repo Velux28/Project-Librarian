@@ -278,7 +278,7 @@ void ANPCAIController::HandleHearHumanSound()
 		return;
 	}
 
-	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase && CurrAIState != EAIState::Hunt)
+	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase)
 	{
 		EnterHuntState();
 	}
@@ -317,12 +317,11 @@ void ANPCAIController::EnterPatrolState()
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
-	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTimer"), ControlledPawn->MovementPatrolWaitTimer);
 
 	SightPatrolConfig();
 	HearPatrolConfig();
+	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementPatrolWaitTimer);
 
-	UE_LOG(LogTemp, Warning, TEXT("Patrol"));
 }
 
 void ANPCAIController::EnterAlertState(FVector _TargetLocation)
@@ -342,7 +341,6 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 	SightAlertConfig();
 	HearAlertConfig();
 
-	UE_LOG(LogTemp, Warning, TEXT("sound loc  %d, %d, %d"), _TargetLocation.X, _TargetLocation.Y, _TargetLocation.Z);
 }
 
 void ANPCAIController::EnterHuntState()
@@ -359,12 +357,11 @@ void ANPCAIController::EnterHuntState()
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
-	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTimer"), ControlledPawn->MovementHuntWaitTimer);
 
 	SightHuntConfig();
 	HearHuntConfig();
 
-	UE_LOG(LogTemp, Warning, TEXT("Hunt"));
+	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementHuntWaitTimer);
 }
 
 void ANPCAIController::EnterChaseState(UObject* _TargetActor)
@@ -384,7 +381,6 @@ void ANPCAIController::EnterChaseState(UObject* _TargetActor)
 
 	SightChaseConfig();
 
-	UE_LOG(LogTemp, Warning, TEXT("Chase"));
 }
 
 void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
@@ -399,11 +395,6 @@ void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
 	Blackboard->ClearValue(TEXT("TargetLocation"));
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
-
-	//SightPlayerLostConfig();
-
-	UE_LOG(LogTemp, Warning, TEXT("PalyerLost"));
-
 }
 
 

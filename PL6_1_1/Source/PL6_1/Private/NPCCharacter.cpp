@@ -16,7 +16,7 @@ ANPCCharacter::ANPCCharacter()
 
 	MovementPatrolSpeed = 200; 
 	MovementPatrolRadius = 5000;
-	MovementPatrolWaitTimer = 5;
+	MovementPatrolWaitTimer = 2;
 	HearingPatrolRadius = 3000;
 	SightPatrolRadius = 200;
 	SightPatrolLostRadiusDelta = 50000;
@@ -34,7 +34,7 @@ ANPCCharacter::ANPCCharacter()
 
 	MovementHuntSpeed = 300;
 	MovementHuntRadius = 800;
-	MovementHuntWaitTimer = 2.5;
+	MovementHuntWaitTimer = 1;
 	MovementHuntResetTimer = 20;
 	MovementHuntCurrResetTimer = MovementHuntResetTimer;
 	HearingHuntRadius = 3000;
