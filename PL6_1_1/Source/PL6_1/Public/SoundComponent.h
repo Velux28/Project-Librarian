@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Components/AudioComponent.h"
 #include "SoundComponent.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class PL6_1_API USoundComponent : public UActorComponent
+class PL6_1_API USoundComponent : public UAudioComponent
 {
 	GENERATED_BODY()
 
