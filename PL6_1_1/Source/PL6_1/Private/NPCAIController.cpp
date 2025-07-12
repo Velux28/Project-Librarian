@@ -36,8 +36,11 @@ void ANPCAIController::BeginPlay()
 		ControlledPawn = Cast<ANPCCharacter>(GetPawn());
 	}
 
-	SightPatrolConfig();
-	HearPatrolConfig();
+	if (ControlledPawn != nullptr)
+	{
+		SightPatrolConfig();
+		HearPatrolConfig();
+	}
 
 	//UE_LOG(LogTemp, Warning, TEXT("%f"), ConfigSight->SightRadius);
 }
