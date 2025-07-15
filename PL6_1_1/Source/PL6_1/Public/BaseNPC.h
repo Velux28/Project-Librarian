@@ -35,6 +35,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	FDialogue CurrNPCDialogue;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
+	FString  ImportantDialogueKey;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Dialogue")
 	UDialogueComponent* NPCDialogues;
 
 
