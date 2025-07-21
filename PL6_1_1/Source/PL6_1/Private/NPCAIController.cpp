@@ -323,6 +323,7 @@ void ANPCAIController::EnterPatrolState()
 
 	SightPatrolConfig();
 	HearPatrolConfig();
+
 	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementPatrolWaitTimer);
 
 }

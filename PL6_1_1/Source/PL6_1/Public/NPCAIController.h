@@ -84,14 +84,34 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
 	virtual void ChosePatrolLocation(FVector& PatrolPosition);
 
+	/// <summary>
+	///	Set ControlledPawn movement speed, changes "ControlledPawn" materials using Patrol variable in pawn "MaterialMap" using "Patrol" key and plays "Patrol" sound in SoundMap of ControlledPawn.
+	/// Set hearing and sight sense, clears and set blackboard variable for Patrol.
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterPatrolState();
+	/// <summary>
+	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Alert variable in pawn MaterialMap using "Alert" key and plays "Alert" sound in SoundMap of ControlledPawn.
+	/// Set hearing and sight sense, clears and set blackboard variable for Alert.
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterAlertState(FVector _TargetLocation);
+	/// <summary>
+	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Hunt variable in pawn MaterialMap using "Hunt" key and plays "Hunt" sound in SoundMap of ControlledPawn.
+	/// Set hearing and sight sense, clears and set blackboard variable for Hunt.
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterHuntState();
+	/// <summary>
+	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Chase variable in pawn MaterialMap using "Chase" key and plays "Chase" sound in SoundMap of ControlledPawn.
+	/// Set sight sense, clears and set blackboard variable for Chase.
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterChaseState(UObject* _TargetActor);
+	/// <summary>
+	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Lost variable in pawn MaterialMap using "Lost" key and plays "Lost" sound in SoundMap of ControlledPawn.
+	/// Set blackboard variable for Lost.
+	/// </summary>
 	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
 	virtual void EnterPalyerLostState(FVector _LastKnownLocation);
 
