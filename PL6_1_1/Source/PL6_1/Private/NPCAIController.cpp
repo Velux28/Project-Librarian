@@ -216,7 +216,10 @@ bool ANPCAIController::ActivatePlayerLostScanner_Implementation()
 
 void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 {
-	
+	if (!Blackboard)
+	{
+		return;
+	}
 	//check if player ref is set
 	if (_Actor != PlayerRef)
 	{
@@ -261,6 +264,12 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 
 void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 {
+
+	if (!Blackboard)
+	{
+		return;
+	}
+		
 	Blackboard->SetValueAsName(TEXT("SoundType"), _Stimulus.Tag);
 
 	if (_Stimulus.Tag == TEXT("Human"))
