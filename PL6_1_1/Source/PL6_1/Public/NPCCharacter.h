@@ -44,6 +44,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Material")
 	TMap<int32, UMaterialInstance*> DefaultMat;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Scan")
+	FVector ScannerLocation;
+
 	//una variabile per ogni stato, categorizzate per stato
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PatrolConfig")
 	float MovementPatrolSpeed;

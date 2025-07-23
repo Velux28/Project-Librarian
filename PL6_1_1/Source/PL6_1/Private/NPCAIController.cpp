@@ -80,6 +80,12 @@ void ANPCAIController::Tick(float DeltaTime)
 		break;
 	}
 }
+
+void ANPCAIController::SetHearingSenseStatus(bool _NewStatus)
+{
+	AISense->SetSenseEnabled(UAISense_Hearing::StaticClass(), _NewStatus);
+}
+
 #pragma region SightConfig
 void ANPCAIController::SightConfigWithParams(float _SightRadius, float _SightLostDelta, float _SightAngle)
 {
@@ -315,9 +321,11 @@ void ANPCAIController::ChosePatrolLocation(FVector& PatrolPosition)
 	PatrolPosition = ControlledPawn->ChosePatrolLocation(PlayerRef->GetActorLocation());
 }
 
-void ANPCAIController::EnterPatrolState()
+void ANPCAIController::EnterPatrolState_Implementation()
 {
 	CurrAIState = EAIState::Patrol;
+
+	SetHearingSenseStatus(true);
 
 	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementPatrolRadius;
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPatrolSpeed);
@@ -337,9 +345,11 @@ void ANPCAIController::EnterPatrolState()
 
 }
 
-void ANPCAIController::EnterAlertState(FVector _TargetLocation)
+void ANPCAIController::EnterAlertState_Implementation(FVector _TargetLocation)
 {
 	CurrAIState = EAIState::Alert;
+
+	SetHearingSenseStatus(true);
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementAlertSpeed);
 
@@ -356,9 +366,11 @@ void ANPCAIController::EnterAlertState(FVector _TargetLocation)
 
 }
 
-void ANPCAIController::EnterHuntState()
+void ANPCAIController::EnterHuntState_Implementation()
 {
 	CurrAIState = EAIState::Hunt;
+
+	SetHearingSenseStatus(true);
 
 	ControlledPawn->MovementHuntCurrResetTimer = ControlledPawn->MovementHuntResetTimer;
 	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementHuntRadius;
@@ -377,9 +389,11 @@ void ANPCAIController::EnterHuntState()
 	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementHuntWaitTimer);
 }
 
-void ANPCAIController::EnterChaseState(UObject* _TargetActor)
+void ANPCAIController::EnterChaseState_Implementation(UObject* _TargetActor)
 {
 	CurrAIState = EAIState::Chase;
+
+	SetHearingSenseStatus(false);
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementChaseSpeed);
 
@@ -396,9 +410,11 @@ void ANPCAIController::EnterChaseState(UObject* _TargetActor)
 
 }
 
-void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
+void ANPCAIController::EnterPalyerLostState_Implementation	(FVector _LastKnownLocation)
 {
 	CurrAIState = EAIState::PlayerLost;
+
+	SetHearingSenseStatus(false);
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPlayerLostSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Lost"));

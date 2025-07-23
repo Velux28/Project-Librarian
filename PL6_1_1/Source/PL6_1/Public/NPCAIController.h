@@ -55,6 +55,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AISense")
 	TEnumAsByte<EAIState> CurrAIState;
 
+	UFUNCTION(BlueprintCallable, Category = "AISense")
+	void SetHearingSenseStatus(bool _NewStatus);
+
 	//in player lost l'ai si gira in direzione del player solo all'inizio delle scansione
 	void SightConfigWithParams(float _SightRadius, float _SightLostDelta, float _SightAnfgle);
 	void SightPatrolConfig();
@@ -84,36 +87,37 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
 	virtual void ChosePatrolLocation(FVector& PatrolPosition);
 
+
 	/// <summary>
 	///	Set ControlledPawn movement speed, changes "ControlledPawn" materials using Patrol variable in pawn "MaterialMap" using "Patrol" key and plays "Patrol" sound in SoundMap of ControlledPawn.
 	/// Set hearing and sight sense, clears and set blackboard variable for Patrol.
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterPatrolState();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
+	void EnterPatrolState();
 	/// <summary>
 	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Alert variable in pawn MaterialMap using "Alert" key and plays "Alert" sound in SoundMap of ControlledPawn.
 	/// Set hearing and sight sense, clears and set blackboard variable for Alert.
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterAlertState(FVector _TargetLocation);
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
+	void EnterAlertState(FVector _TargetLocation);
 	/// <summary>
 	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Hunt variable in pawn MaterialMap using "Hunt" key and plays "Hunt" sound in SoundMap of ControlledPawn.
 	/// Set hearing and sight sense, clears and set blackboard variable for Hunt.
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterHuntState();
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
+	void EnterHuntState();
 	/// <summary>
 	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Chase variable in pawn MaterialMap using "Chase" key and plays "Chase" sound in SoundMap of ControlledPawn.
 	/// Set sight sense, clears and set blackboard variable for Chase.
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterChaseState(UObject* _TargetActor);
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
+	void EnterChaseState(UObject* _TargetActor);
 	/// <summary>
 	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Lost variable in pawn MaterialMap using "Lost" key and plays "Lost" sound in SoundMap of ControlledPawn.
 	/// Set blackboard variable for Lost.
 	/// </summary>
-	UFUNCTION(BlueprintCallable, Category = "AISense/Change Snese")
-	virtual void EnterPalyerLostState(FVector _LastKnownLocation);
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
+	void EnterPalyerLostState(FVector _LastKnownLocation);
 
 	
 

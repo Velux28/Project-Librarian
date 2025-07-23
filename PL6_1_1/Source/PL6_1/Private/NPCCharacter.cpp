@@ -14,6 +14,8 @@ ANPCCharacter::ANPCCharacter()
 		SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 	}
 
+	ScannerLocation = FVector(-1, -16, 210);
+
 	MovementPatrolSpeed = 200; 
 	MovementPatrolRadius = 5000;
 	MovementPatrolWaitTimer = 2;
