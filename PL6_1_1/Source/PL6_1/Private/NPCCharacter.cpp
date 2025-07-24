@@ -14,7 +14,7 @@ ANPCCharacter::ANPCCharacter()
 		SoundComp = CreateDefaultSubobject<USoundComponent>(TEXT("My Sound Comp"));
 	}
 
-	ScannerLocation = FVector(-1, -16, 210);
+	ScannerLocation = FVector(-4.2, -16.2, 146.5);
 
 	MovementPatrolSpeed = 200; 
 	MovementPatrolRadius = 5000;
@@ -47,7 +47,7 @@ ANPCCharacter::ANPCCharacter()
 	MovementChaseSpeed = 350;
 	SightChaseRadius = 400;
 	SightChaseLostRadiusDelta = 50000;
-	SightChaseHalfAngle = 90;
+	SightChaseHalfAngle = 125;
 
 	MovementPlayerLostSpeed = 250;
 	SightPlayerLostRadius = 1500;
