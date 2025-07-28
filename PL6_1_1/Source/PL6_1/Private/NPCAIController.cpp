@@ -276,16 +276,18 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 		return;
 	}
 		
-	Blackboard->SetValueAsName(TEXT("SoundType"), _Stimulus.Tag);
 
 	if (_Stimulus.Tag == TEXT("Human"))
 	{
+		Blackboard->ClearValue(TEXT("SoundType"));
 		HandleHearHumanSound();
 	}
 	else if (_Stimulus.Tag == TEXT("Non-Human"))
 	{
 		HandleHearNonHumanSound(_Stimulus.StimulusLocation);
 	}
+
+	Blackboard->SetValueAsName(TEXT("SoundType"), _Stimulus.Tag);
 }
 
 void ANPCAIController::HandleHearHumanSound()
