@@ -63,12 +63,6 @@ void ANPCAIController::Tick(float DeltaTime)
 		break;
 
 	case EAIState::Hunt:
-		ControlledPawn->MovementHuntCurrResetTimer -= DeltaTime;
-
-		if (ControlledPawn->MovementHuntCurrResetTimer <= 0)
-		{
-			EnterPatrolState();
-		}
 
 		break;
 
@@ -280,7 +274,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 	if (_Stimulus.Tag == TEXT("Human"))
 	{
 		Blackboard->ClearValue(TEXT("SoundType"));
-		HandleHearHumanSound();
+		HandleHearHumanSound(_Stimulus.StimulusLocation);
 	}
 	else if (_Stimulus.Tag == TEXT("Non-Human"))
 	{
@@ -290,7 +284,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 	Blackboard->SetValueAsName(TEXT("SoundType"), _Stimulus.Tag);
 }
 
-void ANPCAIController::HandleHearHumanSound()
+void ANPCAIController::HandleHearHumanSound(FVector StepPosition)
 {
 	if (CurrAIState == EAIState::Hunt)
 	{
@@ -300,7 +294,7 @@ void ANPCAIController::HandleHearHumanSound()
 
 	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase)
 	{
-		EnterHuntState();
+		EnterHuntState(StepPosition);
 	}
 }
 
@@ -368,7 +362,7 @@ void ANPCAIController::EnterAlertState_Implementation(FVector _TargetLocation)
 
 }
 
-void ANPCAIController::EnterHuntState_Implementation()
+void ANPCAIController::EnterHuntState_Implementation(FVector StepPosition)
 {
 	CurrAIState = EAIState::Hunt;
 
@@ -389,6 +383,7 @@ void ANPCAIController::EnterHuntState_Implementation()
 	HearHuntConfig();
 
 	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementHuntWaitTimer);
+	Blackboard->SetValueAsVector(TEXT("CurrPatrolPos"), StepPosition);
 }
 
 void ANPCAIController::EnterChaseState_Implementation(UObject* _TargetActor)

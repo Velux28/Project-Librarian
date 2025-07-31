@@ -81,7 +81,7 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
 	virtual void HandleHear(FAIStimulus _Stimulus);
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
-	virtual void HandleHearHumanSound();
+	virtual void HandleHearHumanSound(FVector StepPosition);
 	UFUNCTION(BlueprintCallable, Category = "AISense/Hear")
 	virtual void HandleHearNonHumanSound(FVector _TargetLocation);
 	UFUNCTION(BlueprintCallable, Category = "AIState/Patrol")
@@ -105,7 +105,7 @@ protected:
 	/// Set hearing and sight sense, clears and set blackboard variable for Hunt.
 	/// </summary>
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
-	void EnterHuntState();
+	void EnterHuntState(FVector StepPosition);
 	/// <summary>
 	///	Set ControlledPawn movement speed, changes ControlledPawn materials using Chase variable in pawn MaterialMap using "Chase" key and plays "Chase" sound in SoundMap of ControlledPawn.
 	/// Set sight sense, clears and set blackboard variable for Chase.
