@@ -35,10 +35,7 @@ ANPCCharacter::ANPCCharacter()
 	SightScanHalfAngle = 75;
 
 	MovementHuntSpeed = 300;
-	MovementHuntRadius = 800;
 	MovementHuntWaitTimer = 1;
-	MovementHuntResetTimer = 20;
-	MovementHuntCurrResetTimer = MovementHuntResetTimer;
 	HearingHuntRadius = 3000;
 	SightHuntRadius = 400;
 	SightHuntLostRadiusDelta = 50000;

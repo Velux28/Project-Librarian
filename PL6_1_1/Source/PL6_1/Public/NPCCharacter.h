@@ -84,12 +84,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
 	float MovementHuntSpeed;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
-	float MovementHuntRadius;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
 	float MovementHuntWaitTimer;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
-	float MovementHuntResetTimer;
-	float MovementHuntCurrResetTimer;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")
 	float HearingHuntRadius;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "HuntConfig")

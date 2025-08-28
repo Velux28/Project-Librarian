@@ -286,11 +286,6 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 
 void ANPCAIController::HandleHearHumanSound(FVector StepPosition)
 {
-	if (CurrAIState == EAIState::Hunt)
-	{
-		ControlledPawn->MovementHuntCurrResetTimer = ControlledPawn->MovementHuntResetTimer;
-		return;
-	}
 
 	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase)
 	{
@@ -368,8 +363,6 @@ void ANPCAIController::EnterHuntState_Implementation(FVector StepPosition)
 
 	SetHearingSenseStatus(true);
 
-	ControlledPawn->MovementHuntCurrResetTimer = ControlledPawn->MovementHuntResetTimer;
-	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementHuntRadius;
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementHuntSpeed);
 
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
