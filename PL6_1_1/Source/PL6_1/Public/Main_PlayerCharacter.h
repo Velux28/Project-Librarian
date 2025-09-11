@@ -42,6 +42,8 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	bool bIsCrouching;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	bool bIsMidCrouchAnim;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	FVector PlayerUncrouchHeight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")

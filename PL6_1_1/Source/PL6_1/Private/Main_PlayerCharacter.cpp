@@ -37,9 +37,12 @@ void AMain_PlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 
 bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 {
-	if (bIsCrouching && _Camera->FieldOfView == CrouchFOV)
+	
+	
+	//if (bIsCrouching && _Camera->FieldOfView == CrouchFOV)
+	if (bIsCrouching && !bIsMidCrouchAnim)
 	{
-		DeltaFOV = UncrouchFOV - _Camera->FieldOfView;
+		//DeltaFOV = UncrouchFOV - _Camera->FieldOfView;
 		FHitResult OnHit;
 		FCollisionQueryParams Params;
 		//Params.AddIgnoredActor(this);
@@ -51,15 +54,18 @@ bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 		UnCrouch();
 		GetMesh()->SetRelativeLocation(FVector::Zero());
 		bIsCrouching = false;
+		bIsMidCrouchAnim = true;
 		return true;
 	}
-	else if (!bIsCrouching && _Camera->FieldOfView == UncrouchFOV)
+	//else if (!bIsCrouching && _Camera->FieldOfView == UncrouchFOV)
+	else if (!bIsCrouching && !bIsMidCrouchAnim)
 	{
-		DeltaFOV = CrouchFOV - _Camera->FieldOfView;
+		//DeltaFOV = CrouchFOV - _Camera->FieldOfView;
 		Crouch();
 		//playsound
 		GetMesh()->SetRelativeLocation(FVector(-40, -15, 0));
 		bIsCrouching = true;
+		bIsMidCrouchAnim = true;
 		return true;
 	}
 
