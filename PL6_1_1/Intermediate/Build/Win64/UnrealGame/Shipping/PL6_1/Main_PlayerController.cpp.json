@@ -1,0 +1,29 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\private\\main_playercontroller.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\pl6_1\\shipping\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\shipping\\pl6_1\\definitions.pl6_1.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\main_playercontroller.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\main_playercharacter.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\camera\\cameracomponent.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\cameracomponent.generated.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\dialoguecomponent.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\dialogue.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\dialogue.generated.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\dialoguecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\character.generated.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\main_playercharacter.generated.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\main_playercontroller.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

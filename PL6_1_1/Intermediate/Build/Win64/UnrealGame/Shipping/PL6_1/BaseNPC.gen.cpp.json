@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\basenpc.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\pl6_1\\shipping\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\shipping\\pl6_1\\definitions.pl6_1.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\basenpc.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\dialogue.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\dialogue.generated.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\dialoguecomponent.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\dialoguecomponent.generated.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealgame\\inc\\pl6_1\\basenpc.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
