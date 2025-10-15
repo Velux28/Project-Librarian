@@ -102,9 +102,10 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 	}
 	DEFINE_FUNCTION(ANPCAIController::execEnterHuntState)
 	{
+		P_GET_STRUCT(FVector,Z_Param_StepPosition);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->EnterHuntState_Implementation();
+		P_THIS->EnterHuntState_Implementation(Z_Param_StepPosition);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ANPCAIController::execEnterAlertState)
@@ -140,9 +141,10 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 	}
 	DEFINE_FUNCTION(ANPCAIController::execHandleHearHumanSound)
 	{
+		P_GET_STRUCT(FVector,Z_Param_StepPosition);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		P_THIS->HandleHearHumanSound();
+		P_THIS->HandleHearHumanSound(Z_Param_StepPosition);
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ANPCAIController::execHandleHear)
@@ -213,9 +215,11 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 		ProcessEvent(FindFunctionChecked(NAME_ANPCAIController_EnterChaseState),&Parms);
 	}
 	static FName NAME_ANPCAIController_EnterHuntState = FName(TEXT("EnterHuntState"));
-	void ANPCAIController::EnterHuntState()
+	void ANPCAIController::EnterHuntState(FVector StepPosition)
 	{
-		ProcessEvent(FindFunctionChecked(NAME_ANPCAIController_EnterHuntState),NULL);
+		NPCAIController_eventEnterHuntState_Parms Parms;
+		Parms.StepPosition=StepPosition;
+		ProcessEvent(FindFunctionChecked(NAME_ANPCAIController_EnterHuntState),&Parms);
 	}
 	static FName NAME_ANPCAIController_EnterPalyerLostState = FName(TEXT("EnterPalyerLostState"));
 	void ANPCAIController::EnterPalyerLostState(FVector _LastKnownLocation)
@@ -418,10 +422,16 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 	}
 	struct Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics
 	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_StepPosition;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::NewProp_StepPosition = { "StepPosition", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(NPCAIController_eventEnterHuntState_Parms, StepPosition), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::NewProp_StepPosition,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::Function_MetaDataParams[] = {
@@ -432,7 +442,7 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 		{ "ToolTip", "<summary>\n      Set ControlledPawn movement speed, changes ControlledPawn materials using Hunt variable in pawn MaterialMap using \"Hunt\" key and plays \"Hunt\" sound in SoundMap of ControlledPawn.\nSet hearing and sight sense, clears and set blackboard variable for Hunt.\n</summary>" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCAIController, nullptr, "EnterHuntState", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C080C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::Function_MetaDataParams)) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCAIController, nullptr, "EnterHuntState", nullptr, nullptr, sizeof(NPCAIController_eventEnterHuntState_Parms), Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C880C00, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANPCAIController_EnterHuntState_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ANPCAIController_EnterHuntState()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -535,10 +545,20 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 	}
 	struct Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics
 	{
+		struct NPCAIController_eventHandleHearHumanSound_Parms
+		{
+			FVector StepPosition;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_StepPosition;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
 #endif
 		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::NewProp_StepPosition = { "StepPosition", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(NPCAIController_eventHandleHearHumanSound_Parms, StepPosition), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::NewProp_StepPosition,
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::Function_MetaDataParams[] = {
@@ -546,7 +566,7 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 		{ "ModuleRelativePath", "Public/NPCAIController.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCAIController, nullptr, "HandleHearHumanSound", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::Function_MetaDataParams)) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ANPCAIController, nullptr, "HandleHearHumanSound", nullptr, nullptr, sizeof(Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::NPCAIController_eventHandleHearHumanSound_Parms), Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04880400, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -706,11 +726,11 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 		{ &Z_Construct_UFunction_ANPCAIController_ChosePatrolLocation, "ChosePatrolLocation" }, // 2739424155
 		{ &Z_Construct_UFunction_ANPCAIController_EnterAlertState, "EnterAlertState" }, // 1358533580
 		{ &Z_Construct_UFunction_ANPCAIController_EnterChaseState, "EnterChaseState" }, // 29830478
-		{ &Z_Construct_UFunction_ANPCAIController_EnterHuntState, "EnterHuntState" }, // 2076689694
+		{ &Z_Construct_UFunction_ANPCAIController_EnterHuntState, "EnterHuntState" }, // 743951764
 		{ &Z_Construct_UFunction_ANPCAIController_EnterPalyerLostState, "EnterPalyerLostState" }, // 481096382
 		{ &Z_Construct_UFunction_ANPCAIController_EnterPatrolState, "EnterPatrolState" }, // 1341705393
 		{ &Z_Construct_UFunction_ANPCAIController_HandleHear, "HandleHear" }, // 3918569860
-		{ &Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound, "HandleHearHumanSound" }, // 2720711468
+		{ &Z_Construct_UFunction_ANPCAIController_HandleHearHumanSound, "HandleHearHumanSound" }, // 1801617102
 		{ &Z_Construct_UFunction_ANPCAIController_HandleHearNonHumanSound, "HandleHearNonHumanSound" }, // 3965134795
 		{ &Z_Construct_UFunction_ANPCAIController_HandleSight, "HandleSight" }, // 1893515699
 		{ &Z_Construct_UFunction_ANPCAIController_SetHearingSenseStatus, "SetHearingSenseStatus" }, // 555806806
@@ -800,9 +820,9 @@ void EmptyLinkFunctionForGeneratedCodeNPCAIController() {}
 		{ EAIState_StaticEnum, TEXT("EAIState"), &Z_Registration_Info_UEnum_EAIState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 814876965U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ANPCAIController, ANPCAIController::StaticClass, TEXT("ANPCAIController"), &Z_Registration_Info_UClass_ANPCAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCAIController), 825806047U) },
+		{ Z_Construct_UClass_ANPCAIController, ANPCAIController::StaticClass, TEXT("ANPCAIController"), &Z_Registration_Info_UClass_ANPCAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCAIController), 1016866760U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_4008251359(TEXT("/Script/PL6_1"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_1690583142(TEXT("/Script/PL6_1"),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_Statics::ClassInfo),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCAIController_h_Statics::EnumInfo));

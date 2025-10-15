@@ -279,17 +279,9 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_MovementHuntSpeed;
 #if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_MovementHuntRadius_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_MovementHuntRadius;
-#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MovementHuntWaitTimer_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_MovementHuntWaitTimer;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_MovementHuntResetTimer_MetaData[];
-#endif
-		static const UECodeGen_Private::FFloatPropertyParams NewProp_MovementHuntResetTimer;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_HearingHuntRadius_MetaData[];
 #endif
@@ -505,26 +497,12 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntSpeed = { "MovementHuntSpeed", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCCharacter, MovementHuntSpeed), METADATA_PARAMS(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntSpeed_MetaData)) };
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntRadius_MetaData[] = {
-		{ "Category", "HuntConfig" },
-		{ "ModuleRelativePath", "Public/NPCCharacter.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntRadius = { "MovementHuntRadius", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCCharacter, MovementHuntRadius), METADATA_PARAMS(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntRadius_MetaData)) };
-#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntWaitTimer_MetaData[] = {
 		{ "Category", "HuntConfig" },
 		{ "ModuleRelativePath", "Public/NPCCharacter.h" },
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntWaitTimer = { "MovementHuntWaitTimer", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCCharacter, MovementHuntWaitTimer), METADATA_PARAMS(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntWaitTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntWaitTimer_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntResetTimer_MetaData[] = {
-		{ "Category", "HuntConfig" },
-		{ "ModuleRelativePath", "Public/NPCCharacter.h" },
-	};
-#endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntResetTimer = { "MovementHuntResetTimer", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCCharacter, MovementHuntResetTimer), METADATA_PARAMS(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntResetTimer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntResetTimer_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCCharacter_Statics::NewProp_HearingHuntRadius_MetaData[] = {
 		{ "Category", "HuntConfig" },
@@ -634,9 +612,7 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightScanLostRadiusDelta,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightScanHalfAngle,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntSpeed,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntRadius,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntWaitTimer,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MovementHuntResetTimer,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_HearingHuntRadius,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightHuntRadius,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightHuntLostRadiusDelta,
@@ -690,9 +666,9 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 		{ FMaterialMap::StaticStruct, Z_Construct_UScriptStruct_FMaterialMap_Statics::NewStructOps, TEXT("MaterialMap"), &Z_Registration_Info_UScriptStruct_MaterialMap, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMaterialMap), 1413631385U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ANPCCharacter, ANPCCharacter::StaticClass, TEXT("ANPCCharacter"), &Z_Registration_Info_UClass_ANPCCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCCharacter), 1358403912U) },
+		{ Z_Construct_UClass_ANPCCharacter, ANPCCharacter::StaticClass, TEXT("ANPCCharacter"), &Z_Registration_Info_UClass_ANPCCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCCharacter), 2948073262U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_2075817225(TEXT("/Script/PL6_1"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_3483685681(TEXT("/Script/PL6_1"),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ScriptStructInfo),
 		nullptr, 0);

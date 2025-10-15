@@ -107,6 +107,16 @@ void EmptyLinkFunctionForGeneratedCodeMain_PlayerCharacter() {}
 		static void NewProp_bIsCrouching_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsCrouching;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_bIsMidCrouchAnim_MetaData[];
+#endif
+		static void NewProp_bIsMidCrouchAnim_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsMidCrouchAnim;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_c_MetaData[];
+#endif
+		static void NewProp_c_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_c;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_PlayerUncrouchHeight_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_PlayerUncrouchHeight;
@@ -171,6 +181,28 @@ void EmptyLinkFunctionForGeneratedCodeMain_PlayerCharacter() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsCrouching = { "bIsCrouching", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AMain_PlayerCharacter), &Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsCrouching_SetBit, METADATA_PARAMS(Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsCrouching_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsCrouching_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Main_PlayerCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim_SetBit(void* Obj)
+	{
+		((AMain_PlayerCharacter*)Obj)->bIsMidCrouchAnim = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim = { "bIsMidCrouchAnim", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AMain_PlayerCharacter), &Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim_SetBit, METADATA_PARAMS(Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c_MetaData[] = {
+		{ "Category", "Movement" },
+		{ "ModuleRelativePath", "Public/Main_PlayerCharacter.h" },
+	};
+#endif
+	void Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c_SetBit(void* Obj)
+	{
+		((AMain_PlayerCharacter*)Obj)->c = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c = { "c", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AMain_PlayerCharacter), &Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c_SetBit, METADATA_PARAMS(Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_PlayerUncrouchHeight_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "ModuleRelativePath", "Public/Main_PlayerCharacter.h" },
@@ -216,6 +248,8 @@ void EmptyLinkFunctionForGeneratedCodeMain_PlayerCharacter() {}
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMain_PlayerCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMoving,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsCrouching,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_bIsMidCrouchAnim,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_c,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_PlayerUncrouchHeight,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_CrouchFOV,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMain_PlayerCharacter_Statics::NewProp_UncrouchFOV,
@@ -259,9 +293,9 @@ void EmptyLinkFunctionForGeneratedCodeMain_PlayerCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_Main_PlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AMain_PlayerCharacter, AMain_PlayerCharacter::StaticClass, TEXT("AMain_PlayerCharacter"), &Z_Registration_Info_UClass_AMain_PlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMain_PlayerCharacter), 393924826U) },
+		{ Z_Construct_UClass_AMain_PlayerCharacter, AMain_PlayerCharacter::StaticClass, TEXT("AMain_PlayerCharacter"), &Z_Registration_Info_UClass_AMain_PlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMain_PlayerCharacter), 3924409666U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_Main_PlayerCharacter_h_1802202434(TEXT("/Script/PL6_1"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_Main_PlayerCharacter_h_1594633439(TEXT("/Script/PL6_1"),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_Main_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_Main_PlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
