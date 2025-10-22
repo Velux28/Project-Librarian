@@ -330,6 +330,10 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SightPlayerLostHalfAngle_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_SightPlayerLostHalfAngle;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_PredictionTime_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_PredictionTime;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -587,6 +591,15 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightPlayerLostHalfAngle = { "SightPlayerLostHalfAngle", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCCharacter, SightPlayerLostHalfAngle), METADATA_PARAMS(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightPlayerLostHalfAngle_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightPlayerLostHalfAngle_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ANPCCharacter_Statics::NewProp_PredictionTime_MetaData[] = {
+		{ "Category", "Prediction" },
+		{ "Comment", "//for how much time the AI predict Player location\n" },
+		{ "ModuleRelativePath", "Public/NPCCharacter.h" },
+		{ "ToolTip", "for how much time the AI predict Player location" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ANPCCharacter_Statics::NewProp_PredictionTime = { "PredictionTime", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ANPCCharacter, PredictionTime), METADATA_PARAMS(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_PredictionTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ANPCCharacter_Statics::NewProp_PredictionTime_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ANPCCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SoundComp,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_MaterialMap_ValueProp,
@@ -625,6 +638,7 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightPlayerLostRadius,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightPlayerLostLostRadiusDelta,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_SightPlayerLostHalfAngle,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ANPCCharacter_Statics::NewProp_PredictionTime,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ANPCCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ANPCCharacter>::IsAbstract,
@@ -666,9 +680,9 @@ template<> PL6_1_API UScriptStruct* StaticStruct<FMaterialMap>()
 		{ FMaterialMap::StaticStruct, Z_Construct_UScriptStruct_FMaterialMap_Statics::NewStructOps, TEXT("MaterialMap"), &Z_Registration_Info_UScriptStruct_MaterialMap, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FMaterialMap), 1413631385U) },
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ANPCCharacter, ANPCCharacter::StaticClass, TEXT("ANPCCharacter"), &Z_Registration_Info_UClass_ANPCCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCCharacter), 2948073262U) },
+		{ Z_Construct_UClass_ANPCCharacter, ANPCCharacter::StaticClass, TEXT("ANPCCharacter"), &Z_Registration_Info_UClass_ANPCCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ANPCCharacter), 1076587118U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_3483685681(TEXT("/Script/PL6_1"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_1608215236(TEXT("/Script/PL6_1"),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ClassInfo),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_NPCCharacter_h_Statics::ScriptStructInfo),
 		nullptr, 0);

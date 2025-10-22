@@ -111,6 +111,10 @@ public:
 	float SightPlayerLostLostRadiusDelta;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlayerLostConfig")
 	float SightPlayerLostHalfAngle;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Prediction")
+	//for how much time the AI predict Player location
+	float PredictionTime;
 
 	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "AIState")
 	float CurrPlayerMaxRadius;

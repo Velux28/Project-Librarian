@@ -50,6 +50,8 @@ ANPCCharacter::ANPCCharacter()
 	SightPlayerLostRadius = 1500;
 	SightPlayerLostLostRadiusDelta = 50000;
 	SightPlayerLostHalfAngle = 75;
+
+	PredictionTime = 1.f;
 }
 
 // Called when the game starts or when spawned

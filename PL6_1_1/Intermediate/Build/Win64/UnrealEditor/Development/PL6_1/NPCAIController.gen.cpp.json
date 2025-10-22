@@ -103,6 +103,8 @@
             "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\perception\\aisense_sight.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aisense_sight.generated.h",
             "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aisenseconfig_sight.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\aimodule\\classes\\perception\\aisenseconfig_prediction.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\aimodule\\aisenseconfig_prediction.generated.h",
             "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealeditor\\inc\\pl6_1\\npcaicontroller.generated.h"
         ],
         "ImportedModules": [],

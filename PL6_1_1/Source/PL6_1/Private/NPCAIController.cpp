@@ -24,6 +24,9 @@ ANPCAIController::ANPCAIController()
 		HearConfig->DetectionByAffiliation.bDetectEnemies = true;
 		HearConfig->DetectionByAffiliation.bDetectNeutrals = true;
 		AISense->ConfigureSense(*HearConfig);
+
+		PredictionConfig = CreateDefaultSubobject<UAISenseConfig_Prediction>(TEXT("prediction"));
+		AISense->ConfigureSense(*PredictionConfig);
 	}
 }
 
@@ -248,10 +251,8 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 	}
 	else 
 	{
-		//if the player is outside my sight radius, set his last location and change color and walk speed
-
-		EnterPalyerLostState(_Stimulus.StimulusLocation);
-		UE_LOG(LogTemp, Warning, TEXT("NOT SENSE"));
+		//if the player is outside my sight radius, set his last location plus a prediction and change color and walk speed
+		EnterPalyerLostState(_Stimulus.StimulusLocation + PlayerRef->GetVelocity() * ControlledPawn->PredictionTime);
 
 
 		//TODO:

@@ -10,6 +10,7 @@
 #include "Perception/AIPerceptionTypes.h"
 #include "Perception/AISenseConfig_Hearing.h"
 #include "Perception/AISenseConfig_Sight.h"
+#include "Perception/AISenseConfig_Prediction.h"
 #include "NPCAIController.generated.h"
 
 UENUM()
@@ -44,6 +45,8 @@ protected:
 
 	UAISenseConfig_Sight* SightConfig;
 	UAISenseConfig_Hearing* HearConfig;
+	UAISenseConfig_Prediction* PredictionConfig;
+
 
 	//UAISenseConfig_Sight* ConfigSight;
 
