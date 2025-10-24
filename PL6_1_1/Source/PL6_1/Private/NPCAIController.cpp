@@ -214,6 +214,7 @@ bool ANPCAIController::ActivatePlayerLostScanner_Implementation()
 {
 	SightPlayerLostConfig();
 
+
 	return true;
 }
 
@@ -288,7 +289,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 void ANPCAIController::HandleHearHumanSound(FVector StepPosition)
 {
 
-	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase)
+	if (CurrAIState != EAIState::Chase)
 	{
 		EnterHuntState(StepPosition);
 	}
@@ -405,13 +406,13 @@ void ANPCAIController::EnterPalyerLostState_Implementation	(FVector _LastKnownLo
 {
 	CurrAIState = EAIState::PlayerLost;
 
-	SetHearingSenseStatus(false);
+	SetHearingSenseStatus(true);
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPlayerLostSpeed);
 	ControlledPawn->ChangeMaterial(TEXT("Lost"));
 
 	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _LastKnownLocation);
-	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+	//Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
