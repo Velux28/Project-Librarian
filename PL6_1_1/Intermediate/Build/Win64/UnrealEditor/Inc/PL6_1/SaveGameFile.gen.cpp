@@ -54,6 +54,11 @@ void EmptyLinkFunctionForGeneratedCodeSaveGameFile() {}
 		static void NewProp_IsStoragePuzzleDone_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_IsStoragePuzzleDone;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_IsStorageElettricalBoxRestored_MetaData[];
+#endif
+		static void NewProp_IsStorageElettricalBoxRestored_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_IsStorageElettricalBoxRestored;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_UnloadLevel1Submup1_MetaData[];
 #endif
 		static void NewProp_UnloadLevel1Submup1_SetBit(void* Obj);
@@ -134,6 +139,17 @@ void EmptyLinkFunctionForGeneratedCodeSaveGameFile() {}
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStoragePuzzleDone = { "IsStoragePuzzleDone", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(USaveGameFile), &Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStoragePuzzleDone_SetBit, METADATA_PARAMS(Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStoragePuzzleDone_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStoragePuzzleDone_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored_MetaData[] = {
+		{ "Category", "Envirorment" },
+		{ "ModuleRelativePath", "Public/SaveGameFile.h" },
+	};
+#endif
+	void Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored_SetBit(void* Obj)
+	{
+		((USaveGameFile*)Obj)->IsStorageElettricalBoxRestored = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored = { "IsStorageElettricalBoxRestored", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(USaveGameFile), &Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored_SetBit, METADATA_PARAMS(Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USaveGameFile_Statics::NewProp_UnloadLevel1Submup1_MetaData[] = {
 		{ "Category", "Envirorment" },
 		{ "ModuleRelativePath", "Public/SaveGameFile.h" },
@@ -165,6 +181,7 @@ void EmptyLinkFunctionForGeneratedCodeSaveGameFile() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_HasScrewdriver,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsFinishAssembly,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStoragePuzzleDone,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_IsStorageElettricalBoxRestored,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_UnloadLevel1Submup1,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_CurrSection_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USaveGameFile_Statics::NewProp_CurrSection,
@@ -206,9 +223,9 @@ void EmptyLinkFunctionForGeneratedCodeSaveGameFile() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_SaveGameFile_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USaveGameFile, USaveGameFile::StaticClass, TEXT("USaveGameFile"), &Z_Registration_Info_UClass_USaveGameFile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USaveGameFile), 3048737278U) },
+		{ Z_Construct_UClass_USaveGameFile, USaveGameFile::StaticClass, TEXT("USaveGameFile"), &Z_Registration_Info_UClass_USaveGameFile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USaveGameFile), 951375869U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_SaveGameFile_h_2725096673(TEXT("/Script/PL6_1"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_SaveGameFile_h_2771646491(TEXT("/Script/PL6_1"),
 		Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_SaveGameFile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_PL6_1_1_Source_PL6_1_Public_SaveGameFile_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

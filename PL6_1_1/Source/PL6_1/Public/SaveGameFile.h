@@ -30,6 +30,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
 	bool IsStoragePuzzleDone = false;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
+	bool IsStorageElettricalBoxRestored= false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Envirorment")
 	bool UnloadLevel1Submup1 = false;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Level")
