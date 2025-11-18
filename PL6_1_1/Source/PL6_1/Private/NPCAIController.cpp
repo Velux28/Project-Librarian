@@ -318,7 +318,7 @@ void ANPCAIController::EnterPatrolState_Implementation()
 {
 	CurrAIState = EAIState::Patrol;
 
-	SetHearingSenseStatus(true);
+	//SetHearingSenseStatus(true);
 
 	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementPatrolRadius;
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPatrolSpeed);
