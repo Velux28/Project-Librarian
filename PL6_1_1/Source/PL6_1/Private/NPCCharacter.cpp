@@ -52,6 +52,8 @@ ANPCCharacter::ANPCCharacter()
 	SightPlayerLostHalfAngle = 75;
 
 	PredictionTime = 1.f;
+
+	bCanHear = true;
 }
 
 // Called when the game starts or when spawned

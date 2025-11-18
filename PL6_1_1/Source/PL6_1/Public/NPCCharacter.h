@@ -111,6 +111,10 @@ public:
 	float SightPlayerLostLostRadiusDelta;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PlayerLostConfig")
 	float SightPlayerLostHalfAngle;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hearing")
+	bool bCanHear;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Prediction")
 	//for how much time the AI predict Player location
