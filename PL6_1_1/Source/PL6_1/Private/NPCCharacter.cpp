@@ -54,6 +54,7 @@ ANPCCharacter::ANPCCharacter()
 	PredictionTime = 1.f;
 
 	bCanHear = true;
+	bCanSee = true;
 }
 
 // Called when the game starts or when spawned
