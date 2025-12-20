@@ -1,6 +1,6 @@
-C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Inc\PL6_1\NPCCharacter.gen.cpp
+U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Inc\PL6_1\NPCCharacter.gen.cpp
 /I .
-/I C:\Dev\Project-Librarian\PL6_1_1\Source\PL6_1\Private
+/I U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Source\PL6_1\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine
 /I Runtime
 /I ..\Shaders\Shared
@@ -252,9 +252,9 @@ C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Inc\PL6_1
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController
 /I Developer\AnimationDataController\Public
-/I C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Inc\PL6_1
-/I C:\Dev\Project-Librarian\PL6_1_1\Source
-/I C:\Dev\Project-Librarian\PL6_1_1\Source\PL6_1\Public
+/I U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Inc\PL6_1
+/I U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Source
+/I U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Source\PL6_1\Public
 /I ThirdParty\mimalloc\include
 /I ThirdParty\LibTiff\Source\Win64
 /I ThirdParty\LibTiff\Source
@@ -269,18 +269,18 @@ C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Inc\PL6_1
 /I ThirdParty\PhysX3\PhysX_3.4\Include\common
 /I ThirdParty\PhysX3\PhysX_3.4\Include\extensions
 /I ThirdParty\PhysX3\PhysX_3.4\Include\geometry
-/I "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\INCLUDE"
+/I "E:\VisualStudio  2022\VC\Tools\MSVC\14.38.33130\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8.1\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\PL6_1Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/FI"C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Development\PL6_1\Definitions.PL6_1.h"
-/Yu"C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\PL6_1Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\PL6_1Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-/Fo"C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Development\PL6_1\NPCCharacter.gen.cpp.obj"
-/sourceDependencies C:\Dev\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Development\PL6_1\NPCCharacter.gen.cpp.json
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\winrt"
+/FI"U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\PL6_1Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/FI"U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Development\PL6_1\Definitions.PL6_1.h"
+/Yu"U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\PL6_1Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\PL6_1Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/Fo"U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Development\PL6_1\NPCCharacter.gen.cpp.obj"
+/sourceDependencies U:\FORK\ProjectLibrarian\Project-Librarian\PL6_1_1\Intermediate\Build\Win64\UnrealEditor\Development\PL6_1\NPCCharacter.gen.cpp.json
 /Zc:inline
 /nologo
 /Oi
