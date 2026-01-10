@@ -13,7 +13,7 @@
 #include "Perception/AISenseConfig_Prediction.h"
 #include "NPCAIController.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EAIState
 {
 	Patrol,
