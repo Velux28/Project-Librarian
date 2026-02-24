@@ -252,7 +252,7 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 	else 
 	{
 		//if the player is outside my sight radius, set his last location plus a prediction and change color and walk speed
-		//EnterPalyerLostState(_Stimulus.StimulusLocation + PlayerRef->GetVelocity() * ControlledPawn->PredictionTime);
+		//EnterPlayerLostState(_Stimulus.StimulusLocation + PlayerRef->GetVelocity() * ControlledPawn->PredictionTime);
 
 		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation + PlayerRef->GetVelocity() * ControlledPawn->PredictionTime);
 		//Blackboard->ClearValue(TEXT("CurrPatrolPos"));
@@ -292,6 +292,11 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 
 void ANPCAIController::HandleHearHumanSound(FVector StepPosition)
 {
+	if (CurrAIState == EAIState::PlayerLost)
+	{
+		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), StepPosition);
+		return;
+	}
 	//fail safe
 	if (CurrAIState != EAIState::Chase)
 	{
@@ -420,7 +425,7 @@ void ANPCAIController::EnterChaseState_Implementation(UObject* _TargetActor)
 
 }
 
-void ANPCAIController::EnterPalyerLostState_Implementation	(FVector _LastKnownLocation)
+void ANPCAIController::EnterPlayerLostState_Implementation	(FVector _LastKnownLocation)
 {
 	CurrAIState = EAIState::PlayerLost;
 

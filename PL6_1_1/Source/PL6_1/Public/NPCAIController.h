@@ -120,7 +120,7 @@ protected:
 	/// Set blackboard variable for Lost.
 	/// </summary>
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
-	void EnterPalyerLostState(FVector _LastKnownLocation);
+	void EnterPlayerLostState(FVector _LastKnownLocation);
 
 	
 
