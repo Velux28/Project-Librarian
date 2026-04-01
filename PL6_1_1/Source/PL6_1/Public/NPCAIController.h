@@ -10,9 +10,10 @@
 #include "Perception/AIPerceptionTypes.h"
 #include "Perception/AISenseConfig_Hearing.h"
 #include "Perception/AISenseConfig_Sight.h"
+#include "Perception/AISenseConfig_Prediction.h"
 #include "NPCAIController.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EAIState
 {
 	Patrol,
@@ -44,6 +45,8 @@ protected:
 
 	UAISenseConfig_Sight* SightConfig;
 	UAISenseConfig_Hearing* HearConfig;
+	UAISenseConfig_Prediction* PredictionConfig;
+
 
 	//UAISenseConfig_Sight* ConfigSight;
 
@@ -117,7 +120,7 @@ protected:
 	/// Set blackboard variable for Lost.
 	/// </summary>
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta = (ForceAsFunction), Category = "AISense/Change Snese")
-	void EnterPalyerLostState(FVector _LastKnownLocation);
+	void EnterPlayerLostState(FVector _LastKnownLocation);
 
 	
 

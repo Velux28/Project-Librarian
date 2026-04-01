@@ -24,6 +24,9 @@ ANPCAIController::ANPCAIController()
 		HearConfig->DetectionByAffiliation.bDetectEnemies = true;
 		HearConfig->DetectionByAffiliation.bDetectNeutrals = true;
 		AISense->ConfigureSense(*HearConfig);
+
+		PredictionConfig = CreateDefaultSubobject<UAISenseConfig_Prediction>(TEXT("prediction"));
+		AISense->ConfigureSense(*PredictionConfig);
 	}
 }
 
@@ -211,6 +214,7 @@ bool ANPCAIController::ActivatePlayerLostScanner_Implementation()
 {
 	SightPlayerLostConfig();
 
+
 	return true;
 }
 
@@ -230,29 +234,31 @@ void ANPCAIController::HandleSight(AActor* _Actor, FAIStimulus _Stimulus)
 	if (_Stimulus.WasSuccessfullySensed())
 	{
 		UE_LOG(LogTemp, Warning, TEXT("SENSE"));
-		//if the ai is in alert 
-		if (CurrAIState == EAIState::Alert)
-		{
-			//deactivete scanner
-			EnterChaseState(_Actor);
-			return;
-		}
 
 		//if the blackboard value isn't set 
 		if (!Blackboard->IsVectorValueSet(TEXT("TargetActor")))
 		{
 			//set the value and change color and speed
-			EnterChaseState(_Actor);
+			//EnterChaseState(_Actor);
+
+			Blackboard->SetValueAsObject(TEXT("TargetActor"), _Actor);
+			Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+			Blackboard->ClearValue(TEXT("TargetLocation"));
+			Blackboard->ClearValue(TEXT("LastKnownLocation"));
+			Blackboard->ClearValue(TEXT("SoundType"));
 			return;
 		}
 	}
 	else 
 	{
-		//if the player is outside my sight radius, set his last location and change color and walk speed
+		//if the player is outside my sight radius, set his last location plus a prediction and change color and walk speed
+		//EnterPlayerLostState(_Stimulus.StimulusLocation + PlayerRef->GetVelocity() * ControlledPawn->PredictionTime);
 
-		EnterPalyerLostState(_Stimulus.StimulusLocation);
-		UE_LOG(LogTemp, Warning, TEXT("NOT SENSE"));
-
+		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _Stimulus.StimulusLocation + PlayerRef->GetVelocity() * ControlledPawn->PredictionTime);
+		//Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+		Blackboard->ClearValue(TEXT("TargetLocation"));
+		Blackboard->ClearValue(TEXT("SoundType"));
+		Blackboard->ClearValue(TEXT("TargetActor"));
 
 		//TODO:
 		//enable earsense
@@ -273,7 +279,7 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 
 	if (_Stimulus.Tag == TEXT("Human"))
 	{
-		Blackboard->ClearValue(TEXT("SoundType"));
+		//Blackboard->ClearValue(TEXT("SoundType"));
 		HandleHearHumanSound(_Stimulus.StimulusLocation);
 	}
 	else if (_Stimulus.Tag == TEXT("Non-Human"))
@@ -286,18 +292,37 @@ void ANPCAIController::HandleHear(FAIStimulus _Stimulus)
 
 void ANPCAIController::HandleHearHumanSound(FVector StepPosition)
 {
-
-	if (CurrAIState != EAIState::PlayerLost && CurrAIState != EAIState::Chase)
+	if (CurrAIState == EAIState::PlayerLost)
 	{
-		EnterHuntState(StepPosition);
+		Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), StepPosition);
+		return;
+	}
+	//fail safe
+	if (CurrAIState != EAIState::Chase)
+	{
+
+		Blackboard->ClearValue(TEXT("LastKnownLocation"));
+		Blackboard->ClearValue(TEXT("TargetActor"));
+		Blackboard->ClearValue(TEXT("TargetLocation"));
+
+		Blackboard->SetValueAsVector(TEXT("CurrPatrolPos"), StepPosition);
+
+		//EnterHuntState(StepPosition);
 	}
 }
 
 void ANPCAIController::HandleHearNonHumanSound(FVector _TargetLocation)
 {
+	//ignore the second can if ai is in alert
 	if (CurrAIState != EAIState::Alert)
 	{
-		EnterAlertState(_TargetLocation);
+
+		Blackboard->SetValueAsVector(TEXT("TargetLocation"), _TargetLocation);
+		Blackboard->ClearValue(TEXT("LastKnownLocation"));
+		Blackboard->ClearValue(TEXT("TargetActor"));
+		Blackboard->ClearValue(TEXT("CurrPatrolPos"));		
+
+		//EnterAlertState(_TargetLocation);
 	}	
 }
 
@@ -321,8 +346,8 @@ void ANPCAIController::EnterPatrolState_Implementation()
 	ControlledPawn->CurrPlayerMaxRadius = ControlledPawn->MovementPatrolRadius;
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPatrolSpeed);
 
-	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
-	ControlledPawn->ChangeMaterial(TEXT("Patrol"));
+	//ControlledPawn->SoundComp->PlaySoundByName(TEXT("Patrol"));
+	//ControlledPawn->ChangeMaterial(TEXT("Patrol"));
 
 	Blackboard->ClearValue(TEXT("SoundType"));
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
@@ -344,13 +369,13 @@ void ANPCAIController::EnterAlertState_Implementation(FVector _TargetLocation)
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementAlertSpeed);
 
-	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
+	/*ControlledPawn->SoundComp->PlaySoundByName(TEXT("Alert"));
 	ControlledPawn->ChangeMaterial(TEXT("Alert"));
 
 	Blackboard->SetValueAsVector(TEXT("TargetLocation"), _TargetLocation);
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
-	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+	Blackboard->ClearValue(TEXT("CurrPatrolPos"));*/
 
 	SightAlertConfig();
 	HearAlertConfig();
@@ -365,18 +390,18 @@ void ANPCAIController::EnterHuntState_Implementation(FVector StepPosition)
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementHuntSpeed);
 
-	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
+	/*ControlledPawn->SoundComp->PlaySoundByName(TEXT("Hunt"));
 	ControlledPawn->ChangeMaterial(TEXT("Hunt"));
 
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
 	Blackboard->ClearValue(TEXT("TargetActor"));
-	Blackboard->ClearValue(TEXT("TargetLocation"));
+	Blackboard->ClearValue(TEXT("TargetLocation"));*/
 
 	SightHuntConfig();
 	HearHuntConfig();
 
-	Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementHuntWaitTimer);
-	Blackboard->SetValueAsVector(TEXT("CurrPatrolPos"), StepPosition);
+	/*Blackboard->SetValueAsFloat(TEXT("PatrolWaitTime"), ControlledPawn->MovementHuntWaitTimer);
+	Blackboard->SetValueAsVector(TEXT("CurrPatrolPos"), StepPosition);*/
 }
 
 void ANPCAIController::EnterChaseState_Implementation(UObject* _TargetActor)
@@ -387,33 +412,33 @@ void ANPCAIController::EnterChaseState_Implementation(UObject* _TargetActor)
 
 	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementChaseSpeed);
 
-	ControlledPawn->ChangeMaterial(TEXT("Chase"));
+	/*ControlledPawn->ChangeMaterial(TEXT("Chase"));
 	ControlledPawn->SoundComp->PlaySoundByName(TEXT("Chase"));
 
 	Blackboard->SetValueAsObject(TEXT("TargetActor"), _TargetActor);
 	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
 	Blackboard->ClearValue(TEXT("TargetLocation"));
 	Blackboard->ClearValue(TEXT("LastKnownLocation"));
-	Blackboard->ClearValue(TEXT("SoundType"));
+	Blackboard->ClearValue(TEXT("SoundType"));*/
 
 	SightChaseConfig();
 
 }
 
-void ANPCAIController::EnterPalyerLostState_Implementation	(FVector _LastKnownLocation)
+void ANPCAIController::EnterPlayerLostState_Implementation	(FVector _LastKnownLocation)
 {
 	CurrAIState = EAIState::PlayerLost;
 
-	SetHearingSenseStatus(false);
+	SetHearingSenseStatus(true);
 
-	ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPlayerLostSpeed);
-	ControlledPawn->ChangeMaterial(TEXT("Lost"));
+	/*ControlledPawn->SetWalkSpeed(ControlledPawn->MovementPlayerLostSpeed);
+	ControlledPawn->ChangeMaterial(TEXT("Lost"));*/
 
-	Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _LastKnownLocation);
-	Blackboard->ClearValue(TEXT("CurrPatrolPos"));
-	Blackboard->ClearValue(TEXT("TargetLocation"));
-	Blackboard->ClearValue(TEXT("SoundType"));
-	Blackboard->ClearValue(TEXT("TargetActor"));
+	//Blackboard->SetValueAsVector(TEXT("LastKnownLocation"), _LastKnownLocation);
+	////Blackboard->ClearValue(TEXT("CurrPatrolPos"));
+	//Blackboard->ClearValue(TEXT("TargetLocation"));
+	//Blackboard->ClearValue(TEXT("SoundType"));
+	//Blackboard->ClearValue(TEXT("TargetActor"));
 }
 
 

@@ -38,7 +38,6 @@ void AMain_PlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 {
 	
-	
 	//if (bIsCrouching && _Camera->FieldOfView == CrouchFOV)
 	if (bIsCrouching && !bIsMidCrouchAnim)
 	{
@@ -47,7 +46,7 @@ bool AMain_PlayerCharacter::HandleCrouch(UCameraComponent* _Camera)
 		FCollisionQueryParams Params;
 		//Params.AddIgnoredActor(this);
 		//if hits something does not uncrouch
-		if (GetWorld()->SweepSingleByChannel(OnHit, GetActorLocation(), GetActorLocation() + PlayerUncrouchHeight, FQuat::Identity, ECC_Visibility, FCollisionShape::MakeSphere(25.f), Params))
+		if (GetWorld()->SweepSingleByChannel(OnHit, GetActorLocation(), GetActorLocation() + PlayerUncrouchHeight, FQuat::Identity, ECC_Visibility, FCollisionShape::MakeSphere(50.f), Params))
 		{
 			return false;
 		}

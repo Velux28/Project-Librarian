@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\private\\mytestactor.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\pl6_1editor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealeditor\\development\\pl6_1\\definitions.pl6_1.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\source\\pl6_1\\public\\mytestactor.h",
+            "c:\\dev\\project-librarian\\pl6_1_1\\intermediate\\build\\win64\\unrealeditor\\inc\\pl6_1\\mytestactor.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
